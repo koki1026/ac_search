@@ -1,0 +1,4 @@
+source;share/agent_messages/local_setup.bash
+source;share/agent_messages/local_setup.dsv
+source;share/agent_messages/local_setup.sh
+source;share/agent_messages/local_setup.zsh
