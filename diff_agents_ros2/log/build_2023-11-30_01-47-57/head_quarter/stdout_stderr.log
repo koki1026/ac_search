@@ -1,0 +1,36 @@
+running egg_info
+creating ../../build/head_quarter/head_quarter.egg-info
+writing ../../build/head_quarter/head_quarter.egg-info/PKG-INFO
+writing dependency_links to ../../build/head_quarter/head_quarter.egg-info/dependency_links.txt
+writing entry points to ../../build/head_quarter/head_quarter.egg-info/entry_points.txt
+writing requirements to ../../build/head_quarter/head_quarter.egg-info/requires.txt
+writing top-level names to ../../build/head_quarter/head_quarter.egg-info/top_level.txt
+writing manifest file '../../build/head_quarter/head_quarter.egg-info/SOURCES.txt'
+reading manifest file '../../build/head_quarter/head_quarter.egg-info/SOURCES.txt'
+writing manifest file '../../build/head_quarter/head_quarter.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/koki-22/ac_search/diff_agents_ros2/build/head_quarter/build
+creating /home/koki-22/ac_search/diff_agents_ros2/build/head_quarter/build/lib
+creating /home/koki-22/ac_search/diff_agents_ros2/build/head_quarter/build/lib/head_quarter
+copying head_quarter/__init__.py -> /home/koki-22/ac_search/diff_agents_ros2/build/head_quarter/build/lib/head_quarter
+copying head_quarter/head_quarter.py -> /home/koki-22/ac_search/diff_agents_ros2/build/head_quarter/build/lib/head_quarter
+running install
+running install_lib
+creating /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/lib/python3.10/site-packages/head_quarter
+copying /home/koki-22/ac_search/diff_agents_ros2/build/head_quarter/build/lib/head_quarter/__init__.py -> /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/lib/python3.10/site-packages/head_quarter
+copying /home/koki-22/ac_search/diff_agents_ros2/build/head_quarter/build/lib/head_quarter/head_quarter.py -> /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/lib/python3.10/site-packages/head_quarter
+byte-compiling /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/lib/python3.10/site-packages/head_quarter/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/lib/python3.10/site-packages/head_quarter/head_quarter.py to head_quarter.cpython-310.pyc
+running install_data
+creating /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/share/ament_index
+creating /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/share/ament_index/resource_index
+creating /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/share/ament_index/resource_index/packages
+copying resource/head_quarter -> /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/share/ament_index/resource_index/packages
+copying package.xml -> /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/share/head_quarter
+copying launch/head_quarter.launch.py -> /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/share/head_quarter
+running install_egg_info
+Copying ../../build/head_quarter/head_quarter.egg-info to /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/lib/python3.10/site-packages/head_quarter-0.0.0-py3.10.egg-info
+running install_scripts
+Installing head_quarter script to /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/lib/head_quarter
+writing list of installed files to '/home/koki-22/ac_search/diff_agents_ros2/build/head_quarter/install.log'

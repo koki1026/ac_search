@@ -1,0 +1,3 @@
+[console_scripts]
+head_quarter = head_quarter.head_quarter:main
+

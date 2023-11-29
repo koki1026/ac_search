@@ -1,0 +1,34 @@
+[0.678s] Invoking command in '/home/koki-22/ac_search/diff_agents_ros2/src/diff_agent': PYTHONPATH=/home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/prefix_override:/home/koki-22/ac_search/diff_agents_ros2/install/diff_agent/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/diff_agent build --build-base /home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/build install --record /home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/install.log --single-version-externally-managed
+[0.908s] running egg_info
+[0.909s] creating ../../build/diff_agent/diff_agent.egg-info
+[0.909s] writing ../../build/diff_agent/diff_agent.egg-info/PKG-INFO
+[0.910s] writing dependency_links to ../../build/diff_agent/diff_agent.egg-info/dependency_links.txt
+[0.910s] writing entry points to ../../build/diff_agent/diff_agent.egg-info/entry_points.txt
+[0.910s] writing requirements to ../../build/diff_agent/diff_agent.egg-info/requires.txt
+[0.910s] writing top-level names to ../../build/diff_agent/diff_agent.egg-info/top_level.txt
+[0.910s] writing manifest file '../../build/diff_agent/diff_agent.egg-info/SOURCES.txt'
+[0.911s] reading manifest file '../../build/diff_agent/diff_agent.egg-info/SOURCES.txt'
+[0.912s] writing manifest file '../../build/diff_agent/diff_agent.egg-info/SOURCES.txt'
+[0.912s] running build
+[0.912s] running build_py
+[0.912s] creating /home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/build
+[0.912s] creating /home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/build/lib
+[0.912s] creating /home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/build/lib/diff_agent
+[0.912s] copying diff_agent/__init__.py -> /home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/build/lib/diff_agent
+[0.913s] running install
+[0.913s] running install_lib
+[0.913s] creating /home/koki-22/ac_search/diff_agents_ros2/install/diff_agent/lib/python3.10/site-packages/diff_agent
+[0.913s] copying /home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/build/lib/diff_agent/__init__.py -> /home/koki-22/ac_search/diff_agents_ros2/install/diff_agent/lib/python3.10/site-packages/diff_agent
+[0.914s] byte-compiling /home/koki-22/ac_search/diff_agents_ros2/install/diff_agent/lib/python3.10/site-packages/diff_agent/__init__.py to __init__.cpython-310.pyc
+[0.914s] running install_data
+[0.914s] creating /home/koki-22/ac_search/diff_agents_ros2/install/diff_agent/share/ament_index
+[0.915s] creating /home/koki-22/ac_search/diff_agents_ros2/install/diff_agent/share/ament_index/resource_index
+[0.915s] creating /home/koki-22/ac_search/diff_agents_ros2/install/diff_agent/share/ament_index/resource_index/packages
+[0.915s] copying resource/diff_agent -> /home/koki-22/ac_search/diff_agents_ros2/install/diff_agent/share/ament_index/resource_index/packages
+[0.915s] copying package.xml -> /home/koki-22/ac_search/diff_agents_ros2/install/diff_agent/share/diff_agent
+[0.915s] copying urdf/robot.urdf -> /home/koki-22/ac_search/diff_agents_ros2/install/diff_agent/share/diff_agent
+[0.915s] running install_egg_info
+[0.916s] Copying ../../build/diff_agent/diff_agent.egg-info to /home/koki-22/ac_search/diff_agents_ros2/install/diff_agent/lib/python3.10/site-packages/diff_agent-0.0.0-py3.10.egg-info
+[0.917s] running install_scripts
+[0.933s] writing list of installed files to '/home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/install.log'
+[0.952s] Invoked command in '/home/koki-22/ac_search/diff_agents_ros2/src/diff_agent' returned '0': PYTHONPATH=/home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/prefix_override:/home/koki-22/ac_search/diff_agents_ros2/install/diff_agent/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/diff_agent build --build-base /home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/build install --record /home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/install.log --single-version-externally-managed
