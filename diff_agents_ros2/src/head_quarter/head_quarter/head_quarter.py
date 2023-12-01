@@ -16,9 +16,9 @@ class GameMasterNode(Node):
         #)
 
         # ゲームマスターがエージェントに指示を出すトピックを作成
-        self.agent_command_pub = self.create_publisher(
+        self.agent_control_pub = self.create_publisher(
             Twist,
-            'agent_command_topic',
+            'agent_control_topic',
             10
         )
 
@@ -42,7 +42,7 @@ class GameMasterNode(Node):
             command_msg.angular.z = 45.0  # 例として目標角度を45度に指定
 
             # エージェントに指示を出す
-            self.agent_command_pub.publish(command_msg)
+            self.agent_control_pub.publish(command_msg)
 
 def main():
     rclpy.init()

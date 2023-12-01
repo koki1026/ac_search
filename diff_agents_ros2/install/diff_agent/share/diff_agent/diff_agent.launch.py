@@ -8,13 +8,18 @@ def generate_launch_description():
   packages_dir = get_package_share_directory("diff_agent")
   urdf = os.path.join(packages_dir, "robot.urdf")
   pkg_head_quarter = get_package_share_directory("head_quarter")
+  pkg_agent_control = get_package_share_directory("agent_control")
 
   head_quarter = launch.actions.IncludeLaunchDescription(
     PythonLaunchDescriptionSource([pkg_head_quarter + "/head_quarter.launch.py"]),
   )
+  agent_control = launch.actions.IncludeLaunchDescription(
+    PythonLaunchDescriptionSource([pkg_agent_control + "/agent_control.launch.py"]),
+  )
 
   return launch.LaunchDescription([
     head_quarter,
+    agent_control,
 
     Node(
       package="rviz2",
