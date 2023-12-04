@@ -1,0 +1,20 @@
+[1.386s] Invoking command in '/home/koki-22/ac_search/diff_agents_ros2/src/diff_agent': PYTHONPATH=/home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/prefix_override:/home/koki-22/ac_search/diff_agents_ros2/install/diff_agent/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/diff_agent build --build-base /home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/build install --record /home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/install.log --single-version-externally-managed
+[1.708s] running egg_info
+[1.709s] writing ../../build/diff_agent/diff_agent.egg-info/PKG-INFO
+[1.709s] writing dependency_links to ../../build/diff_agent/diff_agent.egg-info/dependency_links.txt
+[1.709s] writing entry points to ../../build/diff_agent/diff_agent.egg-info/entry_points.txt
+[1.709s] writing requirements to ../../build/diff_agent/diff_agent.egg-info/requires.txt
+[1.709s] writing top-level names to ../../build/diff_agent/diff_agent.egg-info/top_level.txt
+[1.711s] reading manifest file '../../build/diff_agent/diff_agent.egg-info/SOURCES.txt'
+[1.712s] writing manifest file '../../build/diff_agent/diff_agent.egg-info/SOURCES.txt'
+[1.712s] running build
+[1.712s] running build_py
+[1.713s] running install
+[1.713s] running install_lib
+[1.714s] running install_data
+[1.715s] running install_egg_info
+[1.717s] removing '/home/koki-22/ac_search/diff_agents_ros2/install/diff_agent/lib/python3.10/site-packages/diff_agent-0.0.0-py3.10.egg-info' (and everything under it)
+[1.717s] Copying ../../build/diff_agent/diff_agent.egg-info to /home/koki-22/ac_search/diff_agents_ros2/install/diff_agent/lib/python3.10/site-packages/diff_agent-0.0.0-py3.10.egg-info
+[1.718s] running install_scripts
+[1.738s] writing list of installed files to '/home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/install.log'
+[1.775s] Invoked command in '/home/koki-22/ac_search/diff_agents_ros2/src/diff_agent' returned '0': PYTHONPATH=/home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/prefix_override:/home/koki-22/ac_search/diff_agents_ros2/install/diff_agent/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/diff_agent build --build-base /home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/build install --record /home/koki-22/ac_search/diff_agents_ros2/build/diff_agent/install.log --single-version-externally-managed

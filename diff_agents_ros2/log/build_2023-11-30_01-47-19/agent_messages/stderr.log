@@ -1,0 +1,9 @@
+[31mCMake Error at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+  rosidl_generate_interfaces() the passed file 'msg/AgentCmd.msg' doesn't
+  exist relative to the CMAKE_CURRENT_SOURCE_DIR
+  '/home/koki-22/ac_search/diff_agents_ros2/agent_messages'
+Call Stack (most recent call first):
+  CMakeLists.txt:23 (rosidl_generate_interfaces)
+
+[0m
+gmake: *** [Makefile:963: cmake_check_build_system] Error 1

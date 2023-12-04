@@ -325,14 +325,14 @@ ament_cmake_symlink_install_files("/home/koki-22/ac_search/diff_agents_ros2/agen
 # install(DIRECTORY "/home/koki-22/ac_search/diff_agents_ros2/build/agent_messages/rosidl_typesupport_fastrtps_c/agent_messages/" "DESTINATION" "include/agent_messages/agent_messages" "PATTERN_EXCLUDE" "*.cpp")
 ament_cmake_symlink_install_directory("/home/koki-22/ac_search/diff_agents_ros2/agent_messages" DIRECTORY "/home/koki-22/ac_search/diff_agents_ros2/build/agent_messages/rosidl_typesupport_fastrtps_c/agent_messages/" "DESTINATION" "include/agent_messages/agent_messages" "PATTERN_EXCLUDE" "*.cpp")
 
-# install(DIRECTORY "/home/koki-22/ac_search/diff_agents_ros2/build/agent_messages/rosidl_typesupport_introspection_c/agent_messages/" "DESTINATION" "include/agent_messages/agent_messages" "PATTERN" "*.h")
-ament_cmake_symlink_install_directory("/home/koki-22/ac_search/diff_agents_ros2/agent_messages" DIRECTORY "/home/koki-22/ac_search/diff_agents_ros2/build/agent_messages/rosidl_typesupport_introspection_c/agent_messages/" "DESTINATION" "include/agent_messages/agent_messages" "PATTERN" "*.h")
-
 # install(DIRECTORY "/home/koki-22/ac_search/diff_agents_ros2/build/agent_messages/rosidl_generator_cpp/agent_messages/" "DESTINATION" "include/agent_messages/agent_messages" "PATTERN" "*.hpp")
 ament_cmake_symlink_install_directory("/home/koki-22/ac_search/diff_agents_ros2/agent_messages" DIRECTORY "/home/koki-22/ac_search/diff_agents_ros2/build/agent_messages/rosidl_generator_cpp/agent_messages/" "DESTINATION" "include/agent_messages/agent_messages" "PATTERN" "*.hpp")
 
 # install(DIRECTORY "/home/koki-22/ac_search/diff_agents_ros2/build/agent_messages/rosidl_typesupport_fastrtps_cpp/agent_messages/" "DESTINATION" "include/agent_messages/agent_messages" "PATTERN_EXCLUDE" "*.cpp")
 ament_cmake_symlink_install_directory("/home/koki-22/ac_search/diff_agents_ros2/agent_messages" DIRECTORY "/home/koki-22/ac_search/diff_agents_ros2/build/agent_messages/rosidl_typesupport_fastrtps_cpp/agent_messages/" "DESTINATION" "include/agent_messages/agent_messages" "PATTERN_EXCLUDE" "*.cpp")
+
+# install(DIRECTORY "/home/koki-22/ac_search/diff_agents_ros2/build/agent_messages/rosidl_typesupport_introspection_c/agent_messages/" "DESTINATION" "include/agent_messages/agent_messages" "PATTERN" "*.h")
+ament_cmake_symlink_install_directory("/home/koki-22/ac_search/diff_agents_ros2/agent_messages" DIRECTORY "/home/koki-22/ac_search/diff_agents_ros2/build/agent_messages/rosidl_typesupport_introspection_c/agent_messages/" "DESTINATION" "include/agent_messages/agent_messages" "PATTERN" "*.h")
 
 # install(DIRECTORY "/home/koki-22/ac_search/diff_agents_ros2/build/agent_messages/rosidl_typesupport_introspection_cpp/agent_messages/" "DESTINATION" "include/agent_messages/agent_messages" "PATTERN" "*.hpp")
 ament_cmake_symlink_install_directory("/home/koki-22/ac_search/diff_agents_ros2/agent_messages" DIRECTORY "/home/koki-22/ac_search/diff_agents_ros2/build/agent_messages/rosidl_typesupport_introspection_cpp/agent_messages/" "DESTINATION" "include/agent_messages/agent_messages" "PATTERN" "*.hpp")

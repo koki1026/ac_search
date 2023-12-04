@@ -1,0 +1,3 @@
+[console_scripts]
+agent_control = agent_control.agent_control:main
+
