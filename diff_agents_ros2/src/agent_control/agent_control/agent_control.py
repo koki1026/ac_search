@@ -88,16 +88,13 @@ class AgentControlNode(Node):
         angle_ = euler_from_quaternion(msg.orientation)
         self.currentAngle = angle_[2]
         self.angleDifference = self.currentAngle - self.targetAngule
-        # 角度の差が180度以上の場合は逆方向に回転
-        if abs(self.angleDifference) > math.pi:
-            self.angleDifference = math.pi - abs(self.angleDifference)
 
     def update_agent_command(self):
         #agentの現在角と目標角の差異を保存
         #差異角と目標速度をもとにベクトルを作成
         #x速度とz速度を生成
         vehicle_command = Twist()
-        vehicle_command.linear.x = self.targetSpeed * np.cos(self.angleDifference)
+        vehicle_command.linear.x = abs(self.targetSpeed * np.cos(self.angleDifference))
         vehicle_command.angular.z = self.targetSpeed * np.sin(self.angleDifference)
         self.vehicle_command_pub.publish(vehicle_command)
 
