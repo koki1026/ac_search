@@ -2,8 +2,33 @@ import rclpy
 import math
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
+from sensor_msgs.msg import Imu
 from std_msgs.msg import Float64
 import numpy as np
+
+def euler_from_quaternion(quaternion):                                                                   
+        """クオータニオンからオイラー角を計算する関数                                                        
+        Converts quaternion (w in last place) to euler roll, pitch, yaw                                           
+        quaternion = [x, y, z, w]                                                                                 
+        Bellow should be replaced when porting for ROS 2 Python tf_conversions is done.                           
+        """                                                                                                      
+        x = quaternion.x                                                                                          
+        y = quaternion.y                                                                                          
+        z = quaternion.z                                                                                          
+        w = quaternion.w                                                                                          
+                                                                                                                  
+        sinr_cosp = 2 * (w * x + y * z)                                                                           
+        cosr_cosp = 1 - 2 * (x * x + y * y)                                                                       
+        roll      = np.arctan2(sinr_cosp, cosr_cosp)                                                              
+                                                                                                                  
+        sinp  = 2 * (w * y - z * x)                                                                               
+        pitch = np.arcsin(sinp)                                                                                   
+                                                                                                                  
+        siny_cosp = 2 * (w * z + x * y)                                                                           
+        cosy_cosp = 1 - 2 * (y * y + z * z)                                                                       
+        yaw = np.arctan2(siny_cosp, cosy_cosp)                                                                    
+                                                                                                                  
+        return roll, pitch, yaw
 
 class AgentControlNode(Node):
     def __init__(self):
@@ -15,9 +40,22 @@ class AgentControlNode(Node):
             10
         )
 
+        self.imu_sub = self.create_subscription(
+            Imu,
+            'imu',
+            self.imu_sensor_callback,
+            10
+        )
+
         self.vehicle_command_pub = self.create_publisher(
             Twist,
             'agent_command_topic',
+            10
+        )
+
+        self.message_status = self.create_publisher(
+            Twist,
+            'angleDifference',
             10
         )
 
@@ -31,25 +69,44 @@ class AgentControlNode(Node):
         )
 
         # 目標速度と角速度を保存
-        self.linear_speed = 0.0
-        self.angular = 0.0
+        self.targetSpeed = 0.0
+        self.targetAngularDeg = 0.0
+        self.targetAngule = 0.0
 
-        self.current_yaw = 0.0  # 現在のグローバルな角度
+        self.currentAngle = 0.0  # 現在のグローバルな角度
+
+        self.angleDifference = self.targetAngule - self.currentAngle
 
     def vehicle_control_callback(self, msg):
         # head_quarterノードから受け取った速度と角速度
-        self.linear_speed = msg.linear.x
-        self.angular = msg.angular.z
+        self.targetSpeed = msg.linear.x
+        self.targetAngularDeg = msg.angular.z
+        self.targetAngule = np.radians(self.targetAngularDeg)
 
+
+    def imu_sensor_callback(self, msg):
+        angle_ = euler_from_quaternion(msg.orientation)
+        self.currentAngle = angle_[2]
+        self.angleDifference = self.currentAngle - self.targetAngule
+        # 角度の差が180度以上の場合は逆方向に回転
+        if abs(self.angleDifference) > math.pi:
+            self.angleDifference = math.pi - abs(self.angleDifference)
 
     def update_agent_command(self):
         #agentの現在角と目標角の差異を保存
         #差異角と目標速度をもとにベクトルを作成
         #x速度とz速度を生成
         vehicle_command = Twist()
-        vehicle_command.linear.x = self.linear_speed * np.sin(np.radians(self.angular))
-        vehicle_command.angular.z = self.linear_speed * np.cos(np.radians(self.angular))
+        vehicle_command.linear.x = self.targetSpeed * np.cos(self.angleDifference)
+        vehicle_command.angular.z = self.targetSpeed * np.sin(self.angleDifference)
         self.vehicle_command_pub.publish(vehicle_command)
+
+        agentDifference_command = Twist()
+        agentDifference_command.linear.x = self.targetSpeed
+        agentDifference_command.linear.y = self.targetAngule
+        agentDifference_command.linear.z = self.currentAngle
+        agentDifference_command.angular.z = self.angleDifference
+        self.message_status.publish(agentDifference_command)
 
 def main(args=None):
     rclpy.init(args=args)

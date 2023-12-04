@@ -38,7 +38,7 @@ class GameMasterNode(Node):
     def update_agent_commands(self):
             # 仮の指示を生成（実際には適切な制御アルゴリズムに基づいて計算）
             command_msg = Twist()
-            command_msg.linear.x = 3.0  # 例として速度を3.0に指定
+            command_msg.linear.x = 0.3  # 例として速度を3.0に指定
             command_msg.angular.z = 45.0  # 例として目標角度を45度に指定
 
             # エージェントに指示を出す
