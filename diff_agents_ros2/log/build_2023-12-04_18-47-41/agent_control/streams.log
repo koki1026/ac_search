@@ -1,0 +1,21 @@
+[1.671s] Invoking command in '/home/koki-22/ac_search/diff_agents_ros2/src/agent_control': PYTHONPATH=/home/koki-22/ac_search/diff_agents_ros2/build/agent_control/prefix_override:/home/koki-22/ac_search/diff_agents_ros2/install/agent_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/agent_control build --build-base /home/koki-22/ac_search/diff_agents_ros2/build/agent_control/build install --record /home/koki-22/ac_search/diff_agents_ros2/build/agent_control/install.log --single-version-externally-managed
+[2.069s] running egg_info
+[2.070s] writing ../../build/agent_control/agent_control.egg-info/PKG-INFO
+[2.070s] writing dependency_links to ../../build/agent_control/agent_control.egg-info/dependency_links.txt
+[2.071s] writing entry points to ../../build/agent_control/agent_control.egg-info/entry_points.txt
+[2.071s] writing requirements to ../../build/agent_control/agent_control.egg-info/requires.txt
+[2.071s] writing top-level names to ../../build/agent_control/agent_control.egg-info/top_level.txt
+[2.073s] reading manifest file '../../build/agent_control/agent_control.egg-info/SOURCES.txt'
+[2.074s] writing manifest file '../../build/agent_control/agent_control.egg-info/SOURCES.txt'
+[2.074s] running build
+[2.074s] running build_py
+[2.075s] running install
+[2.075s] running install_lib
+[2.077s] running install_data
+[2.077s] running install_egg_info
+[2.079s] removing '/home/koki-22/ac_search/diff_agents_ros2/install/agent_control/lib/python3.10/site-packages/agent_control-0.0.0-py3.10.egg-info' (and everything under it)
+[2.080s] Copying ../../build/agent_control/agent_control.egg-info to /home/koki-22/ac_search/diff_agents_ros2/install/agent_control/lib/python3.10/site-packages/agent_control-0.0.0-py3.10.egg-info
+[2.081s] running install_scripts
+[2.106s] Installing agent_control script to /home/koki-22/ac_search/diff_agents_ros2/install/agent_control/lib/agent_control
+[2.107s] writing list of installed files to '/home/koki-22/ac_search/diff_agents_ros2/build/agent_control/install.log'
+[2.162s] Invoked command in '/home/koki-22/ac_search/diff_agents_ros2/src/agent_control' returned '0': PYTHONPATH=/home/koki-22/ac_search/diff_agents_ros2/build/agent_control/prefix_override:/home/koki-22/ac_search/diff_agents_ros2/install/agent_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/agent_control build --build-base /home/koki-22/ac_search/diff_agents_ros2/build/agent_control/build install --record /home/koki-22/ac_search/diff_agents_ros2/build/agent_control/install.log --single-version-externally-managed

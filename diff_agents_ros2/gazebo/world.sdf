@@ -372,6 +372,19 @@
                     <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
                     <legacyModeNS>true</legacyModeNS>
                 </plugin>
+
+                <plugin
+                    filename="gz-sim-odometry-publisher-system"
+                    name="gz::sim::systems::OdometryPublisher">
+                    <odom_frame>odom</odom_frame>
+                    <robot_base_frame>chassis</robot_base_frame>
+                    <dimensions>3</dimensions>
+                    <topic>/odom</topic>
+                </plugin>
+
+                <plugin filename="libgz-sim-joint-state-publisher-system.so"
+                    name="gz::sim::systems::JointStatePublisher">
+                </plugin>
         </model>
         <plugin filename="gz-sim-imu-system"
             name="gz::sim::systems::Imu">

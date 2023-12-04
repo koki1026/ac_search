@@ -44,6 +44,7 @@ def generate_launch_description():
       arguments=[
         '/imu@sensor_msgs/msg/Imu@gz.msgs.IMU',
         '/agent_command_topic@geometry_msgs/msg/Twist@gz.msgs.Twist',
+        '/odom@nav_msgs/msg/Odometry@gz.msgs.Odometry'
       ],
     )
 
