@@ -22,7 +22,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'head_quarter = head_quarter.head_quarter:main'
+            'head_quarter = head_quarter.head_quarter:main',
+            'Angulear = head_quarter:main',
         ],
     },
 )

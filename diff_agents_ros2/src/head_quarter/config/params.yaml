@@ -1,0 +1,3 @@
+head_quarter:
+  ros_parameters:
+    Angulear: 30.0 #float

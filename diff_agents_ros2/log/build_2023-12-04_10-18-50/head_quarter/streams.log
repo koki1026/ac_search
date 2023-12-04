@@ -1,0 +1,21 @@
+[0.688s] Invoking command in '/home/koki-22/ac_search/diff_agents_ros2/src/head_quarter': PYTHONPATH=/home/koki-22/ac_search/diff_agents_ros2/build/head_quarter/prefix_override:/home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/head_quarter build --build-base /home/koki-22/ac_search/diff_agents_ros2/build/head_quarter/build install --record /home/koki-22/ac_search/diff_agents_ros2/build/head_quarter/install.log --single-version-externally-managed
+[0.925s] running egg_info
+[0.926s] writing ../../build/head_quarter/head_quarter.egg-info/PKG-INFO
+[0.926s] writing dependency_links to ../../build/head_quarter/head_quarter.egg-info/dependency_links.txt
+[0.926s] writing entry points to ../../build/head_quarter/head_quarter.egg-info/entry_points.txt
+[0.926s] writing requirements to ../../build/head_quarter/head_quarter.egg-info/requires.txt
+[0.926s] writing top-level names to ../../build/head_quarter/head_quarter.egg-info/top_level.txt
+[0.928s] reading manifest file '../../build/head_quarter/head_quarter.egg-info/SOURCES.txt'
+[0.928s] writing manifest file '../../build/head_quarter/head_quarter.egg-info/SOURCES.txt'
+[0.928s] running build
+[0.929s] running build_py
+[0.929s] running install
+[0.929s] running install_lib
+[0.930s] running install_data
+[0.930s] running install_egg_info
+[0.931s] removing '/home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/lib/python3.10/site-packages/head_quarter-0.0.0-py3.10.egg-info' (and everything under it)
+[0.932s] Copying ../../build/head_quarter/head_quarter.egg-info to /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/lib/python3.10/site-packages/head_quarter-0.0.0-py3.10.egg-info
+[0.932s] running install_scripts
+[0.946s] Installing head_quarter script to /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/lib/head_quarter
+[0.947s] writing list of installed files to '/home/koki-22/ac_search/diff_agents_ros2/build/head_quarter/install.log'
+[0.963s] Invoked command in '/home/koki-22/ac_search/diff_agents_ros2/src/head_quarter' returned '0': PYTHONPATH=/home/koki-22/ac_search/diff_agents_ros2/build/head_quarter/prefix_override:/home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/head_quarter build --build-base /home/koki-22/ac_search/diff_agents_ros2/build/head_quarter/build install --record /home/koki-22/ac_search/diff_agents_ros2/build/head_quarter/install.log --single-version-externally-managed
