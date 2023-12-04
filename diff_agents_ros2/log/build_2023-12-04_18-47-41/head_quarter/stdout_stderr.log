@@ -1,0 +1,20 @@
+running egg_info
+writing ../../build/head_quarter/head_quarter.egg-info/PKG-INFO
+writing dependency_links to ../../build/head_quarter/head_quarter.egg-info/dependency_links.txt
+writing entry points to ../../build/head_quarter/head_quarter.egg-info/entry_points.txt
+writing requirements to ../../build/head_quarter/head_quarter.egg-info/requires.txt
+writing top-level names to ../../build/head_quarter/head_quarter.egg-info/top_level.txt
+reading manifest file '../../build/head_quarter/head_quarter.egg-info/SOURCES.txt'
+writing manifest file '../../build/head_quarter/head_quarter.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/lib/python3.10/site-packages/head_quarter-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/head_quarter/head_quarter.egg-info to /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/lib/python3.10/site-packages/head_quarter-0.0.0-py3.10.egg-info
+running install_scripts
+Installing Angulear script to /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/lib/head_quarter
+Installing head_quarter script to /home/koki-22/ac_search/diff_agents_ros2/install/head_quarter/lib/head_quarter
+writing list of installed files to '/home/koki-22/ac_search/diff_agents_ros2/build/head_quarter/install.log'
