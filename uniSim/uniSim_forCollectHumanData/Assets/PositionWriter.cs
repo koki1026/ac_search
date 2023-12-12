@@ -1,14 +1,17 @@
 using System;
 using System.IO;
 using System.Text;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class PositionWriter : MonoBehaviour
 {
     public float span = 3f;
+    Encoding enc = Encoding.GetEncoding("Shift_JIS");
 
     void Start () {
         // 文字コードを指定
-        Encoding enc = Encoding.GetEncoding("Shift_JIS");
 
         StartCoroutine ("Logging");
     }
