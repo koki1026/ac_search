@@ -1,0 +1,479 @@
+[0.514s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--merge-install']
+[0.515s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=True, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f2982b1a2f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f2982b19c60>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f2982b19c60>>, mixin_verb=('build',))
+[0.542s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.542s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.542s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.542s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.542s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.542s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.542s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/koki-22/ac_search/vrx_ws'
+[0.542s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.543s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.555s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.557s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.557s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.557s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.557s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.557s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.558s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.558s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.558s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.558s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.558s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.559s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.559s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.559s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.559s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.559s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.559s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.559s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extensions ['ignore', 'ignore_ament_install']
+[0.561s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extension 'ignore'
+[0.561s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extension 'ignore_ament_install'
+[0.561s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extensions ['colcon_pkg']
+[0.561s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extension 'colcon_pkg'
+[0.561s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extensions ['colcon_meta']
+[0.561s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extension 'colcon_meta'
+[0.561s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extensions ['ros']
+[0.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extension 'ros'
+[0.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extensions ['cmake', 'python']
+[0.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extension 'cmake'
+[0.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extension 'python'
+[0.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extensions ['python_setup_py']
+[0.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extension 'python_setup_py'
+[0.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extensions ['ignore', 'ignore_ament_install']
+[0.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extension 'ignore'
+[0.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extension 'ignore_ament_install'
+[0.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extensions ['colcon_pkg']
+[0.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extension 'colcon_pkg'
+[0.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extensions ['colcon_meta']
+[0.564s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extension 'colcon_meta'
+[0.564s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extensions ['ros']
+[0.564s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extension 'ros'
+[0.564s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extensions ['cmake', 'python']
+[0.564s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extension 'cmake'
+[0.564s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extension 'python'
+[0.565s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extensions ['python_setup_py']
+[0.565s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extension 'python_setup_py'
+[0.565s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extensions ['ignore', 'ignore_ament_install']
+[0.565s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extension 'ignore'
+[0.565s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extension 'ignore_ament_install'
+[0.565s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extensions ['colcon_pkg']
+[0.565s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extension 'colcon_pkg'
+[0.565s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extensions ['colcon_meta']
+[0.566s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extension 'colcon_meta'
+[0.566s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extensions ['ros']
+[0.566s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extension 'ros'
+[0.570s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vrx/vrx_gz' with type 'ros.ament_cmake' and name 'vrx_gz'
+[0.570s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extension 'ignore'
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extension 'ignore_ament_install'
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extensions ['colcon_pkg']
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extension 'colcon_pkg'
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extensions ['colcon_meta']
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extension 'colcon_meta'
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extensions ['ros']
+[0.572s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extension 'ros'
+[0.573s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vrx/vrx_ros' with type 'ros.ament_cmake' and name 'vrx_ros'
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extensions ['ignore', 'ignore_ament_install']
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extension 'ignore'
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extension 'ignore_ament_install'
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extensions ['colcon_pkg']
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extension 'colcon_pkg'
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extensions ['colcon_meta']
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extension 'colcon_meta'
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extensions ['ros']
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extension 'ros'
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extensions ['cmake', 'python']
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extension 'cmake'
+[0.575s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extension 'python'
+[0.576s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extensions ['python_setup_py']
+[0.576s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extension 'python_setup_py'
+[0.576s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.576s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extension 'ignore'
+[0.576s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extension 'ignore_ament_install'
+[0.576s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extensions ['colcon_pkg']
+[0.576s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extension 'colcon_pkg'
+[0.577s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extensions ['colcon_meta']
+[0.577s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extension 'colcon_meta'
+[0.577s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extensions ['ros']
+[0.577s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extension 'ros'
+[0.578s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vrx/vrx_urdf/vrx_gazebo' with type 'ros.ament_cmake' and name 'vrx_gazebo'
+[0.578s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extensions ['ignore', 'ignore_ament_install']
+[0.578s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extension 'ignore'
+[0.579s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extension 'ignore_ament_install'
+[0.579s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extensions ['colcon_pkg']
+[0.579s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extension 'colcon_pkg'
+[0.579s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extensions ['colcon_meta']
+[0.579s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extension 'colcon_meta'
+[0.579s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extensions ['ros']
+[0.579s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extension 'ros'
+[0.580s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vrx/vrx_urdf/wamv_description' with type 'ros.ament_cmake' and name 'wamv_description'
+[0.581s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.581s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extension 'ignore'
+[0.581s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extension 'ignore_ament_install'
+[0.581s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extensions ['colcon_pkg']
+[0.581s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extension 'colcon_pkg'
+[0.581s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extensions ['colcon_meta']
+[0.581s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extension 'colcon_meta'
+[0.581s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extensions ['ros']
+[0.582s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extension 'ros'
+[0.583s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vrx/vrx_urdf/wamv_gazebo' with type 'ros.ament_cmake' and name 'wamv_gazebo'
+[0.583s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.583s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.583s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.583s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.583s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.621s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.621s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.625s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/koki-22/ac_search/vrx_ws/install
+[0.627s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 347 installed packages in /opt/ros/humble
+[0.629s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.706s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.706s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.706s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.706s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.706s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.706s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.707s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.707s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.707s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.707s] DEBUG:colcon.colcon_core.verb:Building package 'vrx_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/koki-22/ac_search/vrx_ws/build/vrx_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/koki-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/koki-22/ac_search/vrx_ws/src/vrx/vrx_urdf/vrx_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'cmake_args' from command line to 'None'
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'cmake_target' from command line to 'None'
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'cmake_clean_first' from command line to 'False'
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'cmake_force_configure' from command line to 'False'
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'ament_cmake_args' from command line to 'None'
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[0.709s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.709s] DEBUG:colcon.colcon_core.verb:Building package 'vrx_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/koki-22/ac_search/vrx_ws/build/vrx_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/koki-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/koki-22/ac_search/vrx_ws/src/vrx/vrx_ros', 'symlink_install': False, 'test_result_base': None}
+[0.711s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'cmake_args' from command line to 'None'
+[0.711s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'cmake_target' from command line to 'None'
+[0.711s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.711s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'cmake_clean_cache' from command line to 'False'
+[0.711s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'cmake_clean_first' from command line to 'False'
+[0.711s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'cmake_force_configure' from command line to 'False'
+[0.712s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'ament_cmake_args' from command line to 'None'
+[0.712s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'catkin_cmake_args' from command line to 'None'
+[0.712s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.712s] DEBUG:colcon.colcon_core.verb:Building package 'vrx_gz' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/koki-22/ac_search/vrx_ws/build/vrx_gz', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/koki-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/koki-22/ac_search/vrx_ws/src/vrx/vrx_gz', 'symlink_install': False, 'test_result_base': None}
+[0.713s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'cmake_args' from command line to 'None'
+[0.713s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'cmake_target' from command line to 'None'
+[0.713s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.713s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.714s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.714s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.714s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.714s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.714s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.714s] DEBUG:colcon.colcon_core.verb:Building package 'wamv_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/koki-22/ac_search/vrx_ws/build/wamv_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/koki-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/koki-22/ac_search/vrx_ws/src/vrx/vrx_urdf/wamv_description', 'symlink_install': False, 'test_result_base': None}
+[0.716s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.716s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.716s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.716s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.716s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.716s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.716s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.716s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.716s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.716s] DEBUG:colcon.colcon_core.verb:Building package 'wamv_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/koki-22/ac_search/vrx_ws/build/wamv_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/koki-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/koki-22/ac_search/vrx_ws/src/vrx/vrx_urdf/wamv_gazebo', 'symlink_install': False, 'test_result_base': None}
+[0.718s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.723s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.723s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/koki-22/ac_search/vrx_ws/src/vrx/vrx_urdf/vrx_gazebo' with build type 'ament_cmake'
+[0.724s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/koki-22/ac_search/vrx_ws/src/vrx/vrx_urdf/vrx_gazebo'
+[0.731s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.732s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.732s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.738s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/koki-22/ac_search/vrx_ws/src/vrx/vrx_ros' with build type 'ament_cmake'
+[0.738s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/koki-22/ac_search/vrx_ws/src/vrx/vrx_ros'
+[0.740s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.741s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.754s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/koki-22/ac_search/vrx_ws/build/vrx_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/koki-22/ac_search/vrx_ws/build/vrx_gazebo -- -j16 -l16
+[0.764s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/koki-22/ac_search/vrx_ws/build/vrx_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/koki-22/ac_search/vrx_ws/build/vrx_ros -- -j16 -l16
+[0.854s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/koki-22/ac_search/vrx_ws/build/vrx_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/koki-22/ac_search/vrx_ws/build/vrx_ros -- -j16 -l16
+[0.899s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/koki-22/ac_search/vrx_ws/build/vrx_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/koki-22/ac_search/vrx_ws/build/vrx_ros
+[0.912s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vrx_ros)
+[0.916s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/koki-22/ac_search/vrx_ws/build/vrx_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/koki-22/ac_search/vrx_ws/build/vrx_ros
+[0.923s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake module files
+[0.924s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake config files
+[0.925s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_ros', 'cmake_prefix_path')
+[0.927s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/hook/cmake_prefix_path.ps1'
+[0.929s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/hook/cmake_prefix_path.dsv'
+[0.930s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/hook/cmake_prefix_path.sh'
+[0.932s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib'
+[0.932s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_ros', 'ld_library_path_lib')
+[0.935s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/hook/ld_library_path_lib.ps1'
+[0.936s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/hook/ld_library_path_lib.dsv'
+[0.936s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/hook/ld_library_path_lib.sh'
+[0.937s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[0.937s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/pkgconfig/vrx_ros.pc'
+[0.938s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[0.938s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[0.941s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/package.ps1'
+[0.943s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/package.dsv'
+[0.944s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/package.sh'
+[0.945s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/package.bash'
+[0.947s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/package.zsh'
+[0.948s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/koki-22/ac_search/vrx_ws/install/share/colcon-core/packages/vrx_ros)
+[0.986s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vrx_ros)
+[0.988s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake module files
+[0.989s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake config files
+[0.989s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_ros', 'cmake_prefix_path')
+[0.991s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/hook/cmake_prefix_path.ps1'
+[0.992s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/hook/cmake_prefix_path.dsv'
+[0.992s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/hook/cmake_prefix_path.sh'
+[0.993s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib'
+[0.993s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_ros', 'ld_library_path_lib')
+[0.995s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/hook/ld_library_path_lib.ps1'
+[0.996s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/hook/ld_library_path_lib.dsv'
+[0.996s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/hook/ld_library_path_lib.sh'
+[0.997s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[0.997s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/pkgconfig/vrx_ros.pc'
+[0.997s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[0.998s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[1.000s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/package.ps1'
+[1.001s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/package.dsv'
+[1.002s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/package.sh'
+[1.003s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/package.bash'
+[1.003s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/package.zsh'
+[1.004s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/koki-22/ac_search/vrx_ws/install/share/colcon-core/packages/vrx_ros)
+[1.005s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/koki-22/ac_search/vrx_ws/src/vrx/vrx_gz' with build type 'ament_cmake'
+[1.005s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/koki-22/ac_search/vrx_ws/src/vrx/vrx_gz'
+[1.007s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.008s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.027s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/koki-22/ac_search/vrx_ws/build/vrx_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/koki-22/ac_search/vrx_ws/build/vrx_gz -- -j16 -l16
+[1.413s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/koki-22/ac_search/vrx_ws/build/vrx_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/koki-22/ac_search/vrx_ws/build/vrx_gazebo -- -j16 -l16
+[1.444s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/koki-22/ac_search/vrx_ws/build/vrx_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/koki-22/ac_search/vrx_ws/build/vrx_gazebo
+[1.514s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vrx_gazebo)
+[1.516s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake module files
+[1.518s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/koki-22/ac_search/vrx_ws/build/vrx_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/koki-22/ac_search/vrx_ws/build/vrx_gazebo
+[1.518s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake config files
+[1.518s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gazebo', 'cmake_prefix_path')
+[1.520s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/cmake_prefix_path.ps1'
+[1.521s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/cmake_prefix_path.dsv'
+[1.522s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/cmake_prefix_path.sh'
+[1.523s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib'
+[1.523s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gazebo', 'ld_library_path_lib')
+[1.525s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/ld_library_path_lib.ps1'
+[1.526s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/ld_library_path_lib.dsv'
+[1.527s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/ld_library_path_lib.sh'
+[1.527s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[1.528s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/pkgconfig/vrx_gazebo.pc'
+[1.528s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[1.529s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[1.531s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.ps1'
+[1.532s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.dsv'
+[1.533s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.sh'
+[1.534s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.bash'
+[1.535s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.zsh'
+[1.535s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/koki-22/ac_search/vrx_ws/install/share/colcon-core/packages/vrx_gazebo)
+[1.565s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vrx_gazebo)
+[1.568s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake module files
+[1.568s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake config files
+[1.569s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gazebo', 'cmake_prefix_path')
+[1.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/cmake_prefix_path.ps1'
+[1.572s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/cmake_prefix_path.dsv'
+[1.573s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/cmake_prefix_path.sh'
+[1.574s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib'
+[1.574s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gazebo', 'ld_library_path_lib')
+[1.576s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/ld_library_path_lib.ps1'
+[1.576s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/ld_library_path_lib.dsv'
+[1.577s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/ld_library_path_lib.sh'
+[1.578s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[1.578s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/pkgconfig/vrx_gazebo.pc'
+[1.579s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[1.579s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[1.581s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.ps1'
+[1.582s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.dsv'
+[1.583s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.sh'
+[1.584s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.bash'
+[1.584s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.zsh'
+[1.585s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/koki-22/ac_search/vrx_ws/install/share/colcon-core/packages/vrx_gazebo)
+[1.586s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/koki-22/ac_search/vrx_ws/src/vrx/vrx_urdf/wamv_description' with build type 'ament_cmake'
+[1.586s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/koki-22/ac_search/vrx_ws/src/vrx/vrx_urdf/wamv_description'
+[1.588s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.588s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.607s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/koki-22/ac_search/vrx_ws/build/wamv_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/koki-22/ac_search/vrx_ws/install/share:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake --build /home/koki-22/ac_search/vrx_ws/build/wamv_description -- -j16 -l16
+[1.682s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/koki-22/ac_search/vrx_ws/build/wamv_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/koki-22/ac_search/vrx_ws/install/share:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake --build /home/koki-22/ac_search/vrx_ws/build/wamv_description -- -j16 -l16
+[1.711s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/koki-22/ac_search/vrx_ws/build/wamv_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/koki-22/ac_search/vrx_ws/install/share:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake --install /home/koki-22/ac_search/vrx_ws/build/wamv_description
+[1.713s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/koki-22/ac_search/vrx_ws/build/vrx_gz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/koki-22/ac_search/vrx_ws/build/vrx_gz -- -j16 -l16
+[1.730s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wamv_description)
+[1.734s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake module files
+[1.737s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake config files
+[1.738s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_description', 'cmake_prefix_path')
+[1.741s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/hook/cmake_prefix_path.ps1'
+[1.743s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/koki-22/ac_search/vrx_ws/build/wamv_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/koki-22/ac_search/vrx_ws/install/share:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake --install /home/koki-22/ac_search/vrx_ws/build/wamv_description
+[1.743s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/hook/cmake_prefix_path.dsv'
+[1.743s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/hook/cmake_prefix_path.sh'
+[1.744s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib'
+[1.745s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_description', 'ld_library_path_lib')
+[1.747s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/hook/ld_library_path_lib.ps1'
+[1.748s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/hook/ld_library_path_lib.dsv'
+[1.749s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/hook/ld_library_path_lib.sh'
+[1.749s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[1.749s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/pkgconfig/wamv_description.pc'
+[1.750s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[1.750s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[1.753s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/package.ps1'
+[1.754s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/package.dsv'
+[1.755s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/package.sh'
+[1.756s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/package.bash'
+[1.756s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/package.zsh'
+[1.757s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/koki-22/ac_search/vrx_ws/install/share/colcon-core/packages/wamv_description)
+[1.792s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wamv_description)
+[1.796s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake module files
+[1.796s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake config files
+[1.797s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_description', 'cmake_prefix_path')
+[1.799s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/hook/cmake_prefix_path.ps1'
+[1.800s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/hook/cmake_prefix_path.dsv'
+[1.800s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/hook/cmake_prefix_path.sh'
+[1.801s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib'
+[1.801s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_description', 'ld_library_path_lib')
+[1.804s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/hook/ld_library_path_lib.ps1'
+[1.805s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/hook/ld_library_path_lib.dsv'
+[1.805s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/hook/ld_library_path_lib.sh'
+[1.806s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[1.806s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/pkgconfig/wamv_description.pc'
+[1.807s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[1.808s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[1.812s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/package.ps1'
+[1.813s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/package.dsv'
+[1.815s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/package.sh'
+[1.816s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/package.bash'
+[1.817s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/wamv_description/package.zsh'
+[1.817s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/koki-22/ac_search/vrx_ws/install/share/colcon-core/packages/wamv_description)
+[1.818s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/koki-22/ac_search/vrx_ws/src/vrx/vrx_urdf/wamv_gazebo' with build type 'ament_cmake'
+[1.819s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/koki-22/ac_search/vrx_ws/src/vrx/vrx_urdf/wamv_gazebo'
+[1.822s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.822s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.851s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/koki-22/ac_search/vrx_ws/build/wamv_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/koki-22/ac_search/vrx_ws/install/share:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake --build /home/koki-22/ac_search/vrx_ws/build/wamv_gazebo -- -j16 -l16
+[1.859s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/koki-22/ac_search/vrx_ws/build/vrx_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/koki-22/ac_search/vrx_ws/build/vrx_gz
+[1.909s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/koki-22/ac_search/vrx_ws/build/wamv_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/koki-22/ac_search/vrx_ws/install/share:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake --build /home/koki-22/ac_search/vrx_ws/build/wamv_gazebo -- -j16 -l16
+[1.943s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/koki-22/ac_search/vrx_ws/build/wamv_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/koki-22/ac_search/vrx_ws/install/share:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake --install /home/koki-22/ac_search/vrx_ws/build/wamv_gazebo
+[1.951s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vrx_gz)
+[1.954s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake module files
+[1.957s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake config files
+[1.959s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gz', 'cmake_prefix_path')
+[1.961s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/hook/cmake_prefix_path.ps1'
+[1.963s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/hook/cmake_prefix_path.dsv'
+[1.965s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/hook/cmake_prefix_path.sh'
+[1.967s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib'
+[1.967s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gz', 'ld_library_path_lib')
+[1.970s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/hook/ld_library_path_lib.ps1'
+[1.971s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/hook/ld_library_path_lib.dsv'
+[1.972s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/hook/ld_library_path_lib.sh'
+[1.974s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[1.974s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/pkgconfig/vrx_gz.pc'
+[1.975s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[1.975s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[1.978s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/package.ps1'
+[1.980s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/package.dsv'
+[1.981s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/package.sh'
+[1.983s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/package.bash'
+[1.984s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/package.zsh'
+[1.985s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/koki-22/ac_search/vrx_ws/install/share/colcon-core/packages/vrx_gz)
+[1.988s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wamv_gazebo)
+[1.992s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake module files
+[1.993s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake config files
+[1.995s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_gazebo', 'cmake_prefix_path')
+[1.997s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/cmake_prefix_path.ps1'
+[1.999s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/cmake_prefix_path.dsv'
+[2.000s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/cmake_prefix_path.sh'
+[2.001s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib'
+[2.002s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_gazebo', 'ld_library_path_lib')
+[2.004s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/ld_library_path_lib.ps1'
+[2.005s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/ld_library_path_lib.dsv'
+[2.006s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/ld_library_path_lib.sh'
+[2.008s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[2.008s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/pkgconfig/wamv_gazebo.pc'
+[2.009s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[2.009s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[2.012s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.ps1'
+[2.014s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.dsv'
+[2.015s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.sh'
+[2.016s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.bash'
+[2.017s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.zsh'
+[2.018s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/koki-22/ac_search/vrx_ws/install/share/colcon-core/packages/wamv_gazebo)
+[2.033s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/koki-22/ac_search/vrx_ws/build/vrx_gz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/koki-22/ac_search/vrx_ws/build/vrx_gz
+[2.044s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/koki-22/ac_search/vrx_ws/build/wamv_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/koki-22/ac_search/vrx_ws/install/share:${GZ_SIM_RESOURCE_PATH} /usr/bin/cmake --install /home/koki-22/ac_search/vrx_ws/build/wamv_gazebo
+[2.054s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wamv_gazebo)
+[2.059s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake module files
+[2.060s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake config files
+[2.061s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_gazebo', 'cmake_prefix_path')
+[2.063s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/cmake_prefix_path.ps1'
+[2.064s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/cmake_prefix_path.dsv'
+[2.065s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/cmake_prefix_path.sh'
+[2.066s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib'
+[2.066s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_gazebo', 'ld_library_path_lib')
+[2.068s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/ld_library_path_lib.ps1'
+[2.069s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/ld_library_path_lib.dsv'
+[2.069s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/ld_library_path_lib.sh'
+[2.070s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[2.070s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/pkgconfig/wamv_gazebo.pc'
+[2.071s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[2.071s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[2.074s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.ps1'
+[2.074s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.dsv'
+[2.075s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.sh'
+[2.076s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.bash'
+[2.077s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.zsh'
+[2.078s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/koki-22/ac_search/vrx_ws/install/share/colcon-core/packages/wamv_gazebo)
+[2.124s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vrx_gz)
+[2.126s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake module files
+[2.127s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install' for CMake config files
+[2.128s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gz', 'cmake_prefix_path')
+[2.130s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/hook/cmake_prefix_path.ps1'
+[2.131s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/hook/cmake_prefix_path.dsv'
+[2.131s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/hook/cmake_prefix_path.sh'
+[2.132s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib'
+[2.132s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gz', 'ld_library_path_lib')
+[2.135s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/hook/ld_library_path_lib.ps1'
+[2.136s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/hook/ld_library_path_lib.dsv'
+[2.136s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/hook/ld_library_path_lib.sh'
+[2.137s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[2.137s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/pkgconfig/vrx_gz.pc'
+[2.138s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[2.138s] Level 1:colcon.colcon_core.environment:checking '/home/koki-22/ac_search/vrx_ws/install/bin'
+[2.141s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/package.ps1'
+[2.142s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/package.dsv'
+[2.143s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/package.sh'
+[2.144s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/package.bash'
+[2.144s] INFO:colcon.colcon_core.shell:Creating package script '/home/koki-22/ac_search/vrx_ws/install/share/vrx_gz/package.zsh'
+[2.145s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/koki-22/ac_search/vrx_ws/install/share/colcon-core/packages/vrx_gz)
+[2.146s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.146s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.146s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.147s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.156s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.156s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.156s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.175s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.177s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/koki-22/ac_search/vrx_ws/install/local_setup.ps1'
+[2.178s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/koki-22/ac_search/vrx_ws/install/_local_setup_util_ps1.py'
+[2.180s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/koki-22/ac_search/vrx_ws/install/setup.ps1'
+[2.183s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/koki-22/ac_search/vrx_ws/install/local_setup.sh'
+[2.184s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/koki-22/ac_search/vrx_ws/install/_local_setup_util_sh.py'
+[2.184s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/koki-22/ac_search/vrx_ws/install/setup.sh'
+[2.187s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/koki-22/ac_search/vrx_ws/install/local_setup.bash'
+[2.188s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/koki-22/ac_search/vrx_ws/install/setup.bash'
+[2.189s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/koki-22/ac_search/vrx_ws/install/local_setup.zsh'
+[2.190s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/koki-22/ac_search/vrx_ws/install/setup.zsh'
