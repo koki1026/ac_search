@@ -1,0 +1,4 @@
+Invoking command in '/home/koki-22/ac_search/build/com': /usr/bin/cmake /home/koki-22/ac_search/uniSim/uniSim_forCollectHumanData/Library/PackageCache/com.unity.ide.visualstudio@2.0.18/Editor/COMIntegration/COMIntegration~ -DCMAKE_INSTALL_PREFIX=/home/koki-22/ac_search/install
+Invoked command in '/home/koki-22/ac_search/build/com' returned '0': /usr/bin/cmake /home/koki-22/ac_search/uniSim/uniSim_forCollectHumanData/Library/PackageCache/com.unity.ide.visualstudio@2.0.18/Editor/COMIntegration/COMIntegration~ -DCMAKE_INSTALL_PREFIX=/home/koki-22/ac_search/install
+Invoking command in '/home/koki-22/ac_search/build/com': /usr/bin/cmake --build /home/koki-22/ac_search/build/com -- -j16 -l16
+Invoked command in '/home/koki-22/ac_search/build/com' returned '2': /usr/bin/cmake --build /home/koki-22/ac_search/build/com -- -j16 -l16

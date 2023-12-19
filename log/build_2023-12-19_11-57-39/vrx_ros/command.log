@@ -1,0 +1,1 @@
+Invoking command in '/home/koki-22/ac_search/build/vrx_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/koki-22/ac_search/vrx_ws/src/vrx/vrx_ros -DCMAKE_INSTALL_PREFIX=/home/koki-22/ac_search/install

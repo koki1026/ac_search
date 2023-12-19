@@ -1,0 +1,2 @@
+Invoking command in '/home/koki-22/ac_search/build/com': /usr/bin/cmake --build /home/koki-22/ac_search/build/com -- -j16 -l16
+Invoked command in '/home/koki-22/ac_search/build/com' returned '2': /usr/bin/cmake --build /home/koki-22/ac_search/build/com -- -j16 -l16
