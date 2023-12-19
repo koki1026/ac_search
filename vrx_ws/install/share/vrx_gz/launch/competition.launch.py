@@ -17,6 +17,7 @@ from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.actions import OpaqueFunction
 from launch.substitutions import LaunchConfiguration
+from launch_ros.actions import Node
 import os
 
 import vrx_gz.launch
@@ -108,4 +109,12 @@ def generate_launch_description():
             default_value='',
             description='Additional arguments to be passed to gz sim. '),
         OpaqueFunction(function=launch),
+
+        Node(
+            package="ros_gz_bridge",
+            executable="parameter_bridge",
+            arguments=[
+                '/world/sydney_regatta/dynamic_pose/info@geometry_msgs/msg/PoseArray@gz.msgs.Pose_V',
+            ],
+        )
     ])
