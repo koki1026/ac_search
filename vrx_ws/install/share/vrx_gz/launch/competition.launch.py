@@ -115,6 +115,7 @@ def generate_launch_description():
             executable="parameter_bridge",
             arguments=[
                 '/world/sydney_regatta/dynamic_pose/info@geometry_msgs/msg/PoseArray@gz.msgs.Pose_V',
+                '/world/sydney_regatta/model/wamv/link/wamv/imu_wamv_link/sensor/imu_wamv_sensor/imu@sensor_msgs/msg/Imu@gz.msgs.IMU',
             ],
         )
     ])

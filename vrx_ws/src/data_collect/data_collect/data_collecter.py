@@ -51,24 +51,66 @@ class DatacollectNode(Node):
              '/world/sydney_regatta/dynamic_pose/info',
              self.pose_data_callback,
              10
-
+        )
+        self.collect_LeftTPose_sub = self.create_subscription(
+            Float64,
+            '/wamv/thrusters/left/pos',
+            self.left_thraster_pos_data_callback,
+            10
+        )
+        self.collect_Pose_sub = self.create_subscription(
+            Float64,
+            '/wamv/thrusters/left/thrust',
+            self.left_thraster_trust_data_callback,
+            10
+        )
+        self.collect_Pose_sub = self.create_subscription(
+            Float64,
+            '/wamv/thrusters/right/pos',
+            self.right_thraster_pos_data_callback,
+            10
+        )
+        self.collect_Pose_sub = self.create_subscription(
+            Float64,
+            '/wamv/thrusters/right/thrust',
+            self.right_thraster_trust_data_callback,
+            10
         )
 
         self.myAng = 0.0  #現在のyaw角を保存
         self.myPosX = 0.0 #自分のx位置を保存
         self.myPosY = 0.0 #自分のy位置を保存
-        self.myLeftPos = 0.0 #自分の左スラスター出力（横）を保存
-        self.myRightPos = 0.0 #自分の右スラスター出力（横）を保存
-        self.myLeftTrust = 0.0 #自分の左スラスター出力（縦）を保存
-        self.myRightTrust = 0.0 #自分の右スラスター出力（縦）を保存
+        self.myLeftTPos = 0.0 #自分の左スラスター出力（横）を保存
+        self.myRightTPos = 0.0 #自分の右スラスター出力（横）を保存
+        self.myLeftTTrust = 0.0 #自分の左スラスター出力（縦）を保存
+        self.myRightTTrust = 0.0 #自分の右スラスター出力（縦）を保存
         self.myVelX = 0.0 #自分のX方向速度を保存
         self.myVelY = 0.0 #自分のY方向速度を保存
         self.myAngVel = 0.0 #自分のxy平面角速度を保存
         self.goalPosX = 0.0 #ゴールのx位置を保存
         self.goalPosY = 0.0 #ゴールのy位置を保存
+        self.PosDegX = 0.0 #ゴールまでのx距離を保存
+        self.PosDegY = 0.0 #ゴールまでのy距離を保存
 
     def imu_data_callback(self,msg):
         angle_ = euler_from_quaternion(msg.orientation)
         self.myAng = angle_[2]
+        
     def pose_data_callback(self,msg):
-        a = msg
+        self.myPosX = msg.poses[4].position.x
+        self.myPosY = msg.poses[4].position.y
+        self.goalPosX = msg.poses[0].position.x
+        self.goalPosY = msg.poses[0].position.y
+
+    def left_thraster_pos_data_callback(self,msg):
+        self.myLeftTPos = msg.data
+
+    def right_thraster_pos_data_callback(self,msg):
+        self.myRightTPos = msg.data
+
+    def left_thraster_trust_data_callback(self,msg):
+        self.myLeftTTrust = msg.data
+
+    def right_thraster_trust_data_callback(self,msg):
+        self.myRightTTrust = msg.data
+         
