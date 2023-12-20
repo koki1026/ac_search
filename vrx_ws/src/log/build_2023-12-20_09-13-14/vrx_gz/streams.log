@@ -1,0 +1,582 @@
+[0.008s] Invoking command in '/home/koki-22/ac_search/vrx_ws/src/build/vrx_gz': AMENT_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:/home/koki-22/ac_search/vrx_ws/install:/opt/ros/humble PYTHONPATH=/home/koki-22/ac_search/vrx_ws/src/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /home/koki-22/ac_search/vrx_ws/src/vrx/vrx_gz -DCMAKE_INSTALL_PREFIX=/home/koki-22/ac_search/vrx_ws/src/install
+[0.047s] -- The C compiler identification is GNU 11.4.0
+[0.087s] -- The CXX compiler identification is GNU 11.4.0
+[0.092s] -- Detecting C compiler ABI info
+[0.142s] -- Detecting C compiler ABI info - done
+[0.148s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.149s] -- Detecting C compile features
+[0.149s] -- Detecting C compile features - done
+[0.152s] -- Detecting CXX compiler ABI info
+[0.211s] -- Detecting CXX compiler ABI info - done
+[0.217s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.218s] -- Detecting CXX compile features
+[0.218s] -- Detecting CXX compile features - done
+[0.220s] -- Found ament_cmake: 1.3.3 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.349s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.428s] -- Looking for gz-sim7 -- found version 7.6.0
+[0.448s] -- Searching for dependencies of gz-sim7
+[0.453s] -- Looking for sdformat13 -- found version 13.6.0
+[0.453s] -- Searching for dependencies of sdformat13
+[0.459s] -- Checking for module 'tinyxml2'
+[0.470s] --   Found tinyxml2, version 9.0.0
+[0.497s] -- Looking for gz-math7 -- found version 7.3.0
+[0.498s] -- Searching for dependencies of gz-math7
+[0.500s] -- Looking for gz-utils2 -- found version 2.1.0
+[0.500s] -- Searching for dependencies of gz-utils2
+[0.502s] -- Looking for gz-utils2 -- found version 2.1.0
+[0.502s] -- Searching for dependencies of gz-utils2
+[0.502s] -- Searching for <gz-utils2> component [cli]
+[0.505s] -- Looking for gz-utils2-cli -- found version 2.1.0
+[0.505s] -- Searching for dependencies of gz-utils2-cli
+[0.508s] -- Looking for gz-plugin2 -- found version 2.0.2
+[0.509s] -- Searching for dependencies of gz-plugin2
+[0.509s] -- Looking for gz-utils2 -- found version 2.1.0
+[0.510s] -- Searching for <gz-plugin2> component [loader]
+[0.512s] -- Looking for gz-plugin2-loader -- found version 2.0.2
+[0.513s] -- Searching for dependencies of gz-plugin2-loader
+[0.513s] -- Searching for <gz-plugin2> component [register]
+[0.515s] -- Looking for gz-plugin2-register -- found version 2.0.2
+[0.516s] -- Searching for dependencies of gz-plugin2-register
+[0.518s] -- Looking for gz-transport12 -- found version 12.2.1
+[0.518s] -- Searching for dependencies of gz-transport12
+[0.653s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+[0.662s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[0.665s] -- Checking for module 'libzmq >= 4'
+[0.673s] --   Found libzmq , version 4.3.4
+[0.699s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[0.704s] -- Checking for module 'uuid'
+[0.714s] --   Found uuid, version 2.37.2
+[0.739s] -- Found UUID: TRUE  
+[0.739s] -- Looking for gz-utils2 -- found version 2.1.0
+[0.742s] -- Looking for gz-msgs9 -- found version 9.5.0
+[0.742s] -- Searching for dependencies of gz-msgs9
+[0.761s] -- Looking for gz-math7 -- found version 7.3.0
+[0.765s] -- Searching for <gz-transport12> component [log]
+[0.774s] -- Looking for gz-transport12-log -- found version 12.2.1
+[0.775s] -- Searching for dependencies of gz-transport12-log
+[0.777s] -- Searching for <gz-transport12> component [parameters]
+[0.782s] -- Looking for gz-transport12-parameters -- found version 12.2.1
+[0.783s] -- Searching for dependencies of gz-transport12-parameters
+[0.785s] -- Looking for gz-msgs9 -- found version 9.5.0
+[0.790s] -- Looking for gz-common5 -- found version 5.4.2
+[0.790s] -- Searching for dependencies of gz-common5
+[0.791s] -- Looking for gz-utils2 -- found version 2.1.0
+[0.791s] -- Looking for dlfcn.h - found
+[0.793s] -- Looking for libdl - found
+[0.794s] -- Found DL: TRUE  
+[0.801s] -- Searching for <gz-common5> component [profiler]
+[0.804s] -- Looking for gz-common5-profiler -- found version 5.4.2
+[0.804s] -- Searching for dependencies of gz-common5-profiler
+[0.805s] -- Searching for <gz-common5> component [events]
+[0.807s] -- Looking for gz-common5-events -- found version 5.4.2
+[0.807s] -- Searching for dependencies of gz-common5-events
+[0.807s] -- Looking for gz-math7 -- found version 7.3.0
+[0.808s] -- Searching for <gz-common5> component [av]
+[0.810s] -- Looking for gz-common5-av -- found version 5.4.2
+[0.810s] -- Searching for dependencies of gz-common5-av
+[0.814s] -- Checking for module 'libswscale'
+[0.822s] --   Found libswscale, version 5.9.100
+[0.840s] -- Found SWSCALE: TRUE  
+[0.844s] -- Checking for module 'libavdevice >= 56.4.100'
+[0.852s] --   Found libavdevice , version 58.13.100
+[0.874s] -- Found AVDEVICE: TRUE (Required is at least version "56.4.100") 
+[0.877s] -- Checking for module 'libavformat'
+[0.885s] --   Found libavformat, version 58.76.100
+[0.906s] -- Found AVFORMAT: TRUE  
+[0.909s] -- Checking for module 'libavcodec'
+[0.916s] --   Found libavcodec, version 58.134.100
+[0.936s] -- Found AVCODEC: TRUE  
+[0.939s] -- Checking for module 'libavutil'
+[0.947s] --   Found libavutil, version 56.70.100
+[0.965s] -- Found AVUTIL: TRUE  
+[0.966s] -- Searching for <gz-common5> component [io]
+[0.968s] -- Looking for gz-common5-io -- found version 5.4.2
+[0.969s] -- Searching for dependencies of gz-common5-io
+[0.971s] -- Looking for gz-fuel_tools8 -- found version 8.1.0
+[0.971s] -- Searching for dependencies of gz-fuel_tools8
+[1.022s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  
+[1.029s] -- Checking for module 'jsoncpp'
+[1.038s] --   Found jsoncpp, version 1.9.5
+[1.058s] -- Found JSONCPP: TRUE  
+[1.062s] -- Checking for module 'libzip'
+[1.070s] --   Found libzip, version 1.7.3
+[1.092s] -- Found ZIP: TRUE  
+[1.092s] -- Looking for gz-utils2 -- found version 2.1.0
+[1.093s] -- Looking for gz-common5 -- found version 5.4.2
+[1.093s] -- Searching for dependencies of gz-common5
+[1.093s] -- Looking for gz-utils2 -- found version 2.1.0
+[1.093s] -- Looking for dlfcn.h - found
+[1.094s] -- Looking for libdl - found
+[1.099s] -- Searching for <gz-common5> component [testing]
+[1.101s] -- Looking for gz-common5-testing -- found version 5.4.2
+[1.101s] -- Searching for dependencies of gz-common5-testing
+[1.102s] -- Looking for gz-math7 -- found version 7.3.0
+[1.102s] -- Looking for gz-msgs9 -- found version 9.5.0
+[1.105s] -- Looking for gz-gui7 -- found version 7.2.1
+[1.105s] -- Searching for dependencies of gz-gui7
+[1.122s] -- Looking for gz-utils2 -- found version 2.1.0
+[1.122s] -- Looking for gz-math7 -- found version 7.3.0
+[1.123s] -- Looking for gz-common5 -- found version 5.4.2
+[1.123s] -- Looking for gz-plugin2 -- found version 2.0.2
+[1.124s] -- Looking for gz-transport12 -- found version 12.2.1
+[1.126s] -- Looking for gz-rendering7 -- found version 7.4.2
+[1.126s] -- Searching for dependencies of gz-rendering7
+[1.127s] -- Looking for gz-math7 -- found version 7.3.0
+[1.127s] -- Searching for dependencies of gz-math7
+[1.128s] -- Looking for gz-utils2 -- found version 2.1.0
+[1.128s] -- Searching for <gz-math7> component [eigen3]
+[1.130s] -- Looking for gz-math7-eigen3 -- found version 7.3.0
+[1.130s] -- Searching for dependencies of gz-math7-eigen3
+[1.137s] -- Looking for gz-common5 -- found version 5.4.2
+[1.137s] -- Searching for dependencies of gz-common5
+[1.138s] -- Looking for gz-utils2 -- found version 2.1.0
+[1.138s] -- Looking for dlfcn.h - found
+[1.138s] -- Looking for libdl - found
+[1.143s] -- Searching for <gz-common5> component [graphics]
+[1.145s] -- Looking for gz-common5-graphics -- found version 5.4.2
+[1.146s] -- Searching for dependencies of gz-common5-graphics
+[1.146s] -- Looking for gz-math7 -- found version 7.3.0
+[1.152s] -- Found GzAssimp: TRUE (found version "5.2.0") 
+[1.152s] -- Searching for <gz-common5> component [events]
+[1.153s] -- Searching for <gz-common5> component [geospatial]
+[1.155s] -- Looking for gz-common5-geospatial -- found version 5.4.2
+[1.155s] -- Searching for dependencies of gz-common5-geospatial
+[1.155s] -- Looking for gz-math7 -- found version 7.3.0
+[1.156s] -- Looking for gz-common5 -- found version 5.4.2
+[1.157s] -- Looking for gz-plugin2 -- found version 2.0.2
+[1.157s] -- Searching for dependencies of gz-plugin2
+[1.158s] -- Looking for gz-utils2 -- found version 2.1.0
+[1.158s] -- Searching for <gz-plugin2> component [all]
+[1.160s] -- Looking for all libraries of gz-plugin2 -- found version 2.0.2
+[1.161s] -- Looking for gz-plugin2 -- found version 2.0.2
+[1.162s] -- Looking for gz-utils2 -- found version 2.1.0
+[1.167s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL 
+[1.168s] -- Looking for gz-msgs9 -- found version 9.5.0
+[1.196s] -- Looking for gz-physics6 -- found version 6.5.1
+[1.197s] -- Searching for dependencies of gz-physics6
+[1.197s] -- Looking for gz-math7 -- found version 7.3.0
+[1.197s] -- Looking for gz-plugin2 -- found version 2.0.2
+[1.198s] -- Looking for gz-utils2 -- found version 2.1.0
+[1.199s] -- Searching for <gz-physics6> component [heightmap]
+[1.201s] -- Looking for gz-physics6-heightmap -- found version 6.5.1
+[1.201s] -- Searching for dependencies of gz-physics6-heightmap
+[1.202s] -- Looking for gz-common5 -- found version 5.4.2
+[1.202s] -- Searching for <gz-physics6> component [mesh]
+[1.205s] -- Looking for gz-physics6-mesh -- found version 6.5.1
+[1.205s] -- Searching for dependencies of gz-physics6-mesh
+[1.206s] -- Looking for gz-common5 -- found version 5.4.2
+[1.206s] -- Searching for <gz-physics6> component [sdf]
+[1.208s] -- Looking for gz-physics6-sdf -- found version 6.5.1
+[1.209s] -- Searching for dependencies of gz-physics6-sdf
+[1.209s] -- Looking for sdformat13 -- found version 13.6.0
+[1.213s] -- Looking for gz-sensors7 -- found version 7.3.0
+[1.213s] -- Searching for dependencies of gz-sensors7
+[1.227s] -- Looking for gz-math7 -- found version 7.3.0
+[1.227s] -- Looking for gz-common5 -- found version 5.4.2
+[1.228s] -- Looking for gz-transport12 -- found version 12.2.1
+[1.228s] -- Looking for gz-rendering7 -- found version 7.4.2
+[1.229s] -- Looking for gz-msgs9 -- found version 9.5.0
+[1.229s] -- Looking for sdformat13 -- found version 13.6.0
+[1.230s] -- Searching for <gz-sensors7> component [air_pressure]
+[1.232s] -- Looking for gz-sensors7-air_pressure -- found version 7.3.0
+[1.233s] -- Searching for dependencies of gz-sensors7-air_pressure
+[1.233s] -- Searching for <gz-sensors7> component [air_speed]
+[1.235s] -- Looking for gz-sensors7-air_speed -- found version 7.3.0
+[1.236s] -- Searching for dependencies of gz-sensors7-air_speed
+[1.236s] -- Searching for <gz-sensors7> component [altimeter]
+[1.239s] -- Looking for gz-sensors7-altimeter -- found version 7.3.0
+[1.239s] -- Searching for dependencies of gz-sensors7-altimeter
+[1.240s] -- Searching for <gz-sensors7> component [imu]
+[1.242s] -- Looking for gz-sensors7-imu -- found version 7.3.0
+[1.242s] -- Searching for dependencies of gz-sensors7-imu
+[1.243s] -- Searching for <gz-sensors7> component [force_torque]
+[1.245s] -- Looking for gz-sensors7-force_torque -- found version 7.3.0
+[1.246s] -- Searching for dependencies of gz-sensors7-force_torque
+[1.246s] -- Searching for <gz-sensors7> component [logical_camera]
+[1.248s] -- Looking for gz-sensors7-logical_camera -- found version 7.3.0
+[1.249s] -- Searching for dependencies of gz-sensors7-logical_camera
+[1.249s] -- Searching for <gz-sensors7> component [magnetometer]
+[1.252s] -- Looking for gz-sensors7-magnetometer -- found version 7.3.0
+[1.252s] -- Searching for dependencies of gz-sensors7-magnetometer
+[1.253s] -- Searching for <gz-sensors7> component [navsat]
+[1.255s] -- Looking for gz-sensors7-navsat -- found version 7.3.0
+[1.256s] -- Searching for dependencies of gz-sensors7-navsat
+[1.256s] -- Searching for <gz-sensors7> component [rendering]
+[1.258s] -- Looking for gz-sensors7-rendering -- found version 7.3.0
+[1.259s] -- Searching for dependencies of gz-sensors7-rendering
+[1.259s] -- Searching for <gz-sensors7> component [lidar]
+[1.262s] -- Looking for gz-sensors7-lidar -- found version 7.3.0
+[1.262s] -- Searching for dependencies of gz-sensors7-lidar
+[1.262s] -- Looking for gz-sensors7 -- found version 7.3.0
+[1.263s] -- Searching for <gz-sensors7> component [gpu_lidar]
+[1.265s] -- Looking for gz-sensors7-gpu_lidar -- found version 7.3.0
+[1.266s] -- Searching for dependencies of gz-sensors7-gpu_lidar
+[1.266s] -- Looking for gz-sensors7 -- found version 7.3.0
+[1.267s] -- Searching for <gz-sensors7> component [camera]
+[1.269s] -- Looking for gz-sensors7-camera -- found version 7.3.0
+[1.269s] -- Searching for dependencies of gz-sensors7-camera
+[1.270s] -- Looking for gz-sensors7 -- found version 7.3.0
+[1.270s] -- Searching for <gz-sensors7> component [boundingbox_camera]
+[1.273s] -- Looking for gz-sensors7-boundingbox_camera -- found version 7.3.0
+[1.273s] -- Searching for dependencies of gz-sensors7-boundingbox_camera
+[1.274s] -- Searching for <gz-sensors7> component [segmentation_camera]
+[1.277s] -- Looking for gz-sensors7-segmentation_camera -- found version 7.3.0
+[1.277s] -- Searching for dependencies of gz-sensors7-segmentation_camera
+[1.278s] -- Searching for <gz-sensors7> component [depth_camera]
+[1.280s] -- Looking for gz-sensors7-depth_camera -- found version 7.3.0
+[1.281s] -- Searching for dependencies of gz-sensors7-depth_camera
+[1.281s] -- Looking for gz-sensors7 -- found version 7.3.0
+[1.282s] -- Searching for <gz-sensors7> component [rgbd_camera]
+[1.284s] -- Looking for gz-sensors7-rgbd_camera -- found version 7.3.0
+[1.285s] -- Searching for dependencies of gz-sensors7-rgbd_camera
+[1.285s] -- Looking for gz-sensors7 -- found version 7.3.0
+[1.286s] -- Searching for <gz-sensors7> component [thermal_camera]
+[1.288s] -- Looking for gz-sensors7-thermal_camera -- found version 7.3.0
+[1.288s] -- Searching for dependencies of gz-sensors7-thermal_camera
+[1.288s] -- Looking for gz-sensors7 -- found version 7.3.0
+[1.289s] -- Searching for <gz-sensors7> component [wide_angle_camera]
+[1.291s] -- Looking for gz-sensors7-wide_angle_camera -- found version 7.3.0
+[1.292s] -- Searching for dependencies of gz-sensors7-wide_angle_camera
+[1.293s] -- Looking for gz-rendering7 -- found version 7.4.2
+[1.293s] -- Looking for gz-math7 -- found version 7.3.0
+[1.294s] -- Looking for gz-utils2 -- found version 2.1.0
+[1.309s] -- Looking for gz-common5 -- found version 5.4.2
+[1.309s] -- Looking for gz-fuel_tools8 -- found version 8.1.0
+[1.309s] -- Looking for gz-math7 -- found version 7.3.0
+[1.310s] -- Looking for gz-msgs9 -- found version 9.5.0
+[1.310s] -- Looking for gz-transport12 -- found version 12.2.1
+[1.311s] -- Looking for gz-plugin2 -- found version 2.0.2
+[1.311s] -- Looking for gz-rendering7 -- found version 7.4.2
+[1.311s] -- Looking for gz-sensors7 -- found version 7.3.0
+[1.312s] -- Looking for gz-utils2 -- found version 2.1.0
+[1.312s] -- Looking for sdformat13 -- found version 13.6.0
+[1.313s] -- Found std_msgs: 4.2.3 (/opt/ros/humble/share/std_msgs/cmake)
+[1.335s] -- Found rosidl_generator_c: 3.1.4 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.339s] -- Found rosidl_adapter: 3.1.4 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.345s] -- Found rosidl_generator_cpp: 3.1.4 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.356s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.371s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.530s] -- Configuring done
+[1.607s] -- Generating done
+[1.610s] -- Build files have been written to: /home/koki-22/ac_search/vrx_ws/src/build/vrx_gz
+[1.621s] Invoked command in '/home/koki-22/ac_search/vrx_ws/src/build/vrx_gz' returned '0': AMENT_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:/home/koki-22/ac_search/vrx_ws/install:/opt/ros/humble PYTHONPATH=/home/koki-22/ac_search/vrx_ws/src/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /home/koki-22/ac_search/vrx_ws/src/vrx/vrx_gz -DCMAKE_INSTALL_PREFIX=/home/koki-22/ac_search/vrx_ws/src/install
+[1.622s] Invoking command in '/home/koki-22/ac_search/vrx_ws/src/build/vrx_gz': AMENT_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:/home/koki-22/ac_search/vrx_ws/install:/opt/ros/humble PYTHONPATH=/home/koki-22/ac_search/vrx_ws/src/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/koki-22/ac_search/vrx_ws/src/build/vrx_gz -- -j16 -l16
+[1.660s] [  2%] [32mBuilding CXX object CMakeFiles/ScoringPlugin.dir/src/ScoringPlugin.cc.o[0m
+[1.661s] [  4%] [32mBuilding CXX object CMakeFiles/Waves.dir/src/Wavefield.cc.o[0m
+[1.667s] [  4%] Built target ament_cmake_python_copy_vrx_gz
+[1.948s] running egg_info
+[1.948s] creating vrx_gz.egg-info
+[1.949s] writing vrx_gz.egg-info/PKG-INFO
+[1.949s] writing dependency_links to vrx_gz.egg-info/dependency_links.txt
+[1.949s] writing top-level names to vrx_gz.egg-info/top_level.txt
+[1.949s] writing manifest file 'vrx_gz.egg-info/SOURCES.txt'
+[1.951s] reading manifest file 'vrx_gz.egg-info/SOURCES.txt'
+[1.952s] writing manifest file 'vrx_gz.egg-info/SOURCES.txt'
+[1.972s] [  4%] Built target ament_cmake_python_build_vrx_gz_egg
+[4.568s] [  6%] [32m[1mLinking CXX shared library libWaves.so[0m
+[4.767s] [  6%] Built target Waves
+[4.783s] [ 10%] [32mBuilding CXX object CMakeFiles/PolyhedraBuoyancyDrag.dir/src/PolyhedraBuoyancyDrag.cc.o[0m
+[4.783s] [ 12%] [32mBuilding CXX object CMakeFiles/PolyhedraBuoyancyDrag.dir/src/PolyhedronVolume.cc.o[0m
+[4.783s] [ 12%] [32mBuilding CXX object CMakeFiles/PolyhedraBuoyancyDrag.dir/src/ShapeVolume.cc.o[0m
+[5.649s] [ 14%] [32m[1mLinking CXX shared library libScoringPlugin.so[0m
+[5.895s] [ 14%] Built target ScoringPlugin
+[5.927s] [ 20%] [32mBuilding CXX object CMakeFiles/WayfindingScoringPlugin.dir/src/WayfindingScoringPlugin.cc.o[0m
+[5.927s] [ 20%] [32mBuilding CXX object CMakeFiles/StationkeepingScoringPlugin.dir/src/StationkeepingScoringPlugin.cc.o[0m
+[5.927s] [ 22%] [32mBuilding CXX object CMakeFiles/AcousticPerceptionScoringPlugin.dir/src/AcousticPerceptionScoringPlugin.cc.o[0m
+[5.927s] [ 25%] [32mBuilding CXX object CMakeFiles/AcousticPingerPlugin.dir/src/AcousticPingerPlugin.cc.o[0m
+[5.928s] [ 29%] [32mBuilding CXX object CMakeFiles/GymkhanaScoringPlugin.dir/src/GymkhanaScoringPlugin.cc.o[0m
+[5.928s] [ 29%] [32mBuilding CXX object CMakeFiles/LightBuoyPlugin.dir/src/LightBuoyPlugin.cc.o[0m
+[5.928s] [ 29%] [32mBuilding CXX object CMakeFiles/PerceptionScoringPlugin.dir/src/PerceptionScoringPlugin.cc.o[0m
+[5.928s] [ 31%] [32mBuilding CXX object CMakeFiles/AcousticTrackingScoringPlugin.dir/src/AcousticTrackingScoringPlugin.cc.o[0m
+[5.929s] [ 33%] [32mBuilding CXX object CMakeFiles/PublisherPlugin.dir/src/PublisherPlugin.cc.o[0m
+[5.930s] [ 35%] [32mBuilding CXX object CMakeFiles/PlacardPlugin.dir/src/PlacardPlugin.cc.o[0m
+[5.930s] [ 39%] [32mBuilding CXX object CMakeFiles/SimpleHydrodynamics.dir/src/SimpleHydrodynamics.cc.o[0m
+[5.931s] [ 39%] [32mBuilding CXX object CMakeFiles/BallShooterPlugin.dir/src/BallShooterPlugin.cc.o[0m
+[5.931s] [ 41%] [32mBuilding CXX object CMakeFiles/ScanDockScoringPlugin.dir/src/ScanDockScoringPlugin.cc.o[0m
+[5.940s] [ 43%] [32mBuilding CXX object CMakeFiles/NavigationScoringPlugin.dir/src/NavigationScoringPlugin.cc.o[0m
+[6.818s] [ 45%] [32mBuilding CXX object CMakeFiles/StationkeepingScoringPlugin.dir/src/WaypointMarkers.cc.o[0m
+[12.925s] [ 47%] [32m[1mLinking CXX shared library libPublisherPlugin.so[0m
+[13.595s] [ 47%] Built target PublisherPlugin
+[13.611s] [ 50%] [32mBuilding CXX object CMakeFiles/AcousticPerceptionScoringPlugin.dir/src/WaypointMarkers.cc.o[0m
+[13.729s] [ 52%] [32m[1mLinking CXX shared library libLightBuoyPlugin.so[0m
+[14.271s] [ 52%] Built target LightBuoyPlugin
+[14.309s] [ 54%] [32mBuilding CXX object CMakeFiles/Surface.dir/src/Surface.cc.o[0m
+[14.940s] [ 56%] [32m[1mLinking CXX shared library libGymkhanaScoringPlugin.so[0m
+[15.388s] [ 58%] [32m[1mLinking CXX shared library libPlacardPlugin.so[0m
+[15.582s] [ 58%] Built target GymkhanaScoringPlugin
+[15.618s] [ 60%] [32mBuilding CXX object CMakeFiles/USVWind.dir/src/USVWind.cc.o[0m
+[16.032s] [ 60%] Built target PlacardPlugin
+[16.101s] [ 62%] [32m[1mLinking CXX shared library libPolyhedraBuoyancyDrag.so[0m
+[16.114s] [ 64%] [32mBuilding CXX object CMakeFiles/WaveVisual.dir/src/WaveVisual.cc.o[0m
+[16.134s] [ 66%] [32m[1mLinking CXX shared library libSimpleHydrodynamics.so[0m
+[16.467s] [ 68%] [32mBuilding CXX object CMakeFiles/WildlifeScoringPlugin.dir/src/WildlifeScoringPlugin.cc.o[0m
+[16.646s] [ 68%] Built target SimpleHydrodynamics
+[16.664s] [ 70%] [32mBuilding CXX object CMakeFiles/WayfindingScoringPlugin.dir/src/WaypointMarkers.cc.o[0m
+[16.785s] [ 72%] [32m[1mLinking CXX shared library libPerceptionScoringPlugin.so[0m
+[16.854s] [ 75%] [32m[1mLinking CXX shared library libAcousticPingerPlugin.so[0m
+[16.868s] [ 75%] Built target PolyhedraBuoyancyDrag
+[16.884s] [ 77%] [32mBuilding CXX object CMakeFiles/AcousticTrackingScoringPlugin.dir/src/WaypointMarkers.cc.o[0m
+[17.591s] [ 77%] Built target AcousticPingerPlugin
+[17.619s] [ 77%] Built target PerceptionScoringPlugin
+[19.242s] [ 79%] [32m[1mLinking CXX shared library libStationkeepingScoringPlugin.so[0m
+[19.833s] [ 81%] [32m[1mLinking CXX shared library libNavigationScoringPlugin.so[0m
+[19.909s] [ 81%] Built target StationkeepingScoringPlugin
+[20.257s] [ 83%] [32m[1mLinking CXX shared library libBallShooterPlugin.so[0m
+[20.366s] [ 83%] Built target NavigationScoringPlugin
+[20.788s] [ 85%] [32m[1mLinking CXX shared library libScanDockScoringPlugin.so[0m
+[20.921s] [ 85%] Built target BallShooterPlugin
+[21.258s] [ 85%] Built target ScanDockScoringPlugin
+[21.760s] [ 87%] [32m[1mLinking CXX shared library libSurface.so[0m
+[21.921s] [ 89%] [32m[1mLinking CXX shared library libAcousticPerceptionScoringPlugin.so[0m
+[22.111s] [ 89%] Built target Surface
+[22.320s] [ 89%] Built target AcousticPerceptionScoringPlugin
+[23.500s] [ 91%] [32m[1mLinking CXX shared library libAcousticTrackingScoringPlugin.so[0m
+[23.566s] [ 93%] [32m[1mLinking CXX shared library libWayfindingScoringPlugin.so[0m
+[23.854s] [ 93%] Built target AcousticTrackingScoringPlugin
+[23.952s] [ 93%] Built target WayfindingScoringPlugin
+[24.186s] [ 95%] [32m[1mLinking CXX shared library libWildlifeScoringPlugin.so[0m
+[24.472s] [ 95%] Built target WildlifeScoringPlugin
+[24.846s] [ 97%] [32m[1mLinking CXX shared library libWaveVisual.so[0m
+[25.101s] [ 97%] Built target WaveVisual
+[25.110s] [100%] [32m[1mLinking CXX shared library libUSVWind.so[0m
+[25.320s] [100%] Built target USVWind
+[25.329s] Invoked command in '/home/koki-22/ac_search/vrx_ws/src/build/vrx_gz' returned '0': AMENT_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:/home/koki-22/ac_search/vrx_ws/install:/opt/ros/humble PYTHONPATH=/home/koki-22/ac_search/vrx_ws/src/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/koki-22/ac_search/vrx_ws/src/build/vrx_gz -- -j16 -l16
+[25.388s] Invoking command in '/home/koki-22/ac_search/vrx_ws/src/build/vrx_gz': AMENT_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:/home/koki-22/ac_search/vrx_ws/install:/opt/ros/humble PYTHONPATH=/home/koki-22/ac_search/vrx_ws/src/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/koki-22/ac_search/vrx_ws/src/build/vrx_gz
+[25.394s] -- Install configuration: ""
+[25.394s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/environment/resource_paths.dsv
+[25.394s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/environment/resource_paths.sh
+[25.395s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libWaves.so
+[25.397s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libWaves.so" to ""
+[25.397s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libPolyhedraBuoyancyDrag.so
+[25.399s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libPolyhedraBuoyancyDrag.so" to ""
+[25.399s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libScoringPlugin.so
+[25.402s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libScoringPlugin.so" to ""
+[25.402s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libStationkeepingScoringPlugin.so
+[25.405s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libStationkeepingScoringPlugin.so" to ""
+[25.405s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libWayfindingScoringPlugin.so
+[25.408s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libWayfindingScoringPlugin.so" to ""
+[25.408s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libAcousticPerceptionScoringPlugin.so
+[25.411s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libAcousticPerceptionScoringPlugin.so" to ""
+[25.411s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libAcousticTrackingScoringPlugin.so
+[25.413s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libAcousticTrackingScoringPlugin.so" to ""
+[25.413s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libAcousticPingerPlugin.so
+[25.416s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libAcousticPingerPlugin.so" to ""
+[25.416s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libBallShooterPlugin.so
+[25.419s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libBallShooterPlugin.so" to ""
+[25.419s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libLightBuoyPlugin.so
+[25.421s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libLightBuoyPlugin.so" to ""
+[25.421s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libNavigationScoringPlugin.so
+[25.423s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libNavigationScoringPlugin.so" to ""
+[25.423s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libGymkhanaScoringPlugin.so
+[25.425s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libGymkhanaScoringPlugin.so" to ""
+[25.425s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libPerceptionScoringPlugin.so
+[25.428s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libPerceptionScoringPlugin.so" to ""
+[25.428s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libPlacardPlugin.so
+[25.430s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libPlacardPlugin.so" to ""
+[25.430s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libPublisherPlugin.so
+[25.432s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libPublisherPlugin.so" to ""
+[25.432s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libScanDockScoringPlugin.so
+[25.435s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libScanDockScoringPlugin.so" to ""
+[25.435s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libSimpleHydrodynamics.so
+[25.437s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libSimpleHydrodynamics.so" to ""
+[25.437s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libSurface.so
+[25.439s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libSurface.so" to ""
+[25.439s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libUSVWind.so
+[25.441s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libUSVWind.so" to ""
+[25.441s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libWaveVisual.so
+[25.443s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libWaveVisual.so" to ""
+[25.444s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/lib/libWildlifeScoringPlugin.so
+[25.446s] -- Set runtime path of "/home/koki-22/ac_search/vrx_ws/src/install/lib/libWildlifeScoringPlugin.so" to ""
+[25.446s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/environment/pythonpath.sh
+[25.446s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/environment/pythonpath.dsv
+[25.446s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz-0.0.0-py3.10.egg-info
+[25.446s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz-0.0.0-py3.10.egg-info/SOURCES.txt
+[25.447s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz-0.0.0-py3.10.egg-info/dependency_links.txt
+[25.447s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz-0.0.0-py3.10.egg-info/top_level.txt
+[25.447s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz-0.0.0-py3.10.egg-info/PKG-INFO
+[25.447s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz
+[25.447s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/launch.py
+[25.447s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/bridges.py
+[25.447s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/__init__.py
+[25.448s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/bridge.py
+[25.448s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/model.py
+[25.448s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/payload_bridges.py
+[25.481s] Listing '/home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz'...
+[25.481s] Compiling '/home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/__init__.py'...
+[25.481s] Compiling '/home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/bridge.py'...
+[25.481s] Compiling '/home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/bridges.py'...
+[25.481s] Compiling '/home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/launch.py'...
+[25.482s] Compiling '/home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/model.py'...
+[25.482s] Compiling '/home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/payload_bridges.py'...
+[25.486s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/config
+[25.486s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/config/wamv.yaml
+[25.486s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/launch
+[25.486s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/launch/spawn_config.launch.py
+[25.487s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/launch/spawn.launch.py
+[25.487s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/launch/usv_joy_teleop.launch.py
+[25.487s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/launch/competition.launch.py
+[25.487s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models
+[25.487s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_1
+[25.487s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_1/model.config
+[25.488s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_1/model.sdf
+[25.488s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_2022_base
+[25.488s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_2022_base/model.config
+[25.488s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_2022_base/model.sdf
+[25.488s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/symbol_triangle
+[25.488s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/symbol_triangle/model.config
+[25.488s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/symbol_triangle/mesh
+[25.488s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/symbol_triangle/mesh/triangle.dae
+[25.489s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/symbol_triangle/model.sdf
+[25.489s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb
+[25.489s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/model.config
+[25.489s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh
+[25.489s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/LightTower_Roughness.png
+[25.490s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/LightTower_Normal.png
+[25.496s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/LightTower_Opacity.png
+[25.496s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/LightTower_Albedo.png
+[25.499s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/robotx_light_buoy.dae
+[25.500s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/LightTower_Metalness.png
+[25.500s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/model.sdf
+[25.501s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_2022
+[25.501s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_2022/model.config
+[25.501s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_2022/model.sdf
+[25.501s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/platform
+[25.501s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/platform/model.config
+[25.501s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/platform/model.sdf
+[25.502s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/placard_2022
+[25.502s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/placard_2022/meshes
+[25.502s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/placard_2022/meshes/placard_2022.dae
+[25.502s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/placard_2022/model.config
+[25.502s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/placard_2022/materials
+[25.502s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/placard_2022/materials/textures
+[25.502s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/placard_2022/materials/textures/Placard.png
+[25.502s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/placard_2022/model.sdf
+[25.502s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/obstacle_course
+[25.502s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/obstacle_course/model.config
+[25.503s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/obstacle_course/model.sdf
+[25.503s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_5
+[25.503s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_5/model.config
+[25.503s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_5/model.sdf
+[25.503s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves
+[25.503s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/meshes
+[25.503s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/meshes/waterlow.dae
+[25.516s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/model.config
+[25.517s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/materials
+[25.517s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/materials/programs
+[25.517s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/materials/programs/GerstnerWaves_fs_330.glsl
+[25.517s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/materials/programs/GerstnerWaves_vs_330.glsl
+[25.517s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/materials/textures
+[25.517s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/materials/textures/wave_normals.dds
+[25.517s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/materials/textures/skybox_lowres.dds
+[25.518s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/model.sdf
+[25.518s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/articulated_platform
+[25.518s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/articulated_platform/model.config
+[25.518s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/articulated_platform/model.sdf
+[25.518s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_bgr
+[25.519s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_bgr/model.config
+[25.519s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_bgr/model.sdf
+[25.519s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_bgy
+[25.519s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_bgy/model.config
+[25.519s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_bgy/model.sdf
+[25.519s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_ybr
+[25.519s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_ybr/model.config
+[25.520s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_ybr/model.sdf
+[25.520s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rbg
+[25.520s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rbg/model.config
+[25.520s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rbg/model.sdf
+[25.520s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4
+[25.520s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4/model.config
+[25.520s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4/mesh
+[25.520s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4/mesh/DockCubes_Roughness.png
+[25.521s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4/mesh/DockCubes_Metalness.png
+[25.521s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4/mesh/dock_block_4x4.dae
+[25.523s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4/mesh/DockCubes_Albedo.png
+[25.524s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4/mesh/DockCubes_Normal.png
+[25.563s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4/model.sdf
+[25.563s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgy
+[25.564s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgy/model.config
+[25.564s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgy/model.sdf
+[25.564s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_gbr
+[25.564s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_gbr/model.config
+[25.564s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_gbr/model.sdf
+[25.564s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_yrg
+[25.564s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_yrg/model.config
+[25.564s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_yrg/model.sdf
+[25.564s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_3
+[25.564s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_3/model.config
+[25.564s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_3/model.sdf
+[25.565s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_ygb
+[25.565s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_ygb/model.config
+[25.565s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_ygb/model.sdf
+[25.565s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_0
+[25.565s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_0/model.config
+[25.565s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_0/model.sdf
+[25.565s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_course_2023_phase3_1
+[25.565s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_course_2023_phase3_1/model.config
+[25.566s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_course_2023_phase3_1/model.sdf
+[25.566s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_2
+[25.566s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_2/model.config
+[25.566s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_2/model.sdf
+[25.566s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/entrance_exit
+[25.566s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/entrance_exit/model.config
+[25.566s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/entrance_exit/model.sdf
+[25.566s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_4
+[25.566s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_4/model.config
+[25.567s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_4/model.sdf
+[25.567s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_course_2023_phase3_2
+[25.567s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_course_2023_phase3_2/model.config
+[25.567s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_course_2023_phase3_2/model.sdf
+[25.567s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds
+[25.567s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/wildlife_task.sdf
+[25.567s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/acoustic_tracking_task.sdf
+[25.567s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/acoustic_perception_task.sdf
+[25.567s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/sydney_regatta.sdf
+[25.567s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/nbpark.sdf
+[25.568s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/wayfinding_task.sdf
+[25.568s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/navigation_task.sdf
+[25.568s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice
+[25.568s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_stationkeeping0_task.sdf
+[25.568s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_follow_path2_task.sdf
+[25.568s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_follow_path1_task.sdf
+[25.568s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_follow_path0_task.sdf
+[25.568s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_wayfinding2_task.sdf
+[25.568s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_scan_dock_deliver2_task.sdf
+[25.569s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_perception0_task.sdf
+[25.569s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_perception0_task.sdf
+[25.569s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_scan_dock_deliver1_task.sdf
+[25.569s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_tracking1_task.sdf
+[25.569s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_wayfinding1_task.sdf
+[25.569s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_wildlife2_task.sdf
+[25.569s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_scan_dock_deliver0_task.sdf
+[25.569s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_wildlife1_task.sdf
+[25.569s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_perception2_task.sdf
+[25.570s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_perception1_task.sdf
+[25.570s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_stationkeeping2_task.sdf
+[25.570s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_perception2_task.sdf
+[25.570s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_stationkeeping1_task.sdf
+[25.570s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_wayfinding0_task.sdf
+[25.570s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_tracking0_task.sdf
+[25.570s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_perception1_task.sdf
+[25.570s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_wildlife0_task.sdf
+[25.570s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_tracking2_task.sdf
+[25.571s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/perception_task.sdf
+[25.571s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/gymkhana_task.sdf
+[25.571s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/follow_path_task.sdf
+[25.571s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/scan_dock_deliver_task.sdf
+[25.571s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/stationkeeping_task.sdf
+[25.571s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/ament_index/resource_index/package_run_dependencies/vrx_gz
+[25.571s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/ament_index/resource_index/parent_prefix_path/vrx_gz
+[25.572s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/environment/ament_prefix_path.sh
+[25.572s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/environment/ament_prefix_path.dsv
+[25.572s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/environment/path.sh
+[25.572s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/environment/path.dsv
+[25.572s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/local_setup.bash
+[25.572s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/local_setup.sh
+[25.573s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/local_setup.zsh
+[25.573s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/local_setup.dsv
+[25.573s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/package.dsv
+[25.573s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/ament_index/resource_index/packages/vrx_gz
+[25.573s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/cmake/vrx_gzConfig.cmake
+[25.573s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/cmake/vrx_gzConfig-version.cmake
+[25.574s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/package.xml
+[25.577s] Invoked command in '/home/koki-22/ac_search/vrx_ws/src/build/vrx_gz' returned '0': AMENT_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:/home/koki-22/ac_search/vrx_ws/install:/opt/ros/humble PYTHONPATH=/home/koki-22/ac_search/vrx_ws/src/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/koki-22/ac_search/vrx_ws/src/build/vrx_gz

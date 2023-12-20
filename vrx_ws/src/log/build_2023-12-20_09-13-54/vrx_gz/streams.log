@@ -1,0 +1,264 @@
+[0.005s] Invoking command in '/home/koki-22/ac_search/vrx_ws/src/build/vrx_gz': AMENT_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:/home/koki-22/ac_search/vrx_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/home/koki-22/ac_search/vrx_ws/src/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/koki-22/ac_search/vrx_ws/src/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/koki-22/ac_search/vrx_ws/src/build/vrx_gz -- -j16 -l16
+[0.054s] [35m[1mConsolidate compiler generated dependencies of target ScoringPlugin[0m
+[0.055s] [35m[1mConsolidate compiler generated dependencies of target Waves[0m
+[0.074s] [  0%] Built target ament_cmake_python_copy_vrx_gz
+[0.078s] [  4%] Built target ScoringPlugin
+[0.082s] [  8%] Built target Waves
+[0.097s] [35m[1mConsolidate compiler generated dependencies of target StationkeepingScoringPlugin[0m
+[0.099s] [35m[1mConsolidate compiler generated dependencies of target AcousticPerceptionScoringPlugin[0m
+[0.099s] [35m[1mConsolidate compiler generated dependencies of target WayfindingScoringPlugin[0m
+[0.101s] [35m[1mConsolidate compiler generated dependencies of target AcousticTrackingScoringPlugin[0m
+[0.105s] [35m[1mConsolidate compiler generated dependencies of target AcousticPingerPlugin[0m
+[0.105s] [35m[1mConsolidate compiler generated dependencies of target NavigationScoringPlugin[0m
+[0.106s] [35m[1mConsolidate compiler generated dependencies of target LightBuoyPlugin[0m
+[0.107s] [35m[1mConsolidate compiler generated dependencies of target GymkhanaScoringPlugin[0m
+[0.107s] [35m[1mConsolidate compiler generated dependencies of target BallShooterPlugin[0m
+[0.110s] [35m[1mConsolidate compiler generated dependencies of target PolyhedraBuoyancyDrag[0m
+[0.111s] [35m[1mConsolidate compiler generated dependencies of target PerceptionScoringPlugin[0m
+[0.119s] [35m[1mConsolidate compiler generated dependencies of target PlacardPlugin[0m
+[0.135s] [35m[1mConsolidate compiler generated dependencies of target ScanDockScoringPlugin[0m
+[0.143s] [35m[1mConsolidate compiler generated dependencies of target PublisherPlugin[0m
+[0.155s] [ 14%] Built target StationkeepingScoringPlugin
+[0.155s] [ 18%] Built target LightBuoyPlugin
+[0.157s] [ 25%] Built target AcousticPerceptionScoringPlugin
+[0.160s] [ 29%] Built target AcousticPingerPlugin
+[0.160s] [ 33%] Built target BallShooterPlugin
+[0.162s] [ 41%] Built target PolyhedraBuoyancyDrag
+[0.163s] [ 47%] Built target WayfindingScoringPlugin
+[0.165s] [ 54%] Built target AcousticTrackingScoringPlugin
+[0.167s] [ 58%] Built target PerceptionScoringPlugin
+[0.169s] [ 66%] Built target PlacardPlugin
+[0.169s] [ 66%] Built target GymkhanaScoringPlugin
+[0.173s] [35m[1mConsolidate compiler generated dependencies of target SimpleHydrodynamics[0m
+[0.176s] [35m[1mConsolidate compiler generated dependencies of target WildlifeScoringPlugin[0m
+[0.176s] [35m[1mConsolidate compiler generated dependencies of target Surface[0m
+[0.177s] [ 70%] Built target ScanDockScoringPlugin
+[0.178s] [35m[1mConsolidate compiler generated dependencies of target USVWind[0m
+[0.178s] [35m[1mConsolidate compiler generated dependencies of target WaveVisual[0m
+[0.184s] [ 75%] Built target NavigationScoringPlugin
+[0.189s] [ 79%] Built target PublisherPlugin
+[0.218s] [ 83%] Built target SimpleHydrodynamics
+[0.235s] [ 87%] Built target WildlifeScoringPlugin
+[0.238s] [ 91%] Built target WaveVisual
+[0.241s] [ 95%] Built target Surface
+[0.251s] [100%] Built target USVWind
+[0.508s] running egg_info
+[0.508s] writing vrx_gz.egg-info/PKG-INFO
+[0.509s] writing dependency_links to vrx_gz.egg-info/dependency_links.txt
+[0.509s] writing top-level names to vrx_gz.egg-info/top_level.txt
+[0.511s] reading manifest file 'vrx_gz.egg-info/SOURCES.txt'
+[0.511s] writing manifest file 'vrx_gz.egg-info/SOURCES.txt'
+[0.538s] [100%] Built target ament_cmake_python_build_vrx_gz_egg
+[0.549s] Invoked command in '/home/koki-22/ac_search/vrx_ws/src/build/vrx_gz' returned '0': AMENT_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:/home/koki-22/ac_search/vrx_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/home/koki-22/ac_search/vrx_ws/src/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/koki-22/ac_search/vrx_ws/src/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/koki-22/ac_search/vrx_ws/src/build/vrx_gz -- -j16 -l16
+[0.621s] Invoking command in '/home/koki-22/ac_search/vrx_ws/src/build/vrx_gz': AMENT_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:/home/koki-22/ac_search/vrx_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/home/koki-22/ac_search/vrx_ws/src/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/koki-22/ac_search/vrx_ws/src/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/koki-22/ac_search/vrx_ws/src/build/vrx_gz
+[0.628s] -- Install configuration: ""
+[0.628s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/environment/resource_paths.dsv
+[0.629s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/environment/resource_paths.sh
+[0.629s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libWaves.so
+[0.629s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libPolyhedraBuoyancyDrag.so
+[0.629s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libScoringPlugin.so
+[0.629s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libStationkeepingScoringPlugin.so
+[0.629s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libWayfindingScoringPlugin.so
+[0.630s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libAcousticPerceptionScoringPlugin.so
+[0.630s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libAcousticTrackingScoringPlugin.so
+[0.630s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libAcousticPingerPlugin.so
+[0.630s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libBallShooterPlugin.so
+[0.631s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libLightBuoyPlugin.so
+[0.631s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libNavigationScoringPlugin.so
+[0.631s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libGymkhanaScoringPlugin.so
+[0.631s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libPerceptionScoringPlugin.so
+[0.632s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libPlacardPlugin.so
+[0.632s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libPublisherPlugin.so
+[0.632s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libScanDockScoringPlugin.so
+[0.632s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libSimpleHydrodynamics.so
+[0.632s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libSurface.so
+[0.633s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libUSVWind.so
+[0.633s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libWaveVisual.so
+[0.633s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/lib/libWildlifeScoringPlugin.so
+[0.633s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/environment/pythonpath.sh
+[0.634s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/environment/pythonpath.dsv
+[0.634s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz-0.0.0-py3.10.egg-info
+[0.634s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.634s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.634s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz-0.0.0-py3.10.egg-info/top_level.txt
+[0.634s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz-0.0.0-py3.10.egg-info/PKG-INFO
+[0.634s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz
+[0.634s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/launch.py
+[0.634s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/bridges.py
+[0.634s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/__init__.py
+[0.634s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/bridge.py
+[0.635s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/model.py
+[0.635s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz/payload_bridges.py
+[0.665s] Listing '/home/koki-22/ac_search/vrx_ws/src/install/local/lib/python3.10/dist-packages/vrx_gz'...
+[0.669s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/config
+[0.669s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/config/wamv.yaml
+[0.670s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/launch
+[0.670s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/launch/spawn_config.launch.py
+[0.670s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/launch/spawn.launch.py
+[0.670s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/launch/usv_joy_teleop.launch.py
+[0.670s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/launch/competition.launch.py
+[0.670s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models
+[0.671s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_1
+[0.671s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_1/model.config
+[0.671s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_1/model.sdf
+[0.671s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_2022_base
+[0.672s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_2022_base/model.config
+[0.672s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_2022_base/model.sdf
+[0.672s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/symbol_triangle
+[0.672s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/symbol_triangle/model.config
+[0.672s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/symbol_triangle/mesh
+[0.672s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/symbol_triangle/mesh/triangle.dae
+[0.673s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/symbol_triangle/model.sdf
+[0.673s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb
+[0.673s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/model.config
+[0.673s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh
+[0.673s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/LightTower_Roughness.png
+[0.673s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/LightTower_Normal.png
+[0.673s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/LightTower_Opacity.png
+[0.674s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/LightTower_Albedo.png
+[0.674s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/robotx_light_buoy.dae
+[0.674s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/LightTower_Metalness.png
+[0.674s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgb/model.sdf
+[0.674s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_2022
+[0.674s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_2022/model.config
+[0.674s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_2022/model.sdf
+[0.674s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/platform
+[0.674s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/platform/model.config
+[0.674s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/platform/model.sdf
+[0.674s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/placard_2022
+[0.674s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/placard_2022/meshes
+[0.674s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/placard_2022/meshes/placard_2022.dae
+[0.674s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/placard_2022/model.config
+[0.675s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/placard_2022/materials
+[0.675s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/placard_2022/materials/textures
+[0.675s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/placard_2022/materials/textures/Placard.png
+[0.675s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/placard_2022/model.sdf
+[0.675s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/obstacle_course
+[0.675s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/obstacle_course/model.config
+[0.675s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/obstacle_course/model.sdf
+[0.675s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_5
+[0.675s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_5/model.config
+[0.678s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_5/model.sdf
+[0.678s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves
+[0.679s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/meshes
+[0.679s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/meshes/waterlow.dae
+[0.679s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/model.config
+[0.679s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/materials
+[0.679s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/materials/programs
+[0.679s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/materials/programs/GerstnerWaves_fs_330.glsl
+[0.680s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/materials/programs/GerstnerWaves_vs_330.glsl
+[0.680s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/materials/textures
+[0.680s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/materials/textures/wave_normals.dds
+[0.680s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/materials/textures/skybox_lowres.dds
+[0.680s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/coast_waves/model.sdf
+[0.680s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/articulated_platform
+[0.680s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/articulated_platform/model.config
+[0.682s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/articulated_platform/model.sdf
+[0.683s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_bgr
+[0.683s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_bgr/model.config
+[0.683s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_bgr/model.sdf
+[0.683s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_bgy
+[0.683s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_bgy/model.config
+[0.683s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_bgy/model.sdf
+[0.684s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_ybr
+[0.684s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_ybr/model.config
+[0.685s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_ybr/model.sdf
+[0.685s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rbg
+[0.685s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rbg/model.config
+[0.685s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rbg/model.sdf
+[0.686s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4
+[0.686s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4/model.config
+[0.686s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4/mesh
+[0.688s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4/mesh/DockCubes_Roughness.png
+[0.688s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4/mesh/DockCubes_Metalness.png
+[0.688s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4/mesh/dock_block_4x4.dae
+[0.688s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4/mesh/DockCubes_Albedo.png
+[0.689s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4/mesh/DockCubes_Normal.png
+[0.689s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/dock_block_4x4/model.sdf
+[0.689s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgy
+[0.689s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgy/model.config
+[0.689s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_rgy/model.sdf
+[0.690s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_gbr
+[0.690s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_gbr/model.config
+[0.690s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_gbr/model.sdf
+[0.691s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_yrg
+[0.692s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_yrg/model.config
+[0.693s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_yrg/model.sdf
+[0.693s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_3
+[0.693s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_3/model.config
+[0.693s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_3/model.sdf
+[0.693s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_ygb
+[0.694s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_ygb/model.config
+[0.694s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/robotx_light_buoy_ygb/model.sdf
+[0.694s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_0
+[0.694s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_0/model.config
+[0.694s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_0/model.sdf
+[0.695s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_course_2023_phase3_1
+[0.696s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_course_2023_phase3_1/model.config
+[0.697s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_course_2023_phase3_1/model.sdf
+[0.697s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_2
+[0.697s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_2/model.config
+[0.697s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_2/model.sdf
+[0.698s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/entrance_exit
+[0.698s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/entrance_exit/model.config
+[0.698s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/entrance_exit/model.sdf
+[0.698s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_4
+[0.698s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_4/model.config
+[0.699s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_navigation_course_4/model.sdf
+[0.699s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_course_2023_phase3_2
+[0.699s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_course_2023_phase3_2/model.config
+[0.699s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/models/short_course_2023_phase3_2/model.sdf
+[0.699s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds
+[0.700s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/wildlife_task.sdf
+[0.700s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/acoustic_tracking_task.sdf
+[0.700s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/acoustic_perception_task.sdf
+[0.700s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/sydney_regatta.sdf
+[0.701s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/nbpark.sdf
+[0.701s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/wayfinding_task.sdf
+[0.701s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/navigation_task.sdf
+[0.701s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice
+[0.701s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_stationkeeping0_task.sdf
+[0.702s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_follow_path2_task.sdf
+[0.703s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_follow_path1_task.sdf
+[0.703s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_follow_path0_task.sdf
+[0.703s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_wayfinding2_task.sdf
+[0.703s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_scan_dock_deliver2_task.sdf
+[0.703s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_perception0_task.sdf
+[0.703s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_perception0_task.sdf
+[0.703s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_scan_dock_deliver1_task.sdf
+[0.703s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_tracking1_task.sdf
+[0.703s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_wayfinding1_task.sdf
+[0.703s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_wildlife2_task.sdf
+[0.703s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_scan_dock_deliver0_task.sdf
+[0.703s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_wildlife1_task.sdf
+[0.703s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_perception2_task.sdf
+[0.703s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_perception1_task.sdf
+[0.703s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_stationkeeping2_task.sdf
+[0.704s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_perception2_task.sdf
+[0.704s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_stationkeeping1_task.sdf
+[0.704s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_wayfinding0_task.sdf
+[0.704s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_tracking0_task.sdf
+[0.704s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_perception1_task.sdf
+[0.704s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_wildlife0_task.sdf
+[0.704s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_tracking2_task.sdf
+[0.704s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/perception_task.sdf
+[0.705s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/gymkhana_task.sdf
+[0.705s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/follow_path_task.sdf
+[0.705s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/scan_dock_deliver_task.sdf
+[0.705s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/worlds/stationkeeping_task.sdf
+[0.705s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/ament_index/resource_index/package_run_dependencies/vrx_gz
+[0.705s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/ament_index/resource_index/parent_prefix_path/vrx_gz
+[0.705s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/environment/ament_prefix_path.sh
+[0.705s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/environment/ament_prefix_path.dsv
+[0.705s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/environment/path.sh
+[0.705s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/environment/path.dsv
+[0.705s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/local_setup.bash
+[0.705s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/local_setup.sh
+[0.705s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/local_setup.zsh
+[0.706s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/local_setup.dsv
+[0.706s] -- Installing: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/package.dsv
+[0.706s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/ament_index/resource_index/packages/vrx_gz
+[0.706s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/cmake/vrx_gzConfig.cmake
+[0.706s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/cmake/vrx_gzConfig-version.cmake
+[0.706s] -- Up-to-date: /home/koki-22/ac_search/vrx_ws/src/install/share/vrx_gz/package.xml
+[0.706s] Invoked command in '/home/koki-22/ac_search/vrx_ws/src/build/vrx_gz' returned '0': AMENT_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/koki-22/ac_search/vrx_ws/src/install:/home/koki-22/ac_search/vrx_ws/install:/opt/ros/humble LD_LIBRARY_PATH=/home/koki-22/ac_search/vrx_ws/src/install/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/koki-22/ac_search/vrx_ws/src/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/koki-22/ac_search/vrx_ws/src/build/vrx_gz
