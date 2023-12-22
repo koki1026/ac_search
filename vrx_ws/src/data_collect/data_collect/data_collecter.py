@@ -82,70 +82,62 @@ class DatacollectNode(Node):
             self.onTick
         )
 
-        self.myAng = 0.0  #現在のyaw角を保存
+        self.goalPosX = 0.0 #ゴールのx位置を保存
+        self.goalPosY = 0.0 #ゴールのy位置を保存
         self.myPosX = 0.0 #自分のx位置を保存
         self.myPosY = 0.0 #自分のy位置を保存
+        self.PosDegX = 0.0 #ゴールまでのx距離を保存
+        self.PosDegY = 0.0 #ゴールまでのy距離を保存
+        self.myVelX = 0.0 #自分のX方向速度を保存
+        self.myVelY = 0.0 #自分のY方向速度を保存
+        self.myAng = 0.0  #現在のyaw角を保存
+        self.myAngVel = 0.0 #自分のxy平面角速度を保存
         self.myLeftTPos = 0.0 #自分の左スラスター出力（横）を保存
         self.myRightTPos = 0.0 #自分の右スラスター出力（横）を保存
         self.myLeftTTrust = 0.0 #自分の左スラスター出力（縦）を保存
         self.myRightTTrust = 0.0 #自分の右スラスター出力（縦）を保存
-        self.myVelX = 0.0 #自分のX方向速度を保存
-        self.myVelY = 0.0 #自分のY方向速度を保存
-        self.myAngVel = 0.0 #自分のxy平面角速度を保存
-        self.goalPosX = 0.0 #ゴールのx位置を保存
-        self.goalPosY = 0.0 #ゴールのy位置を保存
-        self.PosDegX = 0.0 #ゴールまでのx距離を保存
-        self.PosDegY = 0.0 #ゴールまでのy距離を保存
-        self.SmyAng = "0.0"  #現在のyaw角を保存
-        self.SmyPosX = "0.0" #自分のx位置を保存
-        self.SmyPosY = "0.0" #自分のy位置を保存
-        self.SmyLeftTPos = "0.0" #自分の左スラスター出力（横）を保存
-        self.SmyRightTPos = "0.0" #自分の右スラスター出力（横）を保存
-        self.SmyLeftTTrust = "0.0" #自分の左スラスター出力（縦）を保存
-        self.SmyRightTTrust = "0.0" #自分の右スラスター出力（縦）を保存
-        self.SmyVelX = "0.0" #自分のX方向速度を保存
-        self.SmyVelY = "0.0" #自分のY方向速度を保存
-        self.SmyAngVel = "0.0" #自分のxy平面角速度を保存
-        self.SgoalPosX = "0.0" #ゴールのx位置を保存
-        self.SgoalPosY = "0.0" #ゴールのy位置を保存
-        self.SPosDegX = "0.0" #ゴールまでのx距離を保存
-        self.SPosDegY = "0.0" #ゴールまでのy距離を保存
+
+        self.PoseHeaderStamp = 0.0
+        self.ImuHeaderStamp = 0.0
+        
 
     def imu_data_callback(self,msg):
+        time = msg.header.stamp.sec + ((msg.header.stamp.nanosec/1000000)*0.001)
+        timeDlta = time - self.ImuHeaderStamp
+        self.ImuHeaderStamp = time
         angle_ = euler_from_quaternion(msg.orientation)
+        self.myAngVel = (angle_[2] - self.myAng) * np.reciprocal(timeDlta)
         self.myAng = angle_[2]
-        self.SmyAng = str(self.myAng)
         
     def pose_data_callback(self,msg):
+        time = msg.header.stamp.sec + ((msg.header.stamp.nanosec/1000000)*0.001)
+        timeDlta = time - self.PoseHeaderStamp
+        self.PoseHeaderStamp = time
+        self.myVelX = (msg.poses[4].position.x - self.myPosX) * np.reciprocal(timeDlta)
+        self.myVelY = (msg.poses[4].position.y - self.myPosY) * np.reciprocal(timeDlta)
         self.myPosX = msg.poses[4].position.x
         self.myPosY = msg.poses[4].position.y
         self.goalPosX = msg.poses[0].position.x
         self.goalPosY = msg.poses[0].position.y
-        self.SmyPosX = str(self.myPosX)
-        self.SmyPosY = str(self.myPosY)
-        self.SgoalPosX = str(self.goalPosX)
-        self.SgoalPosY = str(self.goalPosY)
+        self.PosDegX = self.goalPosX - self.myPosX
+        self.PosDegY = self.goalPosY - self.myPosY
 
     def left_thraster_pos_data_callback(self,msg):
         self.myLeftTPos = msg.data
-        self.SmyLeftTPos = str(self.myLeftTPos)
 
     def right_thraster_pos_data_callback(self,msg):
         self.myRightTPos = msg.data
-        self.SmyRightTPos = str(self.myRightTPos)
 
     def left_thraster_trust_data_callback(self,msg):
         self.myLeftTTrust = msg.data
-        self.SmyLeftTTrust = str(self.myLeftTTrust)
 
     def right_thraster_trust_data_callback(self,msg):
         self.myRightTTrust = msg.data
-        self.SmyRightTTrust = str(self.myRightTTrust)
 
     def onTick(self):
         self.DATA_WRITE = self.get_parameter("data_write").value
         if(self.DATA_WRITE):
-            datalist = [self.SgoalPosX, " ", self.SgoalPosY, " ", self.SmyPosX, " ", self.SmyPosY, " ", self.SPosDegX, " ", self.SPosDegY, " ", self.SmyAng, '\n']
+            datalist = [str(self.goalPosX), " ", str(self.goalPosY), " ", str(self.myPosX), " ", str(self.myPosY), " ", str(self.PosDegX), " ", str(self.PosDegY), " ", str(self.myVelX), " ", str(self.myVelY), " ", str(self.myAng), " ", str(self.myAngVel), " ", str(self.myLeftTPos), " ", str(self.myLeftTTrust), " ", str(self.myRightTPos), " ", str(self.myRightTTrust),'\n']
             f = open('dataset.txt', 'a')
             f.writelines(datalist)
             f.close()
