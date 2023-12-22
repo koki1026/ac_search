@@ -1,7 +1,0 @@
-[0.043s] Invoking command in '/home/koki-22/ac_search/build/vrx_ros': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/koki-22/ac_search/build/vrx_ros -- -j16 -l16
-[0.460s] [ 50%] [32mBuilding CXX object CMakeFiles/optical_frame_publisher.dir/src/optical_frame_publisher.cc.o[0m
-[0.460s] [ 50%] [32mBuilding CXX object CMakeFiles/pose_tf_broadcaster.dir/src/pose_tf_broadcaster.cc.o[0m
-[7.090s] [ 75%] [32m[1mLinking CXX executable pose_tf_broadcaster[0m
-[7.449s] [ 75%] Built target pose_tf_broadcaster
-[9.578s] [100%] [32m[1mLinking CXX executable optical_frame_publisher[0m
-[10.027s] [100%] Built target optical_frame_publisher

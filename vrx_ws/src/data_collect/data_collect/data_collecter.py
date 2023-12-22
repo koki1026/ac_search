@@ -37,6 +37,9 @@ class DatacollectNode(Node):
     def __init__(self):
         super().__init__('agent_control_node')
 
+        self.declare_parameter("data_write",False)
+        self.DATA_WRITE = False
+
         self.collect_imu_sub = self.create_subscription(
             Imu,
             '/world/sydney_regatta/model/wamv/link/wamv/imu_wamv_link/sensor/imu_wamv_sensor/imu',
@@ -140,10 +143,12 @@ class DatacollectNode(Node):
         self.SmyRightTTrust = str(self.myRightTTrust)
 
     def onTick(self):
-        datalist = [self.SgoalPosX, " ", self.SgoalPosY, " ", self.SmyPosX, " ", self.SmyPosY, " ", self.SPosDegX, " ", self.SPosDegY, " ", self.SmyAng, '\n']
-        f = open('dataset.txt', 'a')
-        f.writelines(datalist)
-        f.close()
+        self.DATA_WRITE = self.get_parameter("data_write").value
+        if(self.DATA_WRITE):
+            datalist = [self.SgoalPosX, " ", self.SgoalPosY, " ", self.SmyPosX, " ", self.SmyPosY, " ", self.SPosDegX, " ", self.SPosDegY, " ", self.SmyAng, '\n']
+            f = open('dataset.txt', 'a')
+            f.writelines(datalist)
+            f.close()
        
 def main(args=None):
     rclpy.init(args=args)
