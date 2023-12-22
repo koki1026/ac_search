@@ -35,10 +35,20 @@ def euler_from_quaternion(quaternion):
 
 class DatacollectNode(Node):
     def __init__(self):
-        super().__init__('agent_control_node')
+        super().__init__('data_collect_node')
 
         self.declare_parameter("data_write",False)
         self.DATA_WRITE = False
+
+        self.declare_parameter("wave_direction",0.0)
+        self.declare_parameter("wave_gain",0.0)
+        self.declare_parameter("wave_period",0.0)
+        self.declare_parameter("wave_stepness",0.0)
+        self.waveParameterDirection = self.get_parameter("wave_direction").value #波の方向
+        self.waveParameterGain = self.get_parameter("wave_gain").value #波の上がり方
+        self.waveParameterPeriod = self.get_parameter("wave_period").value #波の周期（*2s）
+        self.waveParameterStepness = self.get_parameter("wave_stepness").value #波のピークの尖り具合
+
 
         self.collect_imu_sub = self.create_subscription(
             Imu,
@@ -77,6 +87,20 @@ class DatacollectNode(Node):
             10
         )
 
+        self.collect_windSpeed_sub = self.create_subscription(
+            Float64,
+            '/vrx/debug/wind/speed',
+            self.wind_speed_data_callback,
+            10
+        )
+
+        self.collect_windDirection_sub = self.create_subscription(
+            Float64,
+            '/vrx/debug/wind/direction',
+            self.wind_direction_data_callback,
+            10
+        )
+
         self.writeTimer = self.create_timer(
             0.01,
             self.onTick
@@ -96,6 +120,8 @@ class DatacollectNode(Node):
         self.myRightTPos = 0.0 #自分の右スラスター出力（横）を保存
         self.myLeftTTrust = 0.0 #自分の左スラスター出力（縦）を保存
         self.myRightTTrust = 0.0 #自分の右スラスター出力（縦）を保存
+        self.windSpeed = 0.0
+        self.windDirection = 0.0
 
         self.PoseHeaderStamp = 0.0
         self.ImuHeaderStamp = 0.0
@@ -134,10 +160,16 @@ class DatacollectNode(Node):
     def right_thraster_trust_data_callback(self,msg):
         self.myRightTTrust = msg.data
 
+    def wind_direction_data_callback(self,msg):
+        self.windDirection = msg.data
+
+    def wind_speed_data_callback(self,msg):
+        self.windSpeed = msg.data
+
     def onTick(self):
         self.DATA_WRITE = self.get_parameter("data_write").value
         if(self.DATA_WRITE):
-            datalist = [str(self.goalPosX), " ", str(self.goalPosY), " ", str(self.myPosX), " ", str(self.myPosY), " ", str(self.PosDegX), " ", str(self.PosDegY), " ", str(self.myVelX), " ", str(self.myVelY), " ", str(self.myAng), " ", str(self.myAngVel), " ", str(self.myLeftTPos), " ", str(self.myLeftTTrust), " ", str(self.myRightTPos), " ", str(self.myRightTTrust),'\n']
+            datalist = [str(self.goalPosX), " ", str(self.goalPosY), " ", str(self.myPosX), " ", str(self.myPosY), " ", str(self.PosDegX), " ", str(self.PosDegY), " ", str(self.myVelX), " ", str(self.myVelY), " ", str(self.myAng), " ", str(self.myAngVel), " ", str(self.myLeftTPos), " ", str(self.myLeftTTrust), " ", str(self.myRightTPos), " ", str(self.myRightTTrust), " ", str(self.waveParameterDirection), " ", str(self.waveParameterGain), " ", str(self.waveParameterPeriod), " ", str(self.waveParameterStepness), " ", str(self.windDirection), " ", str(self.windSpeed),'\n']
             f = open('dataset.txt', 'a')
             f.writelines(datalist)
             f.close()
