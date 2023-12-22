@@ -1,0 +1,27 @@
+running egg_info
+writing ../../build/data_collect/data_collect.egg-info/PKG-INFO
+writing dependency_links to ../../build/data_collect/data_collect.egg-info/dependency_links.txt
+writing entry points to ../../build/data_collect/data_collect.egg-info/entry_points.txt
+writing requirements to ../../build/data_collect/data_collect.egg-info/requires.txt
+writing top-level names to ../../build/data_collect/data_collect.egg-info/top_level.txt
+reading manifest file '../../build/data_collect/data_collect.egg-info/SOURCES.txt'
+writing manifest file '../../build/data_collect/data_collect.egg-info/SOURCES.txt'
+running build
+running build_py
+copying data_collect/data_collecter.py -> /home/koki-22/ac_search/vrx_ws/build/data_collect/build/lib/data_collect
+running install
+running install_lib
+copying /home/koki-22/ac_search/vrx_ws/build/data_collect/build/lib/data_collect/data_collecter.py -> /home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/data_collect
+byte-compiling /home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/data_collect/data_collecter.py to data_collecter.cpython-310.pyc
+  File "/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/data_collect/data_collecter.py", line 143
+    datalist = [self.SgoalPosX, self.SgoalPosY, self.SmyPosX, self.SmyPosY, self.SPosDegX, self.SPosDegY, self.SmyAng'\n']
+                                                                                                          ^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+running install_data
+running install_egg_info
+removing '/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/data_collect-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/data_collect/data_collect.egg-info to /home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/data_collect-0.0.0-py3.10.egg-info
+running install_scripts
+Installing data_collect script to /home/koki-22/ac_search/vrx_ws/install/lib/data_collect
+writing list of installed files to '/home/koki-22/ac_search/vrx_ws/build/data_collect/install.log'

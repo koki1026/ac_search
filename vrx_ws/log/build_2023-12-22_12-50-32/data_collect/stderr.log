@@ -1,0 +1,5 @@
+  File "/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/data_collect/data_collecter.py", line 143
+    datalist = [self.SgoalPosX, self.SgoalPosY, self.SmyPosX, self.SmyPosY, self.SPosDegX, self.SPosDegY, self.SmyAng'\n']
+                                                                                                          ^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+

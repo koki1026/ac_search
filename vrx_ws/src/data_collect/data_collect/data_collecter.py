@@ -30,15 +30,12 @@ def euler_from_quaternion(quaternion):
         siny_cosp = 2 * (w * z + x * y)                                                                           
         cosy_cosp = 1 - 2 * (y * y + z * z)                                                                       
         yaw = np.arctan2(siny_cosp, cosy_cosp)                                                                    
-                                                                                                                  
+                                         
         return roll, pitch, yaw
 
 class DatacollectNode(Node):
     def __init__(self):
         super().__init__('agent_control_node')
-        self.collect_data_pub = self.create_publisher(
-
-        )
 
         self.collect_imu_sub = self.create_subscription(
             Imu,
@@ -77,6 +74,11 @@ class DatacollectNode(Node):
             10
         )
 
+        self.writeTimer = self.create_timer(
+            0.01,
+            self.onTick
+        )
+
         self.myAng = 0.0  #現在のyaw角を保存
         self.myPosX = 0.0 #自分のx位置を保存
         self.myPosY = 0.0 #自分のy位置を保存
@@ -91,26 +93,64 @@ class DatacollectNode(Node):
         self.goalPosY = 0.0 #ゴールのy位置を保存
         self.PosDegX = 0.0 #ゴールまでのx距離を保存
         self.PosDegY = 0.0 #ゴールまでのy距離を保存
+        self.SmyAng = "0.0"  #現在のyaw角を保存
+        self.SmyPosX = "0.0" #自分のx位置を保存
+        self.SmyPosY = "0.0" #自分のy位置を保存
+        self.SmyLeftTPos = "0.0" #自分の左スラスター出力（横）を保存
+        self.SmyRightTPos = "0.0" #自分の右スラスター出力（横）を保存
+        self.SmyLeftTTrust = "0.0" #自分の左スラスター出力（縦）を保存
+        self.SmyRightTTrust = "0.0" #自分の右スラスター出力（縦）を保存
+        self.SmyVelX = "0.0" #自分のX方向速度を保存
+        self.SmyVelY = "0.0" #自分のY方向速度を保存
+        self.SmyAngVel = "0.0" #自分のxy平面角速度を保存
+        self.SgoalPosX = "0.0" #ゴールのx位置を保存
+        self.SgoalPosY = "0.0" #ゴールのy位置を保存
+        self.SPosDegX = "0.0" #ゴールまでのx距離を保存
+        self.SPosDegY = "0.0" #ゴールまでのy距離を保存
 
     def imu_data_callback(self,msg):
         angle_ = euler_from_quaternion(msg.orientation)
         self.myAng = angle_[2]
+        self.SmyAng = str(self.myAng)
         
     def pose_data_callback(self,msg):
         self.myPosX = msg.poses[4].position.x
         self.myPosY = msg.poses[4].position.y
         self.goalPosX = msg.poses[0].position.x
         self.goalPosY = msg.poses[0].position.y
+        self.SmyPosX = str(self.myPosX)
+        self.SmyPosY = str(self.myPosY)
+        self.SgoalPosX = str(self.goalPosX)
+        self.SgoalPosY = str(self.goalPosY)
 
     def left_thraster_pos_data_callback(self,msg):
         self.myLeftTPos = msg.data
+        self.SmyLeftTPos = str(self.myLeftTPos)
 
     def right_thraster_pos_data_callback(self,msg):
         self.myRightTPos = msg.data
+        self.SmyRightTPos = str(self.myRightTPos)
 
     def left_thraster_trust_data_callback(self,msg):
         self.myLeftTTrust = msg.data
+        self.SmyLeftTTrust = str(self.myLeftTTrust)
 
     def right_thraster_trust_data_callback(self,msg):
         self.myRightTTrust = msg.data
-         
+        self.SmyRightTTrust = str(self.myRightTTrust)
+
+    def onTick(self):
+        datalist = [self.SgoalPosX, " ", self.SgoalPosY, " ", self.SmyPosX, " ", self.SmyPosY, " ", self.SPosDegX, " ", self.SPosDegY, " ", self.SmyAng, '\n']
+        f = open('dataset.txt', 'a')
+        f.writelines(datalist)
+        f.close()
+       
+def main(args=None):
+    rclpy.init(args=args)
+    data_collect_node = DatacollectNode()
+    rclpy.spin(data_collect_node)
+    data_collect_node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
