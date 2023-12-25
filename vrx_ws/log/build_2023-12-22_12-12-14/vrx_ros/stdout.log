@@ -1,0 +1,24 @@
+[100%] Built target optical_frame_publisher
+[100%] Built target pose_tf_broadcaster
+-- Install configuration: ""
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/lib/vrx_ros/optical_frame_publisher
+-- Set runtime path of "/home/koki-22/ac_search/vrx_ws/install/lib/vrx_ros/optical_frame_publisher" to ""
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/lib/vrx_ros/pose_tf_broadcaster
+-- Set runtime path of "/home/koki-22/ac_search/vrx_ws/install/lib/vrx_ros/pose_tf_broadcaster" to ""
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/launch
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/launch/monitor_sim.py
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/share/ament_index/resource_index/package_run_dependencies/vrx_ros
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/share/ament_index/resource_index/parent_prefix_path/vrx_ros
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/environment/ament_prefix_path.sh
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/environment/ament_prefix_path.dsv
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/environment/path.sh
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/environment/path.dsv
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/local_setup.bash
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/local_setup.sh
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/local_setup.zsh
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/local_setup.dsv
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/package.dsv
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/share/ament_index/resource_index/packages/vrx_ros
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/cmake/vrx_rosConfig.cmake
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/cmake/vrx_rosConfig-version.cmake
+-- Installing: /home/koki-22/ac_search/vrx_ws/install/share/vrx_ros/package.xml
