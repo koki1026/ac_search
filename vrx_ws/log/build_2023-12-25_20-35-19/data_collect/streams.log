@@ -1,0 +1,24 @@
+[0.937s] Invoking command in '/home/koki-22/ac_search/vrx_ws/src/data_collect': PYTHONPATH=/home/koki-22/ac_search/vrx_ws/build/data_collect/prefix_override:/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/data_collect build --build-base /home/koki-22/ac_search/vrx_ws/build/data_collect/build install --record /home/koki-22/ac_search/vrx_ws/build/data_collect/install.log --single-version-externally-managed
+[1.322s] running egg_info
+[1.323s] writing ../../build/data_collect/data_collect.egg-info/PKG-INFO
+[1.323s] writing dependency_links to ../../build/data_collect/data_collect.egg-info/dependency_links.txt
+[1.324s] writing entry points to ../../build/data_collect/data_collect.egg-info/entry_points.txt
+[1.324s] writing requirements to ../../build/data_collect/data_collect.egg-info/requires.txt
+[1.324s] writing top-level names to ../../build/data_collect/data_collect.egg-info/top_level.txt
+[1.327s] reading manifest file '../../build/data_collect/data_collect.egg-info/SOURCES.txt'
+[1.328s] writing manifest file '../../build/data_collect/data_collect.egg-info/SOURCES.txt'
+[1.329s] running build
+[1.329s] running build_py
+[1.329s] copying data_collect/data_collecter.py -> /home/koki-22/ac_search/vrx_ws/build/data_collect/build/lib/data_collect
+[1.329s] running install
+[1.330s] running install_lib
+[1.330s] copying /home/koki-22/ac_search/vrx_ws/build/data_collect/build/lib/data_collect/data_collecter.py -> /home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/data_collect
+[1.331s] byte-compiling /home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/data_collect/data_collecter.py to data_collecter.cpython-310.pyc
+[1.333s] running install_data
+[1.334s] running install_egg_info
+[1.336s] removing '/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/data_collect-0.0.0-py3.10.egg-info' (and everything under it)
+[1.336s] Copying ../../build/data_collect/data_collect.egg-info to /home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/data_collect-0.0.0-py3.10.egg-info
+[1.338s] running install_scripts
+[1.361s] Installing data_collect script to /home/koki-22/ac_search/vrx_ws/install/lib/data_collect
+[1.361s] writing list of installed files to '/home/koki-22/ac_search/vrx_ws/build/data_collect/install.log'
+[1.410s] Invoked command in '/home/koki-22/ac_search/vrx_ws/src/data_collect' returned '0': PYTHONPATH=/home/koki-22/ac_search/vrx_ws/build/data_collect/prefix_override:/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/data_collect build --build-base /home/koki-22/ac_search/vrx_ws/build/data_collect/build install --record /home/koki-22/ac_search/vrx_ws/build/data_collect/install.log --single-version-externally-managed

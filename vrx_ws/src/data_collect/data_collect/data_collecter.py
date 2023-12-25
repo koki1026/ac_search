@@ -5,6 +5,7 @@ from geometry_msgs.msg import Twist
 from sensor_msgs.msg import Imu
 from geometry_msgs.msg import PoseArray
 from std_msgs.msg import Float64
+from std_msgs.msg import Float32
 import numpy as np
 
 #すべてのトピックをサブスクライブしてひとつにまとめる
@@ -88,14 +89,14 @@ class DatacollectNode(Node):
         )
 
         self.collect_windSpeed_sub = self.create_subscription(
-            Float64,
+            Float32,
             '/vrx/debug/wind/speed',
             self.wind_speed_data_callback,
             10
         )
 
         self.collect_windDirection_sub = self.create_subscription(
-            Float64,
+            Float32,
             '/vrx/debug/wind/direction',
             self.wind_direction_data_callback,
             10
