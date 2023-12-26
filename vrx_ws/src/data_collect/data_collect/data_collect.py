@@ -42,9 +42,9 @@ class DatacollectNode(Node):
         self.DATA_WRITE = False
 
         self.declare_parameter("wave_direction",0.0)
-        self.declare_parameter("wave_gain",0.0)
-        self.declare_parameter("wave_period",0.0)
-        self.declare_parameter("wave_stepness",0.0)
+        self.declare_parameter("wave_gain",3.0)
+        self.declare_parameter("wave_period",5)
+        self.declare_parameter("wave_stepness",0)
         self.waveParameterDirection = self.get_parameter("wave_direction").value #波の方向
         self.waveParameterGain = self.get_parameter("wave_gain").value #波の上がり方
         self.waveParameterPeriod = self.get_parameter("wave_period").value #波の周期（*2s）

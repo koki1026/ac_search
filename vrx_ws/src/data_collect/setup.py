@@ -1,4 +1,5 @@
 from setuptools import setup
+from glob import glob
 
 package_name = 'data_collect'
 
@@ -10,6 +11,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name, glob('launch/*.launch.py'))
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -20,7 +22,11 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'data_collect = data_collect.data_collecter:main'
+            'data_collect_node = data_collect.data_collect:main',
+            'wave_gain = data_collect:main',
+            'wave_direction = data_collect:main',
+            'wave_stepness = data_collect:main',
+            'wave_period = data_collect:main',
         ],
     },
 )
