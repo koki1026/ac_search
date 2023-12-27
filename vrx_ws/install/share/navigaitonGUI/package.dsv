@@ -1,0 +1,12 @@
+source;share/navigaitonGUI/hook/cmake_prefix_path.ps1
+source;share/navigaitonGUI/hook/cmake_prefix_path.dsv
+source;share/navigaitonGUI/hook/cmake_prefix_path.sh
+source;share/navigaitonGUI/hook/ld_library_path_lib.ps1
+source;share/navigaitonGUI/hook/ld_library_path_lib.dsv
+source;share/navigaitonGUI/hook/ld_library_path_lib.sh
+source;share/navigaitonGUI/hook/pythonpath.ps1
+source;share/navigaitonGUI/hook/pythonpath.dsv
+source;share/navigaitonGUI/hook/pythonpath.sh
+source;share/navigaitonGUI/hook/ament_prefix_path.ps1
+source;share/navigaitonGUI/hook/ament_prefix_path.dsv
+source;share/navigaitonGUI/hook/ament_prefix_path.sh
