@@ -62,7 +62,7 @@ class NavigaitonGUI(Node):
         self.myPosX = 0.0 #自分のx位置を保存
         self.myPosY = 0.0 #自分のy位置を保存
         self.myAng = 0.0 #自分の角度を保存
-        self.buoys_size = 39
+        self.buoys_size = 38
         self.buoys = [[0]*2]*self.buoys_size
         self.goal_index = 0
 
@@ -71,11 +71,11 @@ class NavigaitonGUI(Node):
         self.myAng = angle_[2]
         
     def pose_data_callback(self, msg):
-        self.myPosX = msg.poses[40].position.x
-        self.myPosY = msg.poses[40].position.y
+        self.myPosX = msg.poses[self.buoys_size+1].position.x
+        self.myPosY = msg.poses[self.buoys_size+1].position.y
         self.goalPosX = msg.poses[self.goal_index].position.x
         self.goalPosY = msg.poses[self.goal_index].position.y
-        for i in range(39):
+        for i in range(self.buoys_size):
             self.buoys[i][0] = msg.poses[i].position.x
             self.buoys[i][1] = msg.poses[i].position.y
 
