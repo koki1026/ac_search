@@ -8,8 +8,7 @@ from std_msgs.msg import Float64
 from std_msgs.msg import Float32
 import numpy as np
 import matplotlib.pyplot as plt
-
-#すべてのトピックをサブスクライブしてひとつにまとめる
+from visualization_msgs.msg import MarkerArray, Marker
 # wave, goal , my, thruster l,r,lv,rv
 def euler_from_quaternion(quaternion):                                                                   
         """クオータニオンからオイラー角を計算する関数                                                        
@@ -35,9 +34,47 @@ def euler_from_quaternion(quaternion):
                                          
         return roll, pitch, yaw
 
+
+def rviz_marker(self, position: np.ndarray, label: str, idx: int):
+    marker_child = Marker()
+    marker_child.header.frame_id = "world"
+    marker_child.header.stamp = self.get_clock().now().to_msg()
+    marker_child.ns = label
+    marker_child.id = idx
+    marker_child.type = Marker.SPHERE
+    marker_child.action = Marker.ADD
+        
+    marker_child.pose.position.x = position[0]*0.5
+    marker_child.pose.position.y = position[1]*0.5
+    marker_child.scale.x = marker_child.scale.y = marker_child.scale.z = 1.0
+    print(position[0])
+    if(idx == self.goal_index): #ゴールの色は赤色
+        marker_child.color.r = 1.0
+        marker_child.color.g = 0.0
+        marker_child.color.b = 0.0
+        marker_child.color.a = 1.0
+    elif(idx == self.goal_index-1): #スタートの色は青色
+        marker_child.color.r = 0.0
+        marker_child.color.g = 0.0
+        marker_child.color.b = 1.0
+        marker_child.color.a = 1.0
+    else: #他のマーカは黄色
+        marker_child.color.r = 0.0
+        marker_child.color.g = 0.0
+        marker_child.color.b = 1.0
+        marker_child.color.a = 1.0
+    return marker_child
+
+
 class NavigaitonGUI(Node):
     def __init__(self):
         super().__init__('navigation_GUI_node')
+
+        self.marker_pub = self.create_publisher(
+            MarkerArray,
+            "/vrx_markers",
+            10
+        )
 
         self.collect_imu_sub = self.create_subscription(
             Imu,
@@ -52,18 +89,13 @@ class NavigaitonGUI(Node):
              10
         )
 
-        self.writeTimer = self.create_timer(
-            2,
-            self.onTick
-        )
-
         self.goalPosX = 0.0 #ゴールのx位置を保存
         self.goalPosY = 0.0 #ゴールのy位置を保存
         self.myPosX = 0.0 #自分のx位置を保存
         self.myPosY = 0.0 #自分のy位置を保存
         self.myAng = 0.0 #自分の角度を保存
         self.buoys_size = 38
-        self.buoys = [[0]*2]*self.buoys_size
+        self.buoys = [[0.0]*2]*self.buoys_size
         self.goal_index = 0
 
     def imu_data_callback(self,msg):
@@ -75,33 +107,13 @@ class NavigaitonGUI(Node):
         self.myPosY = msg.poses[self.buoys_size+1].position.y
         self.goalPosX = msg.poses[self.goal_index].position.x
         self.goalPosY = msg.poses[self.goal_index].position.y
+        markers = MarkerArray()
         for i in range(self.buoys_size):
             self.buoys[i][0] = msg.poses[i].position.x
             self.buoys[i][1] = msg.poses[i].position.y
+            markers.markers.append(rviz_marker(self, self.buoys[i], "marker: "+str(i), i))
 
-
-    def onTick(self):
-        plt.figure()
-
-        #座標をプロット
-        x_values = [buoy[0] for buoy in self.buoys]
-        y_values = [buoy[1] for buoy in self.buoys]
-        plt.scatter(x_values, y_values, color='black', label='buoys')
-        plt.scatter(self.goalPosX, self.goalPosY, color='red', label='goal')
-        plt.scatter(self.myPosX, self.myPosY, color='blue', label='state')
-        
-        
-
-        #タイトルとラベル
-        plt.title('buoy&boat')
-        plt.xlabel('X_axis')
-        plt.ylabel('Y_axis')
-
-        #グリッドの表示
-        plt.grid(True)
-
-        plt.show()
-
+        self.marker_pub.publish(markers)
 
        
 def main(args=None):
