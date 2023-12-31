@@ -1,0 +1,2 @@
+Invoking command in '/home/koki-22/ac_search/vrx_ws/build/rviz_collada_marker': /usr/bin/cmake /home/koki-22/ac_search/vrx_ws/src/rviz_collada_marker -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/koki-22/ac_search/vrx_ws/install
+Invoked command in '/home/koki-22/ac_search/vrx_ws/build/rviz_collada_marker' returned '1': /usr/bin/cmake /home/koki-22/ac_search/vrx_ws/src/rviz_collada_marker -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/koki-22/ac_search/vrx_ws/install
