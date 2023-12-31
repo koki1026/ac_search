@@ -1,0 +1,24 @@
+[1.105s] Invoking command in '/home/koki-22/ac_search/vrx_ws/src/navigaitonGUI': PYTHONPATH=/home/koki-22/ac_search/vrx_ws/build/navigaitonGUI/prefix_override:/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/navigaitonGUI build --build-base /home/koki-22/ac_search/vrx_ws/build/navigaitonGUI/build install --record /home/koki-22/ac_search/vrx_ws/build/navigaitonGUI/install.log --single-version-externally-managed
+[1.395s] running egg_info
+[1.395s] writing ../../build/navigaitonGUI/navigaitonGUI.egg-info/PKG-INFO
+[1.395s] writing dependency_links to ../../build/navigaitonGUI/navigaitonGUI.egg-info/dependency_links.txt
+[1.396s] writing entry points to ../../build/navigaitonGUI/navigaitonGUI.egg-info/entry_points.txt
+[1.396s] writing requirements to ../../build/navigaitonGUI/navigaitonGUI.egg-info/requires.txt
+[1.396s] writing top-level names to ../../build/navigaitonGUI/navigaitonGUI.egg-info/top_level.txt
+[1.399s] reading manifest file '../../build/navigaitonGUI/navigaitonGUI.egg-info/SOURCES.txt'
+[1.400s] writing manifest file '../../build/navigaitonGUI/navigaitonGUI.egg-info/SOURCES.txt'
+[1.400s] running build
+[1.400s] running build_py
+[1.400s] copying navigaitonGUI/navigaitonGUI.py -> /home/koki-22/ac_search/vrx_ws/build/navigaitonGUI/build/lib/navigaitonGUI
+[1.400s] running install
+[1.401s] running install_lib
+[1.401s] copying /home/koki-22/ac_search/vrx_ws/build/navigaitonGUI/build/lib/navigaitonGUI/navigaitonGUI.py -> /home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/navigaitonGUI
+[1.401s] byte-compiling /home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/navigaitonGUI/navigaitonGUI.py to navigaitonGUI.cpython-310.pyc
+[1.402s] running install_data
+[1.402s] running install_egg_info
+[1.405s] removing '/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/navigaitonGUI-0.0.0-py3.10.egg-info' (and everything under it)
+[1.406s] Copying ../../build/navigaitonGUI/navigaitonGUI.egg-info to /home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/navigaitonGUI-0.0.0-py3.10.egg-info
+[1.406s] running install_scripts
+[1.424s] Installing navigation_GUI_node script to /home/koki-22/ac_search/vrx_ws/install/lib/navigaitonGUI
+[1.424s] writing list of installed files to '/home/koki-22/ac_search/vrx_ws/build/navigaitonGUI/install.log'
+[1.454s] Invoked command in '/home/koki-22/ac_search/vrx_ws/src/navigaitonGUI' returned '0': PYTHONPATH=/home/koki-22/ac_search/vrx_ws/build/navigaitonGUI/prefix_override:/home/koki-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/navigaitonGUI build --build-base /home/koki-22/ac_search/vrx_ws/build/navigaitonGUI/build install --record /home/koki-22/ac_search/vrx_ws/build/navigaitonGUI/install.log --single-version-externally-managed
