@@ -34,7 +34,7 @@ def euler_from_quaternion(quaternion):
                                          
         return roll, pitch, yaw
 
-def rviz_marker(self, position: np.ndarray, label: str, idx: int):
+def rviz_marker(self, position: np.ndarray, angle: np.ndarray, label: str, idx: int):
     marker_child = Marker()
     marker_child.header.frame_id = "wamv/wamv/base_link"
     marker_child.header.stamp = self.get_clock().now().to_msg()
@@ -67,10 +67,10 @@ def rviz_marker(self, position: np.ndarray, label: str, idx: int):
         marker_child.type = Marker.MESH_RESOURCE
         marker_child.mesh_resource = "file:///home/koki-22/ac_search/vrx_ws/src/navigaitonGUI/mesh/WAM-V-Base.dae"
         marker_child.mesh_use_embedded_materials = True
-        marker_child.pose.orientation.x = 
-        marker_child.pose.orientation.y
-        marker_child.pose.orientation.z
-        marker_child.pose.orientation.w
+        marker_child.pose.orientation.x = angle[0]
+        marker_child.pose.orientation.y = angle[1]
+        marker_child.pose.orientation.z = angle[2]
+        marker_child.pose.orientation.w = angle[3]
 
     return marker_child
 
@@ -108,6 +108,10 @@ class NavigaitonGUI(Node):
         self.goal_index = 0
 
     def imu_data_callback(self,msg):
+        self.myAngOri[0] = msg.orientation.x
+        self.myAngOri[1] = msg.orientation.y
+        self.myAngOri[2] = msg.orientation.z
+        self.myAngOri[3] = msg.orientation.w
         angle_ = euler_from_quaternion(msg.orientation)
         self.myAng = angle_[2]
         
@@ -117,11 +121,11 @@ class NavigaitonGUI(Node):
         self.goalPosX = msg.poses[self.goal_index].position.x
         self.goalPosY = msg.poses[self.goal_index].position.y
         markers = MarkerArray()
-        markers.markers.append(rviz_marker(self, self.myPos, "wam_v", 100))
+        markers.markers.append(rviz_marker(self, self.myPos, self.myAngOri, "wam_v", 100))
         for i in range(self.buoys_size):
             self.buoys[i][0] = msg.poses[i].position.x
             self.buoys[i][1] = msg.poses[i].position.y
-            markers.markers.append(rviz_marker(self, self.buoys[i], "marker: "+str(i), i))
+            markers.markers.append(rviz_marker(self, self.buoys[i], self.myAngOri, "marker: "+str(i), i))
 
         self.marker_pub.publish(markers)
 
