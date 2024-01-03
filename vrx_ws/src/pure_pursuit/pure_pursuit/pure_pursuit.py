@@ -5,7 +5,7 @@ from geometry_msgs.msg import Twist
 from sensor_msgs.msg import Imu
 from geometry_msgs.msg import PoseArray
 from std_msgs.msg import Float64
-from std_msgs.msg import Int64MultiArray
+from std_msgs.msg import Int32MultiArray
 import numpy as np
 import matplotlib.pyplot as plt
 from visualization_msgs.msg import MarkerArray, Marker
@@ -64,7 +64,7 @@ class PurePursuit(Node):
              10
         )
         self.index_sub = self.create_subscription(
-            Int64MultiArray,
+            Int32MultiArray,
             '/index_node',
             self.index_callback,
             10
