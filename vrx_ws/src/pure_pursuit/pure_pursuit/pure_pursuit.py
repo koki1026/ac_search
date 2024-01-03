@@ -68,45 +68,50 @@ class PurePursuit(Node):
         self.myPos = [0.0]*2
         self.myPos0 = [0.0]*2
         self.myAng = 0.0 #自分の角度を保存
-        self.myAngOri = [0.0]*4
-        self.buoys_size = 38
-        self.buoys = [[0.0]*2]*self.buoys_size
+
         self.goal_index = 0
+        self.my_index = 0
+        self.alfa = 0.0
+        self.ld = 0.0
+
+        self.left_thruster = 0.0
+        self.right_thruster = 0.0
 
     def imu_data_callback(self,msg):
-        self.myAngOri[0] = msg.orientation.x
-        self.myAngOri[1] = msg.orientation.y
-        self.myAngOri[2] = msg.orientation.z
-        self.myAngOri[3] = msg.orientation.w
         angle_ = euler_from_quaternion(msg.orientation)
         self.myAng = angle_[2]
         
     def pose_data_callback(self, msg):
-        self.myPos[0] = msg.poses[self.buoys_size+1].position.x
-        self.myPos[1] = msg.poses[self.buoys_size+1].position.y
+        self.myPos[0] = msg.poses[self.my_index].position.x
+        self.myPos[1] = msg.poses[self.my_index].position.y
         self.goalPosX = msg.poses[self.goal_index].position.x
         self.goalPosY = msg.poses[self.goal_index].position.y
-        markers = MarkerArray()
-        markers.markers.append(rviz_marker(self, self.myPos0, "wam_v", 100))
-        for i in range(self.buoys_size):
-            self.buoys[i][0] = msg.poses[i].position.x - self.myPos[0]
-            self.buoys[i][1] = msg.poses[i].position.y - self.myPos[1]
-            distance = np.linalg.norm(self.buoys)
-            radian = math.atan2(self.buoys[i][0], self.buoys[i][1])
-            angle = radian - self.myAng
-            rela_buoy = [0.8]*2
-            rela_buoy[0] = np.cos(angle)*distance
-            rela_buoy[1] = -np.sin(angle)*distance
-            markers.markers.append(rviz_marker(self, rela_buoy, "marker: "+str(i), i))
 
-        self.marker_pub.publish(markers)
+        distance = [0.0]*2
+        distance[0] = self.goalPosX-self.myPos[0]
+        distance[1] = self.goalPosY-self.myPos[1]
+
+        self.alfa = math.atan2(distance[0],distance[1]) - self.myAng
+        self.ld = np.linalg.norm(distance)
+
+        sin_alfa = math.asin(self.alfa)
+        if(self.ld!=2*sin_alfa):
+            if(self.alfa<0):
+                self.right_thruster = ((self.ld+2*sin_alfa)/(self.ld-2*sin_alfa))*1000
+                self.left_thruster = 1000
+            else:
+                self.left_thruster = ((self.ld-2*sin_alfa)/(self.ld-2*sin_alfa))*1000
+                self.right_thruster = 1000
+            self.right_thruster_pub.publish(self.right_thruster)
+            self.left_thruster_pub.publish(self.left_thruster)
+
 
        
 def main(args=None):
     rclpy.init(args=args)
-    navigation_GUI_node = NavigaitonGUI()
-    rclpy.spin(navigation_GUI_node)
-    navigation_GUI_node.destroy_node()
+    pure_pursuit_node = PurePursuit()
+    rclpy.spin(pure_pursuit_node)
+    pure_pursuit_node.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':
