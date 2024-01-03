@@ -141,7 +141,7 @@ class NavigaitonGUI(Node):
         goal_dis[1] = np.abs(self.myPos[1]-self.goalPosY)
         if(np.linalg.norm(goal_dis) < 0.1):
             self.goal_index+=1
-        index_array = Int32MultiArray
+        index_array = Int32MultiArray()
         data_array = []
         data_array.append(int(self.my_index))
         data_array.append(int(self.goal_index))
