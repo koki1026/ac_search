@@ -4,7 +4,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from sensor_msgs.msg import Imu
 from geometry_msgs.msg import PoseArray
-from std_msgs.msg import Int64MultiArray
+from std_msgs.msg import Int32MultiArray
 import numpy as np
 import matplotlib.pyplot as plt
 from visualization_msgs.msg import MarkerArray, Marker
@@ -134,16 +134,18 @@ class NavigaitonGUI(Node):
             rela_buoy[1] = -np.sin(angle)*distance
             markers.markers.append(rviz_marker(self, rela_buoy, "marker: "+str(i), i))
         
+        self.marker_pub.publish(markers)
+
         goal_dis = [0.0]*2
         goal_dis[0] = np.abs(self.myPos[0]-self.goalPosX)
         goal_dis[1] = np.abs(self.myPos[1]-self.goalPosY)
         if(np.linalg.norm(goal_dis) < 0.1):
             self.goal_index+=1
-        index_array = Int64MultiArray
-        index_array.data.resize(2)
-        index_array.data[0] = self.my_index
-        index_array.data[1] = self.goal_index
-        self.marker_pub.publish(markers)
+        index_array = Int32MultiArray
+        data_array = []
+        data_array.push_back(int(self.my_index))
+        data_array.push_back(int(self.goal_index))
+        index_array.data = data_array
         self.index_pub.publish(index_array)
 
        
