@@ -4,8 +4,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from sensor_msgs.msg import Imu
 from geometry_msgs.msg import PoseArray
-from std_msgs.msg import Float64
-from std_msgs.msg import Float32
+from std_msgs.msg import Int64MultiArray
 import numpy as np
 import matplotlib.pyplot as plt
 from visualization_msgs.msg import MarkerArray, Marker
@@ -79,6 +78,11 @@ class NavigaitonGUI(Node):
             "/vrx_markers",
             10
         )
+        self.index_pub = self.create_publisher(
+            Int64MultiArray,
+            "/index_node",
+            10
+        )
 
         self.collect_imu_sub = self.create_subscription(
             Imu,
@@ -102,6 +106,7 @@ class NavigaitonGUI(Node):
         self.buoys_size = 38
         self.buoys = [[0.0]*2]*self.buoys_size
         self.goal_index = 0
+        self.my_index = self.buoys_size+1
 
     def imu_data_callback(self,msg):
         self.myAngOri[0] = msg.orientation.x
@@ -112,8 +117,8 @@ class NavigaitonGUI(Node):
         self.myAng = angle_[2]
         
     def pose_data_callback(self, msg):
-        self.myPos[0] = msg.poses[self.buoys_size+1].position.x
-        self.myPos[1] = msg.poses[self.buoys_size+1].position.y
+        self.myPos[0] = msg.poses[self.my_index].position.x
+        self.myPos[1] = msg.poses[self.my_index].position.y
         self.goalPosX = msg.poses[self.goal_index].position.x
         self.goalPosY = msg.poses[self.goal_index].position.y
         markers = MarkerArray()
@@ -128,8 +133,18 @@ class NavigaitonGUI(Node):
             rela_buoy[0] = np.cos(angle)*distance
             rela_buoy[1] = -np.sin(angle)*distance
             markers.markers.append(rviz_marker(self, rela_buoy, "marker: "+str(i), i))
-
+        
+        goal_dis = [0.0]*2
+        goal_dis[0] = np.abs(self.myPos[0]-self.goalPosX)
+        goal_dis[1] = np.abs(self.myPos[1]-self.goalPosY)
+        if(np.linalg.norm(goal_dis) < 0.1):
+            self.goal_index+=1
+        index_array = Int64MultiArray
+        index_array.data.resize(2)
+        index_array.data[0] = self.my_index
+        index_array.data[1] = self.goal_index
         self.marker_pub.publish(markers)
+        self.index_pub.publish(index_array)
 
        
 def main(args=None):
