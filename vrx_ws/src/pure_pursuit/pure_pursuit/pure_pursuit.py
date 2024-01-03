@@ -102,19 +102,24 @@ class PurePursuit(Node):
         distance[0] = self.goalPosX-self.myPos[0]
         distance[1] = self.goalPosY-self.myPos[1]
 
-        self.alfa = math.atan2(distance[0],distance[1]) - self.myAng
+        self.alfa = self.myAng - math.atan2(distance[0],distance[1])
         self.ld = np.linalg.norm(distance)
+        print(self.ld)
 
-        sin_alfa = math.asin(self.alfa)
+        sin_alfa = np.sin(self.alfa)
         if(self.ld!=2*sin_alfa):
             if(self.alfa<0):
-                self.right_thruster = ((self.ld+2*sin_alfa)/(self.ld-2*sin_alfa))*1000
-                self.left_thruster = 1000
+                self.right_thruster = ((self.ld+2*sin_alfa)/(self.ld-2*sin_alfa))*500.0
+                self.left_thruster = 500.0
             else:
-                self.left_thruster = ((self.ld-2*sin_alfa)/(self.ld-2*sin_alfa))*1000
-                self.right_thruster = 1000
-            self.right_thruster_pub.publish(self.right_thruster)
-            self.left_thruster_pub.publish(self.left_thruster)
+                self.left_thruster = ((self.ld-2*sin_alfa)/(self.ld-2*sin_alfa))*500.0
+                self.right_thruster = 500.0
+            right_thruster = Float64()
+            right_thruster.data = self.right_thruster
+            left_thruster = Float64()
+            left_thruster.data = self.left_thruster
+            self.right_thruster_pub.publish(right_thruster)
+            self.left_thruster_pub.publish(left_thruster)
 
 
        
