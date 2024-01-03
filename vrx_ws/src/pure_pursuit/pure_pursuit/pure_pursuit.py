@@ -5,6 +5,7 @@ from geometry_msgs.msg import Twist
 from sensor_msgs.msg import Imu
 from geometry_msgs.msg import PoseArray
 from std_msgs.msg import Float64
+from std_msgs.msg import Int64MultiArray
 import numpy as np
 import matplotlib.pyplot as plt
 from visualization_msgs.msg import MarkerArray, Marker
@@ -62,6 +63,12 @@ class PurePursuit(Node):
              self.pose_data_callback,
              10
         )
+        self.index_sub = self.create_subscription(
+            Int64MultiArray,
+            '/index_node',
+            self.index_callback,
+            10
+        )
 
         self.goalPosX = 0.0 #ゴールのx位置を保存
         self.goalPosY = 0.0 #ゴールのy位置を保存
@@ -80,6 +87,10 @@ class PurePursuit(Node):
     def imu_data_callback(self,msg):
         angle_ = euler_from_quaternion(msg.orientation)
         self.myAng = angle_[2]
+
+    def index_callback(self,msg):
+        self.my_index = msg.data[0]
+        self.goal_index = msg.data[1]
         
     def pose_data_callback(self, msg):
         self.myPos[0] = msg.poses[self.my_index].position.x
