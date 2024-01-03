@@ -143,8 +143,8 @@ class NavigaitonGUI(Node):
             self.goal_index+=1
         index_array = Int32MultiArray
         data_array = []
-        data_array.push_back(int(self.my_index))
-        data_array.push_back(int(self.goal_index))
+        data_array.append(int(self.my_index))
+        data_array.append(int(self.goal_index))
         index_array.data = data_array
         self.index_pub.publish(index_array)
 
