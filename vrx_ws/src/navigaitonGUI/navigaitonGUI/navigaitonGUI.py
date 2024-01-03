@@ -79,7 +79,7 @@ class NavigaitonGUI(Node):
             10
         )
         self.index_pub = self.create_publisher(
-            Int64MultiArray,
+            Int32MultiArray,
             "/index_node",
             10
         )
