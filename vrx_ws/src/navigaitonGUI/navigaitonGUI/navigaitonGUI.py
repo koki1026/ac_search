@@ -127,7 +127,7 @@ class NavigaitonGUI(Node):
             self.buoys[i][0] = msg.poses[i].position.x - self.myPos[0]
             self.buoys[i][1] = msg.poses[i].position.y - self.myPos[1]
             distance = np.linalg.norm(self.buoys)
-            radian = math.atan2(self.buoys[i][0], self.buoys[i][1])
+            radian = math.atan2(self.buoys[i][1], self.buoys[i][0])
             angle = radian - self.myAng
             rela_buoy = [0.8]*2
             rela_buoy[0] = np.cos(angle)*distance
