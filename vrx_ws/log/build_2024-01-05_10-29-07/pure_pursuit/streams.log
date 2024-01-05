@@ -1,0 +1,35 @@
+[1.522s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/src/pure_pursuit': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/pure_pursuit build --build-base /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/build install --record /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/install.log --single-version-externally-managed
+[1.700s] running egg_info
+[1.701s] creating ../../build/pure_pursuit/pure_pursuit.egg-info
+[1.701s] writing ../../build/pure_pursuit/pure_pursuit.egg-info/PKG-INFO
+[1.701s] writing dependency_links to ../../build/pure_pursuit/pure_pursuit.egg-info/dependency_links.txt
+[1.701s] writing entry points to ../../build/pure_pursuit/pure_pursuit.egg-info/entry_points.txt
+[1.701s] writing requirements to ../../build/pure_pursuit/pure_pursuit.egg-info/requires.txt
+[1.701s] writing top-level names to ../../build/pure_pursuit/pure_pursuit.egg-info/top_level.txt
+[1.701s] writing manifest file '../../build/pure_pursuit/pure_pursuit.egg-info/SOURCES.txt'
+[3.774s] writing manifest file '../../build/pure_pursuit/pure_pursuit.egg-info/SOURCES.txt'
+[3.774s] running build
+[3.775s] running build_py
+[3.776s] creating /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/build
+[3.776s] creating /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/build/lib
+[3.776s] creating /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/build/lib/pure_pursuit
+[3.776s] copying pure_pursuit/__init__.py -> /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/build/lib/pure_pursuit
+[3.776s] copying pure_pursuit/pure_pursuit.py -> /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/build/lib/pure_pursuit
+[3.776s] running install
+[3.776s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[3.776s]   warnings.warn(
+[3.776s] running install_lib
+[3.777s] creating /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/pure_pursuit
+[3.777s] copying /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/build/lib/pure_pursuit/__init__.py -> /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/pure_pursuit
+[3.777s] copying /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/build/lib/pure_pursuit/pure_pursuit.py -> /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/pure_pursuit
+[3.777s] byte-compiling /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/pure_pursuit/__init__.py to __init__.cpython-310.pyc
+[3.777s] byte-compiling /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/pure_pursuit/pure_pursuit.py to pure_pursuit.cpython-310.pyc
+[3.777s] running install_data
+[3.777s] copying resource/pure_pursuit -> /home/gaia-22/ac_search/vrx_ws/install/share/ament_index/resource_index/packages
+[3.777s] copying package.xml -> /home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit
+[3.777s] running install_egg_info
+[3.777s] Copying ../../build/pure_pursuit/pure_pursuit.egg-info to /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/pure_pursuit-0.0.0-py3.10.egg-info
+[3.777s] running install_scripts
+[3.790s] Installing pure_pursuit_node script to /home/gaia-22/ac_search/vrx_ws/install/lib/pure_pursuit
+[3.790s] writing list of installed files to '/home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/install.log'
+[3.891s] Invoked command in '/home/gaia-22/ac_search/vrx_ws/src/pure_pursuit' returned '0': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/pure_pursuit build --build-base /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/build install --record /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/install.log --single-version-externally-managed

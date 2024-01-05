@@ -1,0 +1,68 @@
+[0.039s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo': AMENT_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/models:/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/models:/home/gaia-22/ac_search/vrx_ws/install/share PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_urdf/wamv_gazebo -DCMAKE_INSTALL_PREFIX=/home/gaia-22/ac_search/vrx_ws/install
+[0.069s] -- The C compiler identification is GNU 11.4.0
+[0.100s] -- The CXX compiler identification is GNU 11.4.0
+[0.105s] -- Detecting C compiler ABI info
+[0.143s] -- Detecting C compiler ABI info - done
+[0.147s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.147s] -- Detecting C compile features
+[0.147s] -- Detecting C compile features - done
+[0.149s] -- Detecting CXX compiler ABI info
+[0.194s] -- Detecting CXX compiler ABI info - done
+[0.199s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.199s] -- Detecting CXX compile features
+[0.199s] -- Detecting CXX compile features - done
+[0.200s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.309s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.360s] -- Found xacro: 2.0.8 (/opt/ros/humble/share/xacro/cmake)
+[0.361s] -- Found wamv_description: 1.3.0 (/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/cmake)
+[0.397s] -- Configuring done
+[0.399s] -- Generating done
+[0.399s] -- Build files have been written to: /home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo
+[0.402s] Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo' returned '0': AMENT_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/models:/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/models:/home/gaia-22/ac_search/vrx_ws/install/share PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_urdf/wamv_gazebo -DCMAKE_INSTALL_PREFIX=/home/gaia-22/ac_search/vrx_ws/install
+[0.403s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo': AMENT_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/models:/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/models:/home/gaia-22/ac_search/vrx_ws/install/share PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo -- -j20 -l20
+[0.424s] Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo' returned '0': AMENT_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/models:/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/models:/home/gaia-22/ac_search/vrx_ws/install/share PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo -- -j20 -l20
+[0.437s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo': AMENT_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/models:/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/models:/home/gaia-22/ac_search/vrx_ws/install/share PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo
+[0.442s] -- Install configuration: ""
+[0.442s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/models
+[0.442s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/models/gps
+[0.442s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/models/gps/model.config
+[0.442s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/models/gps/mesh
+[0.442s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/models/gps/mesh/gps.png
+[0.442s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/models/gps/mesh/gps.dae
+[0.442s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf
+[0.442s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/wamv_gazebo.urdf.xacro
+[0.442s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/macros.xacro
+[0.442s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/thruster_layouts
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/thruster_layouts/wamv_aft_thrusters.xacro
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/thruster_layouts/wamv_gazebo_thruster_config.xacro
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/thruster_layouts/wamv_x_thrusters.xacro
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/thruster_layouts/wamv_t_thrusters.xacro
+[0.443s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/dynamics
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/dynamics/wamv_gazebo_dynamics_plugin.xacro
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/wamv_gazebo.xacro
+[0.443s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/components
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/components/wamv_planar_lidar.xacro
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/components/wamv_gps.xacro
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/components/lidar.xacro
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/components/wamv_p3d.xacro
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/components/ball_shooter.xacro
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/components/wamv_camera.xacro
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/components/wamv_imu.xacro
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/components/wamv_pinger.xacro
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/urdf/components/wamv_3d_lidar.xacro
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/ament_index/resource_index/package_run_dependencies/wamv_gazebo
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/ament_index/resource_index/parent_prefix_path/wamv_gazebo
+[0.443s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/environment/ament_prefix_path.sh
+[0.444s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/environment/ament_prefix_path.dsv
+[0.444s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/environment/path.sh
+[0.444s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/environment/path.dsv
+[0.444s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/local_setup.bash
+[0.444s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/local_setup.sh
+[0.444s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/local_setup.zsh
+[0.444s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/local_setup.dsv
+[0.444s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.dsv
+[0.444s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/ament_index/resource_index/packages/wamv_gazebo
+[0.444s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/cmake/wamv_gazeboConfig.cmake
+[0.444s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/cmake/wamv_gazeboConfig-version.cmake
+[0.444s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.xml
+[0.445s] Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo' returned '0': AMENT_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:/opt/ros/humble GZ_SIM_RESOURCE_PATH=/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/models:/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/models:/home/gaia-22/ac_search/vrx_ws/install/share PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo

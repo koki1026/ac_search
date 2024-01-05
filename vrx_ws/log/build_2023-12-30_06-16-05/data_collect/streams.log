@@ -1,0 +1,36 @@
+[0.908s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/src/data_collect': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/data_collect/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/data_collect build --build-base /home/gaia-22/ac_search/vrx_ws/build/data_collect/build install --record /home/gaia-22/ac_search/vrx_ws/build/data_collect/install.log --single-version-externally-managed
+[1.087s] running egg_info
+[1.087s] creating ../../build/data_collect/data_collect.egg-info
+[1.087s] writing ../../build/data_collect/data_collect.egg-info/PKG-INFO
+[1.087s] writing dependency_links to ../../build/data_collect/data_collect.egg-info/dependency_links.txt
+[1.087s] writing entry points to ../../build/data_collect/data_collect.egg-info/entry_points.txt
+[1.087s] writing requirements to ../../build/data_collect/data_collect.egg-info/requires.txt
+[1.087s] writing top-level names to ../../build/data_collect/data_collect.egg-info/top_level.txt
+[1.087s] writing manifest file '../../build/data_collect/data_collect.egg-info/SOURCES.txt'
+[3.136s] writing manifest file '../../build/data_collect/data_collect.egg-info/SOURCES.txt'
+[3.136s] running build
+[3.136s] running build_py
+[3.136s] creating /home/gaia-22/ac_search/vrx_ws/build/data_collect/build
+[3.136s] creating /home/gaia-22/ac_search/vrx_ws/build/data_collect/build/lib
+[3.136s] creating /home/gaia-22/ac_search/vrx_ws/build/data_collect/build/lib/data_collect
+[3.136s] copying data_collect/__init__.py -> /home/gaia-22/ac_search/vrx_ws/build/data_collect/build/lib/data_collect
+[3.136s] copying data_collect/data_collect.py -> /home/gaia-22/ac_search/vrx_ws/build/data_collect/build/lib/data_collect
+[3.136s] running install
+[3.136s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[3.136s]   warnings.warn(
+[3.137s] running install_lib
+[3.137s] creating /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/data_collect
+[3.137s] copying /home/gaia-22/ac_search/vrx_ws/build/data_collect/build/lib/data_collect/__init__.py -> /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/data_collect
+[3.137s] copying /home/gaia-22/ac_search/vrx_ws/build/data_collect/build/lib/data_collect/data_collect.py -> /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/data_collect
+[3.138s] byte-compiling /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/data_collect/__init__.py to __init__.cpython-310.pyc
+[3.138s] byte-compiling /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/data_collect/data_collect.py to data_collect.cpython-310.pyc
+[3.138s] running install_data
+[3.139s] running install_egg_info
+[3.139s] Copying ../../build/data_collect/data_collect.egg-info to /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/data_collect-0.0.0-py3.10.egg-info
+[3.140s] running install_scripts
+[3.151s] Installing data_collect_node script to /home/gaia-22/ac_search/vrx_ws/install/lib/data_collect
+[3.151s] Installing wave_direction script to /home/gaia-22/ac_search/vrx_ws/install/lib/data_collect
+[3.151s] Installing wave_gain script to /home/gaia-22/ac_search/vrx_ws/install/lib/data_collect
+[3.151s] Installing wave_period script to /home/gaia-22/ac_search/vrx_ws/install/lib/data_collect
+[3.151s] Installing wave_stepness script to /home/gaia-22/ac_search/vrx_ws/install/lib/data_collect
+[3.151s] writing list of installed files to '/home/gaia-22/ac_search/vrx_ws/build/data_collect/install.log'

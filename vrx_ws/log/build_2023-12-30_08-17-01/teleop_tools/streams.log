@@ -1,0 +1,27 @@
+[0.053s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/teleop_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake /home/gaia-22/ac_search/vrx_ws/src/teleop_tools/teleop_tools -DCMAKE_INSTALL_PREFIX=/home/gaia-22/ac_search/vrx_ws/install
+[0.064s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.194s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.289s] -- Configuring done
+[0.290s] -- Generating done
+[0.290s] -- Build files have been written to: /home/gaia-22/ac_search/vrx_ws/build/teleop_tools
+[0.291s] Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/teleop_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake /home/gaia-22/ac_search/vrx_ws/src/teleop_tools/teleop_tools -DCMAKE_INSTALL_PREFIX=/home/gaia-22/ac_search/vrx_ws/install
+[0.292s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/teleop_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/teleop_tools -- -j20 -l20
+[0.315s] Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/teleop_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/teleop_tools -- -j20 -l20
+[0.329s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/teleop_tools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/teleop_tools
+[0.333s] -- Install configuration: ""
+[0.333s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/ament_index/resource_index/package_run_dependencies/teleop_tools
+[0.333s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/ament_index/resource_index/parent_prefix_path/teleop_tools
+[0.333s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/environment/ament_prefix_path.sh
+[0.333s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/environment/ament_prefix_path.dsv
+[0.333s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/environment/path.sh
+[0.333s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/environment/path.dsv
+[0.333s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/local_setup.bash
+[0.333s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/local_setup.sh
+[0.333s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/local_setup.zsh
+[0.333s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/local_setup.dsv
+[0.333s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/package.dsv
+[0.333s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/ament_index/resource_index/packages/teleop_tools
+[0.333s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/cmake/teleop_toolsConfig.cmake
+[0.334s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/cmake/teleop_toolsConfig-version.cmake
+[0.334s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/package.xml
+[0.335s] Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/teleop_tools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/teleop_tools

@@ -1,0 +1,26 @@
+[0.182s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/vrx_ros -- -j20 -l20
+[0.440s] [100%] Built target optical_frame_publisher
+[0.440s] [100%] Built target pose_tf_broadcaster
+[0.441s] Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/vrx_ros -- -j20 -l20
+[0.702s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/vrx_ros
+[0.706s] -- Install configuration: ""
+[0.706s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/lib/vrx_ros/optical_frame_publisher
+[0.706s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/lib/vrx_ros/pose_tf_broadcaster
+[0.706s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/launch
+[0.706s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/launch/monitor_sim.py
+[0.706s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/ament_index/resource_index/package_run_dependencies/vrx_ros
+[0.706s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/ament_index/resource_index/parent_prefix_path/vrx_ros
+[0.706s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/environment/ament_prefix_path.sh
+[0.706s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/environment/ament_prefix_path.dsv
+[0.707s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/environment/path.sh
+[0.707s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/environment/path.dsv
+[0.707s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/local_setup.bash
+[0.707s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/local_setup.sh
+[0.707s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/local_setup.zsh
+[0.707s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/local_setup.dsv
+[0.707s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/package.dsv
+[0.707s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/ament_index/resource_index/packages/vrx_ros
+[0.707s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/cmake/vrx_rosConfig.cmake
+[0.707s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/cmake/vrx_rosConfig-version.cmake
+[0.707s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/package.xml
+[0.708s] Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/vrx_ros

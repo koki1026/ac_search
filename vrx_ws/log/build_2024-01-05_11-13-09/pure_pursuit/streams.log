@@ -1,0 +1,20 @@
+[1.619s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/src/pure_pursuit': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/pure_pursuit build --build-base /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/build install --record /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/install.log --single-version-externally-managed
+[1.806s] running egg_info
+[1.806s] writing ../../build/pure_pursuit/pure_pursuit.egg-info/PKG-INFO
+[1.806s] writing dependency_links to ../../build/pure_pursuit/pure_pursuit.egg-info/dependency_links.txt
+[1.806s] writing entry points to ../../build/pure_pursuit/pure_pursuit.egg-info/entry_points.txt
+[1.806s] writing requirements to ../../build/pure_pursuit/pure_pursuit.egg-info/requires.txt
+[1.806s] writing top-level names to ../../build/pure_pursuit/pure_pursuit.egg-info/top_level.txt
+[3.949s] writing manifest file '../../build/pure_pursuit/pure_pursuit.egg-info/SOURCES.txt'
+[3.949s] running build
+[3.949s] running build_py
+[3.949s] running install
+[3.949s] running install_lib
+[3.950s] running install_data
+[3.951s] running install_egg_info
+[3.951s] removing '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/pure_pursuit-0.0.0-py3.10.egg-info' (and everything under it)
+[3.951s] Copying ../../build/pure_pursuit/pure_pursuit.egg-info to /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/pure_pursuit-0.0.0-py3.10.egg-info
+[3.951s] running install_scripts
+[3.963s] Installing pure_pursuit_node script to /home/gaia-22/ac_search/vrx_ws/install/lib/pure_pursuit
+[3.963s] writing list of installed files to '/home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/install.log'
+[4.053s] Invoked command in '/home/gaia-22/ac_search/vrx_ws/src/pure_pursuit' returned '0': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/pure_pursuit build --build-base /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/build install --record /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/install.log --single-version-externally-managed

@@ -1,0 +1,21 @@
+[0.733s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/joy_teleop': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/joy_teleop/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 setup.py egg_info --egg-base ../../../build/joy_teleop build --build-base /home/gaia-22/ac_search/vrx_ws/build/joy_teleop/build install --record /home/gaia-22/ac_search/vrx_ws/build/joy_teleop/install.log --single-version-externally-managed
+[0.923s] running egg_info
+[0.923s] writing ../../../build/joy_teleop/joy_teleop.egg-info/PKG-INFO
+[0.923s] writing dependency_links to ../../../build/joy_teleop/joy_teleop.egg-info/dependency_links.txt
+[0.923s] writing entry points to ../../../build/joy_teleop/joy_teleop.egg-info/entry_points.txt
+[0.923s] writing requirements to ../../../build/joy_teleop/joy_teleop.egg-info/requires.txt
+[0.923s] writing top-level names to ../../../build/joy_teleop/joy_teleop.egg-info/top_level.txt
+[0.949s] writing manifest file '../../../build/joy_teleop/joy_teleop.egg-info/SOURCES.txt'
+[0.949s] running build
+[0.949s] running build_py
+[0.949s] running install
+[0.949s] running install_lib
+[0.950s] running install_data
+[0.950s] running install_egg_info
+[0.950s] removing '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/joy_teleop-1.5.0-py3.10.egg-info' (and everything under it)
+[0.951s] Copying ../../../build/joy_teleop/joy_teleop.egg-info to /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/joy_teleop-1.5.0-py3.10.egg-info
+[0.951s] running install_scripts
+[0.963s] Installing incrementer_server script to /home/gaia-22/ac_search/vrx_ws/install/lib/joy_teleop
+[0.963s] Installing joy_teleop script to /home/gaia-22/ac_search/vrx_ws/install/lib/joy_teleop
+[0.963s] writing list of installed files to '/home/gaia-22/ac_search/vrx_ws/build/joy_teleop/install.log'
+[0.982s] Invoked command in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/joy_teleop' returned '0': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/joy_teleop/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 setup.py egg_info --egg-base ../../../build/joy_teleop build --build-base /home/gaia-22/ac_search/vrx_ws/build/joy_teleop/build install --record /home/gaia-22/ac_search/vrx_ws/build/joy_teleop/install.log --single-version-externally-managed
