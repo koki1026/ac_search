@@ -1,0 +1,621 @@
+[0.037s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_gz': AMENT_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:/opt/ros/humble PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_gz -DCMAKE_INSTALL_PREFIX=/home/gaia-22/ac_search/vrx_ws/install
+[0.073s] -- The C compiler identification is GNU 11.4.0
+[0.121s] -- The CXX compiler identification is GNU 11.4.0
+[0.126s] -- Detecting C compiler ABI info
+[0.204s] -- Detecting C compiler ABI info - done
+[0.211s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.211s] -- Detecting C compile features
+[0.212s] -- Detecting C compile features - done
+[0.215s] -- Detecting CXX compiler ABI info
+[0.303s] -- Detecting CXX compiler ABI info - done
+[0.316s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.317s] -- Detecting CXX compile features
+[0.317s] -- Detecting CXX compile features - done
+[0.319s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.435s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.495s] -- Looking for gz-sim7 -- found version 7.6.0
+[0.504s] -- Searching for dependencies of gz-sim7
+[0.506s] -- Looking for sdformat13 -- found version 13.6.0
+[0.506s] -- Searching for dependencies of sdformat13
+[0.510s] -- Checking for module 'tinyxml2'
+[0.517s] --   Found tinyxml2, version 9.0.0
+[0.585s] -- Looking for gz-math7 -- found version 7.3.0
+[0.586s] -- Searching for dependencies of gz-math7
+[0.588s] -- Looking for gz-utils2 -- found version 2.2.0
+[0.588s] -- Searching for dependencies of gz-utils2
+[0.589s] -- Looking for gz-utils2 -- found version 2.2.0
+[0.589s] -- Searching for dependencies of gz-utils2
+[0.589s] -- Searching for <gz-utils2> component [cli]
+[0.590s] -- Looking for gz-utils2-cli -- found version 2.2.0
+[0.590s] -- Searching for dependencies of gz-utils2-cli
+[0.593s] -- Looking for gz-plugin2 -- found version 2.0.2
+[0.593s] -- Searching for dependencies of gz-plugin2
+[0.593s] -- Looking for gz-utils2 -- found version 2.2.0
+[0.594s] -- Searching for <gz-plugin2> component [loader]
+[0.595s] -- Looking for gz-plugin2-loader -- found version 2.0.2
+[0.595s] -- Searching for dependencies of gz-plugin2-loader
+[0.596s] -- Searching for <gz-plugin2> component [register]
+[0.597s] -- Looking for gz-plugin2-register -- found version 2.0.2
+[0.597s] -- Searching for dependencies of gz-plugin2-register
+[0.599s] -- Looking for gz-transport12 -- found version 12.2.1
+[0.599s] -- Searching for dependencies of gz-transport12
+[0.764s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+[0.770s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[0.773s] -- Checking for module 'libzmq >= 4'
+[0.779s] --   Found libzmq , version 4.3.4
+[0.799s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[0.802s] -- Checking for module 'uuid'
+[0.808s] --   Found uuid, version 2.37.2
+[0.843s] -- Found UUID: TRUE  
+[0.844s] -- Looking for gz-utils2 -- found version 2.2.0
+[0.847s] -- Looking for gz-msgs9 -- found version 9.5.0
+[0.848s] -- Searching for dependencies of gz-msgs9
+[0.860s] -- Looking for gz-math7 -- found version 7.3.0
+[0.864s] -- Searching for <gz-transport12> component [log]
+[0.874s] -- Looking for gz-transport12-log -- found version 12.2.1
+[0.874s] -- Searching for dependencies of gz-transport12-log
+[0.875s] -- Searching for <gz-transport12> component [parameters]
+[0.876s] -- Looking for gz-transport12-parameters -- found version 12.2.1
+[0.877s] -- Searching for dependencies of gz-transport12-parameters
+[0.877s] -- Looking for gz-msgs9 -- found version 9.5.0
+[0.879s] -- Looking for gz-common5 -- found version 5.4.2
+[0.880s] -- Searching for dependencies of gz-common5
+[0.880s] -- Looking for gz-utils2 -- found version 2.2.0
+[0.880s] -- Looking for dlfcn.h - found
+[0.881s] -- Looking for libdl - found
+[0.881s] -- Found DL: TRUE  
+[0.885s] -- Searching for <gz-common5> component [profiler]
+[0.886s] -- Looking for gz-common5-profiler -- found version 5.4.2
+[0.887s] -- Searching for dependencies of gz-common5-profiler
+[0.887s] -- Searching for <gz-common5> component [events]
+[0.888s] -- Looking for gz-common5-events -- found version 5.4.2
+[0.889s] -- Searching for dependencies of gz-common5-events
+[0.889s] -- Looking for gz-math7 -- found version 7.3.0
+[0.889s] -- Searching for <gz-common5> component [av]
+[0.891s] -- Looking for gz-common5-av -- found version 5.4.2
+[0.891s] -- Searching for dependencies of gz-common5-av
+[0.893s] -- Checking for module 'libswscale'
+[0.899s] --   Found libswscale, version 5.9.100
+[0.915s] -- Found SWSCALE: TRUE  
+[0.918s] -- Checking for module 'libavdevice >= 56.4.100'
+[0.924s] --   Found libavdevice , version 58.13.100
+[0.949s] -- Found AVDEVICE: TRUE (Required is at least version "56.4.100") 
+[0.953s] -- Checking for module 'libavformat'
+[0.961s] --   Found libavformat, version 58.76.100
+[1.003s] -- Found AVFORMAT: TRUE  
+[1.010s] -- Checking for module 'libavcodec'
+[1.023s] --   Found libavcodec, version 58.134.100
+[1.086s] -- Found AVCODEC: TRUE  
+[1.094s] -- Checking for module 'libavutil'
+[1.110s] --   Found libavutil, version 56.70.100
+[1.180s] -- Found AVUTIL: TRUE  
+[1.181s] -- Searching for <gz-common5> component [io]
+[1.183s] -- Looking for gz-common5-io -- found version 5.4.2
+[1.183s] -- Searching for dependencies of gz-common5-io
+[1.186s] -- Looking for gz-fuel_tools8 -- found version 8.1.0
+[1.186s] -- Searching for dependencies of gz-fuel_tools8
+[1.264s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  
+[1.270s] -- Checking for module 'jsoncpp'
+[1.276s] --   Found jsoncpp, version 1.9.5
+[1.296s] -- Found JSONCPP: TRUE  
+[1.301s] -- Checking for module 'libzip'
+[1.307s] --   Found libzip, version 1.7.3
+[1.340s] -- Found ZIP: TRUE  
+[1.341s] -- Looking for gz-utils2 -- found version 2.2.0
+[1.342s] -- Looking for gz-common5 -- found version 5.4.2
+[1.343s] -- Searching for dependencies of gz-common5
+[1.344s] -- Looking for gz-utils2 -- found version 2.2.0
+[1.344s] -- Looking for dlfcn.h - found
+[1.344s] -- Looking for libdl - found
+[1.353s] -- Searching for <gz-common5> component [testing]
+[1.357s] -- Looking for gz-common5-testing -- found version 5.4.2
+[1.357s] -- Searching for dependencies of gz-common5-testing
+[1.359s] -- Looking for gz-math7 -- found version 7.3.0
+[1.359s] -- Looking for gz-msgs9 -- found version 9.5.0
+[1.363s] -- Looking for gz-gui7 -- found version 7.2.1
+[1.363s] -- Searching for dependencies of gz-gui7
+[1.377s] -- Looking for gz-utils2 -- found version 2.2.0
+[1.377s] -- Looking for gz-math7 -- found version 7.3.0
+[1.378s] -- Looking for gz-common5 -- found version 5.4.2
+[1.378s] -- Looking for gz-plugin2 -- found version 2.0.2
+[1.378s] -- Looking for gz-transport12 -- found version 12.2.1
+[1.380s] -- Looking for gz-rendering7 -- found version 7.4.2
+[1.380s] -- Searching for dependencies of gz-rendering7
+[1.380s] -- Looking for gz-math7 -- found version 7.3.0
+[1.380s] -- Searching for dependencies of gz-math7
+[1.381s] -- Looking for gz-utils2 -- found version 2.2.0
+[1.381s] -- Searching for <gz-math7> component [eigen3]
+[1.382s] -- Looking for gz-math7-eigen3 -- found version 7.3.0
+[1.382s] -- Searching for dependencies of gz-math7-eigen3
+[1.387s] -- Looking for gz-common5 -- found version 5.4.2
+[1.388s] -- Searching for dependencies of gz-common5
+[1.388s] -- Looking for gz-utils2 -- found version 2.2.0
+[1.388s] -- Looking for dlfcn.h - found
+[1.388s] -- Looking for libdl - found
+[1.392s] -- Searching for <gz-common5> component [graphics]
+[1.393s] -- Looking for gz-common5-graphics -- found version 5.4.2
+[1.394s] -- Searching for dependencies of gz-common5-graphics
+[1.394s] -- Looking for gz-math7 -- found version 7.3.0
+[1.398s] -- Found GzAssimp: TRUE (found version "5.2.0") 
+[1.398s] -- Searching for <gz-common5> component [events]
+[1.399s] -- Searching for <gz-common5> component [geospatial]
+[1.400s] -- Looking for gz-common5-geospatial -- found version 5.4.2
+[1.400s] -- Searching for dependencies of gz-common5-geospatial
+[1.400s] -- Looking for gz-math7 -- found version 7.3.0
+[1.401s] -- Looking for gz-common5 -- found version 5.4.2
+[1.401s] -- Looking for gz-plugin2 -- found version 2.0.2
+[1.402s] -- Searching for dependencies of gz-plugin2
+[1.402s] -- Looking for gz-utils2 -- found version 2.2.0
+[1.402s] -- Searching for <gz-plugin2> component [all]
+[1.403s] -- Looking for all libraries of gz-plugin2 -- found version 2.0.2
+[1.404s] -- Looking for gz-plugin2 -- found version 2.0.2
+[1.405s] -- Looking for gz-utils2 -- found version 2.2.0
+[1.408s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL 
+[1.409s] -- Looking for gz-msgs9 -- found version 9.5.0
+[1.433s] -- Looking for gz-physics6 -- found version 6.5.1
+[1.433s] -- Searching for dependencies of gz-physics6
+[1.433s] -- Looking for gz-math7 -- found version 7.3.0
+[1.434s] -- Looking for gz-plugin2 -- found version 2.0.2
+[1.434s] -- Looking for gz-utils2 -- found version 2.2.0
+[1.435s] -- Searching for <gz-physics6> component [heightmap]
+[1.436s] -- Looking for gz-physics6-heightmap -- found version 6.5.1
+[1.436s] -- Searching for dependencies of gz-physics6-heightmap
+[1.436s] -- Looking for gz-common5 -- found version 5.4.2
+[1.437s] -- Searching for <gz-physics6> component [mesh]
+[1.438s] -- Looking for gz-physics6-mesh -- found version 6.5.1
+[1.438s] -- Searching for dependencies of gz-physics6-mesh
+[1.438s] -- Looking for gz-common5 -- found version 5.4.2
+[1.439s] -- Searching for <gz-physics6> component [sdf]
+[1.440s] -- Looking for gz-physics6-sdf -- found version 6.5.1
+[1.440s] -- Searching for dependencies of gz-physics6-sdf
+[1.440s] -- Looking for sdformat13 -- found version 13.6.0
+[1.443s] -- Looking for gz-sensors7 -- found version 7.3.0
+[1.443s] -- Searching for dependencies of gz-sensors7
+[1.454s] -- Looking for gz-math7 -- found version 7.3.0
+[1.454s] -- Looking for gz-common5 -- found version 5.4.2
+[1.454s] -- Looking for gz-transport12 -- found version 12.2.1
+[1.454s] -- Looking for gz-rendering7 -- found version 7.4.2
+[1.455s] -- Looking for gz-msgs9 -- found version 9.5.0
+[1.455s] -- Looking for sdformat13 -- found version 13.6.0
+[1.455s] -- Searching for <gz-sensors7> component [air_pressure]
+[1.457s] -- Looking for gz-sensors7-air_pressure -- found version 7.3.0
+[1.457s] -- Searching for dependencies of gz-sensors7-air_pressure
+[1.458s] -- Searching for <gz-sensors7> component [air_speed]
+[1.459s] -- Looking for gz-sensors7-air_speed -- found version 7.3.0
+[1.459s] -- Searching for dependencies of gz-sensors7-air_speed
+[1.460s] -- Searching for <gz-sensors7> component [altimeter]
+[1.461s] -- Looking for gz-sensors7-altimeter -- found version 7.3.0
+[1.461s] -- Searching for dependencies of gz-sensors7-altimeter
+[1.462s] -- Searching for <gz-sensors7> component [imu]
+[1.463s] -- Looking for gz-sensors7-imu -- found version 7.3.0
+[1.463s] -- Searching for dependencies of gz-sensors7-imu
+[1.464s] -- Searching for <gz-sensors7> component [force_torque]
+[1.465s] -- Looking for gz-sensors7-force_torque -- found version 7.3.0
+[1.465s] -- Searching for dependencies of gz-sensors7-force_torque
+[1.466s] -- Searching for <gz-sensors7> component [logical_camera]
+[1.467s] -- Looking for gz-sensors7-logical_camera -- found version 7.3.0
+[1.467s] -- Searching for dependencies of gz-sensors7-logical_camera
+[1.468s] -- Searching for <gz-sensors7> component [magnetometer]
+[1.469s] -- Looking for gz-sensors7-magnetometer -- found version 7.3.0
+[1.470s] -- Searching for dependencies of gz-sensors7-magnetometer
+[1.470s] -- Searching for <gz-sensors7> component [navsat]
+[1.471s] -- Looking for gz-sensors7-navsat -- found version 7.3.0
+[1.472s] -- Searching for dependencies of gz-sensors7-navsat
+[1.472s] -- Searching for <gz-sensors7> component [rendering]
+[1.473s] -- Looking for gz-sensors7-rendering -- found version 7.3.0
+[1.474s] -- Searching for dependencies of gz-sensors7-rendering
+[1.474s] -- Searching for <gz-sensors7> component [lidar]
+[1.475s] -- Looking for gz-sensors7-lidar -- found version 7.3.0
+[1.476s] -- Searching for dependencies of gz-sensors7-lidar
+[1.476s] -- Looking for gz-sensors7 -- found version 7.3.0
+[1.476s] -- Searching for <gz-sensors7> component [gpu_lidar]
+[1.478s] -- Looking for gz-sensors7-gpu_lidar -- found version 7.3.0
+[1.478s] -- Searching for dependencies of gz-sensors7-gpu_lidar
+[1.478s] -- Looking for gz-sensors7 -- found version 7.3.0
+[1.479s] -- Searching for <gz-sensors7> component [camera]
+[1.480s] -- Looking for gz-sensors7-camera -- found version 7.3.0
+[1.481s] -- Searching for dependencies of gz-sensors7-camera
+[1.481s] -- Looking for gz-sensors7 -- found version 7.3.0
+[1.481s] -- Searching for <gz-sensors7> component [boundingbox_camera]
+[1.483s] -- Looking for gz-sensors7-boundingbox_camera -- found version 7.3.0
+[1.483s] -- Searching for dependencies of gz-sensors7-boundingbox_camera
+[1.483s] -- Searching for <gz-sensors7> component [segmentation_camera]
+[1.485s] -- Looking for gz-sensors7-segmentation_camera -- found version 7.3.0
+[1.485s] -- Searching for dependencies of gz-sensors7-segmentation_camera
+[1.485s] -- Searching for <gz-sensors7> component [depth_camera]
+[1.487s] -- Looking for gz-sensors7-depth_camera -- found version 7.3.0
+[1.487s] -- Searching for dependencies of gz-sensors7-depth_camera
+[1.487s] -- Looking for gz-sensors7 -- found version 7.3.0
+[1.488s] -- Searching for <gz-sensors7> component [rgbd_camera]
+[1.489s] -- Looking for gz-sensors7-rgbd_camera -- found version 7.3.0
+[1.489s] -- Searching for dependencies of gz-sensors7-rgbd_camera
+[1.490s] -- Looking for gz-sensors7 -- found version 7.3.0
+[1.490s] -- Searching for <gz-sensors7> component [thermal_camera]
+[1.491s] -- Looking for gz-sensors7-thermal_camera -- found version 7.3.0
+[1.492s] -- Searching for dependencies of gz-sensors7-thermal_camera
+[1.492s] -- Looking for gz-sensors7 -- found version 7.3.0
+[1.492s] -- Searching for <gz-sensors7> component [wide_angle_camera]
+[1.494s] -- Looking for gz-sensors7-wide_angle_camera -- found version 7.3.0
+[1.494s] -- Searching for dependencies of gz-sensors7-wide_angle_camera
+[1.495s] -- Looking for gz-rendering7 -- found version 7.4.2
+[1.495s] -- Looking for gz-math7 -- found version 7.3.0
+[1.495s] -- Looking for gz-utils2 -- found version 2.2.0
+[1.507s] -- Looking for gz-common5 -- found version 5.4.2
+[1.507s] -- Looking for gz-fuel_tools8 -- found version 8.1.0
+[1.507s] -- Looking for gz-math7 -- found version 7.3.0
+[1.507s] -- Looking for gz-msgs9 -- found version 9.5.0
+[1.507s] -- Looking for gz-transport12 -- found version 12.2.1
+[1.508s] -- Looking for gz-plugin2 -- found version 2.0.2
+[1.508s] -- Looking for gz-rendering7 -- found version 7.4.2
+[1.508s] -- Looking for gz-sensors7 -- found version 7.3.0
+[1.508s] -- Looking for gz-utils2 -- found version 2.2.0
+[1.509s] -- Looking for sdformat13 -- found version 13.6.0
+[1.509s] -- Found std_msgs: 4.2.3 (/opt/ros/humble/share/std_msgs/cmake)
+[1.525s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.528s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.532s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.540s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.550s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.660s] -- Configuring done
+[1.705s] -- Generating done
+[1.707s] -- Build files have been written to: /home/gaia-22/ac_search/vrx_ws/build/vrx_gz
+[1.716s] Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_gz' returned '0': AMENT_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:/opt/ros/humble PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_gz -DCMAKE_INSTALL_PREFIX=/home/gaia-22/ac_search/vrx_ws/install
+[1.716s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_gz': AMENT_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:/opt/ros/humble PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/vrx_gz -- -j20 -l20
+[1.746s] [  2%] [32mBuilding CXX object CMakeFiles/Waves.dir/src/Wavefield.cc.o[0m
+[1.747s] [  4%] [32mBuilding CXX object CMakeFiles/ScoringPlugin.dir/src/ScoringPlugin.cc.o[0m
+[1.752s] [  4%] Built target ament_cmake_python_copy_vrx_gz
+[1.934s] running egg_info
+[1.934s] creating vrx_gz.egg-info
+[1.934s] writing vrx_gz.egg-info/PKG-INFO
+[1.934s] writing dependency_links to vrx_gz.egg-info/dependency_links.txt
+[1.934s] writing top-level names to vrx_gz.egg-info/top_level.txt
+[1.934s] writing manifest file 'vrx_gz.egg-info/SOURCES.txt'
+[3.598s] [  6%] [32m[1mLinking CXX shared library libWaves.so[0m
+[3.736s] [  6%] Built target Waves
+[3.747s] [ 12%] [32mBuilding CXX object CMakeFiles/PolyhedraBuoyancyDrag.dir/src/PolyhedronVolume.cc.o[0m
+[3.748s] [ 12%] [32mBuilding CXX object CMakeFiles/PolyhedraBuoyancyDrag.dir/src/PolyhedraBuoyancyDrag.cc.o[0m
+[3.748s] [ 12%] [32mBuilding CXX object CMakeFiles/PolyhedraBuoyancyDrag.dir/src/ShapeVolume.cc.o[0m
+[4.141s] reading manifest file 'vrx_gz.egg-info/SOURCES.txt'
+[4.141s] writing manifest file 'vrx_gz.egg-info/SOURCES.txt'
+[4.161s] [ 12%] Built target ament_cmake_python_build_vrx_gz_egg
+[4.318s] [ 14%] [32m[1mLinking CXX shared library libScoringPlugin.so[0m
+[4.466s] [ 14%] Built target ScoringPlugin
+[4.482s] [ 20%] [32mBuilding CXX object CMakeFiles/AcousticPerceptionScoringPlugin.dir/src/AcousticPerceptionScoringPlugin.cc.o[0m
+[4.482s] [ 20%] [32mBuilding CXX object CMakeFiles/BallShooterPlugin.dir/src/BallShooterPlugin.cc.o[0m
+[4.482s] [ 22%] [32mBuilding CXX object CMakeFiles/AcousticTrackingScoringPlugin.dir/src/AcousticTrackingScoringPlugin.cc.o[0m
+[4.482s] [ 22%] [32mBuilding CXX object CMakeFiles/WayfindingScoringPlugin.dir/src/WayfindingScoringPlugin.cc.o[0m
+[4.483s] [ 27%] [32mBuilding CXX object CMakeFiles/PerceptionScoringPlugin.dir/src/PerceptionScoringPlugin.cc.o[0m
+[4.483s] [ 27%] [32mBuilding CXX object CMakeFiles/GymkhanaScoringPlugin.dir/src/GymkhanaScoringPlugin.cc.o[0m
+[4.483s] [ 33%] [32mBuilding CXX object CMakeFiles/AcousticPingerPlugin.dir/src/AcousticPingerPlugin.cc.o[0m
+[4.483s] [ 33%] [32mBuilding CXX object CMakeFiles/PlacardPlugin.dir/src/PlacardPlugin.cc.o[0m
+[4.483s] [ 33%] [32mBuilding CXX object CMakeFiles/StationkeepingScoringPlugin.dir/src/StationkeepingScoringPlugin.cc.o[0m
+[4.483s] [ 35%] [32mBuilding CXX object CMakeFiles/ScanDockScoringPlugin.dir/src/ScanDockScoringPlugin.cc.o[0m
+[4.484s] [ 39%] [32mBuilding CXX object CMakeFiles/LightBuoyPlugin.dir/src/LightBuoyPlugin.cc.o[0m
+[4.484s] [ 39%] [32mBuilding CXX object CMakeFiles/SimpleHydrodynamics.dir/src/SimpleHydrodynamics.cc.o[0m
+[4.488s] [ 41%] [32mBuilding CXX object CMakeFiles/NavigationScoringPlugin.dir/src/NavigationScoringPlugin.cc.o[0m
+[4.491s] [ 43%] [32mBuilding CXX object CMakeFiles/USVWind.dir/src/USVWind.cc.o[0m
+[4.491s] [ 45%] [32mBuilding CXX object CMakeFiles/WaveVisual.dir/src/WaveVisual.cc.o[0m
+[4.492s] [ 47%] [32mBuilding CXX object CMakeFiles/Surface.dir/src/Surface.cc.o[0m
+[4.493s] [ 52%] [32mBuilding CXX object CMakeFiles/PublisherPlugin.dir/src/PublisherPlugin.cc.o[0m
+[4.494s] [ 52%] [32mBuilding CXX object CMakeFiles/WildlifeScoringPlugin.dir/src/WildlifeScoringPlugin.cc.o[0m
+[4.747s] [ 54%] [32mBuilding CXX object CMakeFiles/WayfindingScoringPlugin.dir/src/WaypointMarkers.cc.o[0m
+[8.647s] [ 56%] [32m[1mLinking CXX shared library libPublisherPlugin.so[0m
+[9.019s] [ 56%] Built target PublisherPlugin
+[9.031s] [ 58%] [32mBuilding CXX object CMakeFiles/StationkeepingScoringPlugin.dir/src/WaypointMarkers.cc.o[0m
+[9.264s] [ 60%] [32m[1mLinking CXX shared library libLightBuoyPlugin.so[0m
+[9.679s] [ 60%] Built target LightBuoyPlugin
+[9.691s] [ 62%] [32mBuilding CXX object CMakeFiles/AcousticPerceptionScoringPlugin.dir/src/WaypointMarkers.cc.o[0m
+[10.428s] [ 64%] [32m[1mLinking CXX shared library libGymkhanaScoringPlugin.so[0m
+[10.443s] [ 66%] [32m[1mLinking CXX shared library libSurface.so[0m
+[10.506s] [ 68%] [32m[1mLinking CXX shared library libPlacardPlugin.so[0m
+[10.553s] [ 70%] [32m[1mLinking CXX shared library libSimpleHydrodynamics.so[0m
+[10.925s] [ 70%] Built target GymkhanaScoringPlugin
+[10.928s] [ 72%] [32m[1mLinking CXX shared library libPolyhedraBuoyancyDrag.so[0m
+[10.936s] [ 75%] [32mBuilding CXX object CMakeFiles/AcousticTrackingScoringPlugin.dir/src/WaypointMarkers.cc.o[0m
+[11.000s] [ 75%] Built target PlacardPlugin
+[11.016s] [ 75%] Built target SimpleHydrodynamics
+[11.029s] [ 75%] Built target Surface
+[11.313s] [ 77%] [32m[1mLinking CXX shared library libPerceptionScoringPlugin.so[0m
+[11.399s] [ 77%] Built target PolyhedraBuoyancyDrag
+[11.643s] [ 79%] [32m[1mLinking CXX shared library libWildlifeScoringPlugin.so[0m
+[11.650s] [ 81%] [32m[1mLinking CXX shared library libAcousticPingerPlugin.so[0m
+[11.711s] [ 81%] Built target PerceptionScoringPlugin
+[12.050s] [ 81%] Built target AcousticPingerPlugin
+[12.185s] [ 83%] [32m[1mLinking CXX shared library libWayfindingScoringPlugin.so[0m
+[12.296s] [ 83%] Built target WildlifeScoringPlugin
+[12.467s] [ 83%] Built target WayfindingScoringPlugin
+[12.888s] [ 85%] [32m[1mLinking CXX shared library libNavigationScoringPlugin.so[0m
+[13.033s] [ 89%] [32m[1mLinking CXX shared library libUSVWind.so[0m
+[13.033s] [ 89%] [32m[1mLinking CXX shared library libBallShooterPlugin.so[0m
+[13.083s] [ 91%] [32m[1mLinking CXX shared library libWaveVisual.so[0m
+[13.097s] [ 91%] Built target NavigationScoringPlugin
+[13.208s] [ 93%] [32m[1mLinking CXX shared library libScanDockScoringPlugin.so[0m
+[13.272s] [ 93%] Built target USVWind
+[13.296s] [ 93%] Built target BallShooterPlugin
+[13.324s] [ 93%] Built target WaveVisual
+[13.426s] [ 93%] Built target ScanDockScoringPlugin
+[13.553s] [ 95%] [32m[1mLinking CXX shared library libStationkeepingScoringPlugin.so[0m
+[13.740s] [ 95%] Built target StationkeepingScoringPlugin
+[14.040s] [ 97%] [32m[1mLinking CXX shared library libAcousticPerceptionScoringPlugin.so[0m
+[14.223s] [ 97%] Built target AcousticPerceptionScoringPlugin
+[14.563s] [100%] [32m[1mLinking CXX shared library libAcousticTrackingScoringPlugin.so[0m
+[14.727s] [100%] Built target AcousticTrackingScoringPlugin
+[14.738s] Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_gz' returned '0': AMENT_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:/opt/ros/humble PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/vrx_gz -- -j20 -l20
+[14.865s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_gz': AMENT_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:/opt/ros/humble PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/vrx_gz
+[14.880s] -- Install configuration: ""
+[14.880s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/environment/resource_paths.dsv
+[14.880s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/environment/resource_paths.sh
+[14.880s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libWaves.so
+[14.881s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libPolyhedraBuoyancyDrag.so
+[14.882s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libPolyhedraBuoyancyDrag.so" to ""
+[14.882s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libScoringPlugin.so
+[14.884s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libStationkeepingScoringPlugin.so
+[14.885s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libStationkeepingScoringPlugin.so" to ""
+[14.885s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libWayfindingScoringPlugin.so
+[14.886s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libWayfindingScoringPlugin.so" to ""
+[14.886s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libAcousticPerceptionScoringPlugin.so
+[14.888s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libAcousticPerceptionScoringPlugin.so" to ""
+[14.888s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libAcousticTrackingScoringPlugin.so
+[14.889s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libAcousticTrackingScoringPlugin.so" to ""
+[14.889s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libAcousticPingerPlugin.so
+[14.890s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libAcousticPingerPlugin.so" to ""
+[14.890s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libBallShooterPlugin.so
+[14.892s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libBallShooterPlugin.so" to ""
+[14.892s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libLightBuoyPlugin.so
+[14.892s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libLightBuoyPlugin.so" to ""
+[14.892s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libNavigationScoringPlugin.so
+[14.894s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libNavigationScoringPlugin.so" to ""
+[14.894s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libGymkhanaScoringPlugin.so
+[14.895s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libGymkhanaScoringPlugin.so" to ""
+[14.895s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libPerceptionScoringPlugin.so
+[14.896s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libPerceptionScoringPlugin.so" to ""
+[14.896s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libPlacardPlugin.so
+[14.897s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libPlacardPlugin.so" to ""
+[14.897s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libPublisherPlugin.so
+[14.898s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libPublisherPlugin.so" to ""
+[14.898s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libScanDockScoringPlugin.so
+[14.899s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libScanDockScoringPlugin.so" to ""
+[14.899s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libSimpleHydrodynamics.so
+[14.900s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libSimpleHydrodynamics.so" to ""
+[14.900s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libSurface.so
+[14.901s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libSurface.so" to ""
+[14.901s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libUSVWind.so
+[14.902s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libUSVWind.so" to ""
+[14.902s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libWaveVisual.so
+[14.903s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libWaveVisual.so" to ""
+[14.903s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/lib/libWildlifeScoringPlugin.so
+[14.904s] -- Set runtime path of "/home/gaia-22/ac_search/vrx_ws/install/lib/libWildlifeScoringPlugin.so" to ""
+[14.904s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/environment/pythonpath.sh
+[14.904s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/environment/pythonpath.dsv
+[14.904s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz-0.0.0-py3.10.egg-info
+[14.904s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz-0.0.0-py3.10.egg-info/dependency_links.txt
+[14.904s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz-0.0.0-py3.10.egg-info/PKG-INFO
+[14.904s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz-0.0.0-py3.10.egg-info/top_level.txt
+[14.904s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz-0.0.0-py3.10.egg-info/SOURCES.txt
+[14.905s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz
+[14.905s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz/launch.py
+[14.905s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz/bridge.py
+[14.905s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz/__init__.py
+[14.905s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz/payload_bridges.py
+[14.905s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz/bridges.py
+[14.905s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz/model.py
+[14.927s] Listing '/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz'...
+[14.927s] Compiling '/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz/__init__.py'...
+[14.927s] Compiling '/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz/bridge.py'...
+[14.927s] Compiling '/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz/bridges.py'...
+[14.927s] Compiling '/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz/launch.py'...
+[14.927s] Compiling '/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz/model.py'...
+[14.927s] Compiling '/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages/vrx_gz/payload_bridges.py'...
+[14.930s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/config
+[14.930s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/config/wamv.yaml
+[14.930s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/launch
+[14.930s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/launch/spawn.launch.py
+[14.930s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/launch/vrx_environment.launch.py
+[14.930s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/launch/competition.launch.py
+[14.930s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/launch/spawn_config.launch.py
+[14.930s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/launch/usv_joy_teleop.launch.py
+[14.930s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models
+[14.930s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_1
+[14.930s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_1/model.sdf
+[14.930s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_1/model.config
+[14.930s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/coast_waves
+[14.930s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/coast_waves/model.sdf
+[14.930s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/coast_waves/model.config
+[14.930s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/coast_waves/meshes
+[14.930s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/coast_waves/meshes/waterlow.dae
+[14.937s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/coast_waves/materials
+[14.937s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/coast_waves/materials/programs
+[14.937s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/coast_waves/materials/programs/GerstnerWaves_fs_330.glsl
+[14.937s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/coast_waves/materials/programs/GerstnerWaves_vs_330.glsl
+[14.937s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/coast_waves/materials/textures
+[14.937s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/coast_waves/materials/textures/skybox_lowres.dds
+[14.938s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/coast_waves/materials/textures/wave_normals.dds
+[14.938s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/obstacle_course
+[14.938s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/obstacle_course/model.sdf
+[14.938s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/obstacle_course/model.config
+[14.938s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/dock_2022_base
+[14.938s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/dock_2022_base/model.sdf
+[14.938s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/dock_2022_base/model.config
+[14.938s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_rgy
+[14.938s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_rgy/model.sdf
+[14.938s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_rgy/model.config
+[14.938s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_5
+[14.938s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_5/model.sdf
+[14.938s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_5/model.config
+[14.938s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_rgb
+[14.938s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_rgb/model.sdf
+[14.938s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_rgb/model.config
+[14.939s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh
+[14.939s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/LightTower_Normal.png
+[14.940s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/LightTower_Metalness.png
+[14.941s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/robotx_light_buoy.dae
+[14.941s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/LightTower_Roughness.png
+[14.942s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/LightTower_Albedo.png
+[14.943s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_rgb/mesh/LightTower_Opacity.png
+[14.943s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/symbol_triangle
+[14.943s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/symbol_triangle/model.sdf
+[14.943s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/symbol_triangle/model.config
+[14.943s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/symbol_triangle/mesh
+[14.943s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/symbol_triangle/mesh/triangle.dae
+[14.943s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_ygb
+[14.943s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_ygb/model.sdf
+[14.943s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_ygb/model.config
+[14.943s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_rbg
+[14.943s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_rbg/model.sdf
+[14.943s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_rbg/model.config
+[14.943s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_bgy
+[14.943s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_bgy/model.sdf
+[14.943s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_bgy/model.config
+[14.943s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/placard_2022
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/placard_2022/model.sdf
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/placard_2022/model.config
+[14.944s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/placard_2022/meshes
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/placard_2022/meshes/placard_2022.dae
+[14.944s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/placard_2022/materials
+[14.944s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/placard_2022/materials/textures
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/placard_2022/materials/textures/Placard.png
+[14.944s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_course_2023_phase3_1
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_course_2023_phase3_1/model.sdf
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_course_2023_phase3_1/model.config
+[14.944s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_bgr
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_bgr/model.sdf
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_bgr/model.config
+[14.944s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_3
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_3/model.sdf
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_3/model.config
+[14.944s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_4
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_4/model.sdf
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_4/model.config
+[14.944s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/entrance_exit
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/entrance_exit/model.sdf
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/entrance_exit/model.config
+[14.944s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_ybr
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_ybr/model.sdf
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_ybr/model.config
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat_cpubox
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat_cpubox/model.sdf
+[14.944s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat_cpubox/model.config
+[14.945s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat_cpubox/meshes
+[14.945s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat_cpubox/meshes/drybox.dae
+[14.945s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat_cpubox/materials
+[14.945s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat_cpubox/materials/textures
+[14.945s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat_cpubox/materials/textures/DryBox_Roughness.png
+[14.949s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat_cpubox/materials/textures/DryBox_Albedo.png
+[14.952s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_0
+[14.952s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_0/model.sdf
+[14.952s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_0/model.config
+[14.952s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01
+[14.952s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01/model.sdf
+[14.952s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01/model.config
+[14.952s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01/meshes
+[14.953s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01/meshes/mount.dae
+[14.953s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01/meshes/prop.dae
+[14.953s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01/meshes/roboboat01.dae
+[14.953s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01/meshes/housing.dae
+[14.953s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01/materials
+[14.953s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01/materials/scripts
+[14.953s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01/materials/scripts/model.material
+[14.953s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01/materials/textures
+[14.953s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01/materials/textures/Boat01_Metallic.png
+[14.954s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01/materials/textures/Boat01_Normal.png
+[14.954s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01/materials/textures/Boat01_Roughness.png
+[14.956s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01/materials/textures/Thruster_Albedo.png
+[14.956s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01/materials/textures/Boat01_Albedo.png
+[14.959s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat01/materials/textures/Thruster_Roughness.png
+[14.960s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/platform
+[14.960s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/platform/model.sdf
+[14.960s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/platform/model.config
+[14.960s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_2
+[14.960s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_2/model.sdf
+[14.960s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_navigation_course_2/model.config
+[14.960s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/articulated_platform
+[14.960s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/articulated_platform/model.sdf
+[14.960s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/articulated_platform/model.config
+[14.960s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/dock_block_4x4
+[14.960s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/dock_block_4x4/model.sdf
+[14.960s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/dock_block_4x4/model.config
+[14.960s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/dock_block_4x4/mesh
+[14.960s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/dock_block_4x4/mesh/DockCubes_Normal.png
+[14.974s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/dock_block_4x4/mesh/DockCubes_Albedo.png
+[14.975s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/dock_block_4x4/mesh/dock_block_4x4.dae
+[14.975s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/dock_block_4x4/mesh/DockCubes_Metalness.png
+[14.976s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/dock_block_4x4/mesh/DockCubes_Roughness.png
+[14.976s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat02
+[14.976s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat02/model.sdf
+[14.976s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat02/model.config
+[14.976s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat02/meshes
+[14.976s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat02/meshes/roboboat02.dae
+[14.977s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat02/materials
+[14.977s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat02/materials/scripts
+[14.977s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat02/materials/scripts/model.material
+[14.977s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat02/materials/textures
+[14.977s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat02/materials/textures/Boat02_Albedo.png
+[14.979s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat02/materials/textures/Boat02_Normal.png
+[14.980s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat02/materials/textures/Boat02_Roughness.png
+[14.981s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/roboboat02/materials/textures/Boat02_Metallic.png
+[14.982s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_course_2023_phase3_2
+[14.982s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_course_2023_phase3_2/model.sdf
+[14.982s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/short_course_2023_phase3_2/model.config
+[14.982s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_gbr
+[14.982s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_gbr/model.sdf
+[14.982s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_gbr/model.config
+[14.982s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_yrg
+[14.982s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_yrg/model.sdf
+[14.982s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/robotx_light_buoy_yrg/model.config
+[14.982s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/dock_2022
+[14.982s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/dock_2022/model.sdf
+[14.982s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/models/dock_2022/model.config
+[14.982s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds
+[14.982s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/wayfinding_task.sdf
+[14.982s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/navigation_task.sdf
+[14.982s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/acoustic_perception_task.sdf
+[14.982s] -- Up-to-date: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice
+[14.982s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_perception1_task.sdf
+[14.982s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_scan_dock_deliver1_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_perception2_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_wildlife1_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_perception0_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_follow_path0_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_tracking2_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_wildlife0_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_wayfinding2_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_wayfinding0_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_tracking1_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_perception2_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_stationkeeping0_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_acoustic_tracking0_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_follow_path2_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_scan_dock_deliver2_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_stationkeeping2_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_perception0_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_stationkeeping1_task.sdf
+[14.983s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_follow_path1_task.sdf
+[14.984s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_wayfinding1_task.sdf
+[14.984s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_perception1_task.sdf
+[14.984s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_wildlife2_task.sdf
+[14.984s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/2023_practice/practice_2023_scan_dock_deliver0_task.sdf
+[14.984s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/sydney_regatta.sdf
+[14.984s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/follow_path_task.sdf
+[14.984s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/scan_dock_deliver_task.sdf
+[14.984s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/perception_task.sdf
+[14.984s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/wildlife_task.sdf
+[14.984s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/acoustic_tracking_task.sdf
+[14.984s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/stationkeeping_task.sdf
+[14.984s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/gymkhana_task.sdf
+[14.984s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/worlds/nbpark.sdf
+[14.984s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/ament_index/resource_index/package_run_dependencies/vrx_gz
+[14.984s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/ament_index/resource_index/parent_prefix_path/vrx_gz
+[14.984s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/environment/ament_prefix_path.sh
+[14.985s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/environment/ament_prefix_path.dsv
+[14.985s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/environment/path.sh
+[14.985s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/environment/path.dsv
+[14.985s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/local_setup.bash
+[14.985s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/local_setup.sh
+[14.985s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/local_setup.zsh
+[14.985s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/local_setup.dsv
+[14.985s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/package.dsv
+[14.985s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/ament_index/resource_index/packages/vrx_gz
+[14.985s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/cmake/vrx_gzConfig.cmake
+[14.985s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/cmake/vrx_gzConfig-version.cmake
+[14.985s] -- Installing: /home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/package.xml
+[14.987s] Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_gz' returned '0': AMENT_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/gaia-22/ac_search/vrx_ws/install:/opt/ros/humble PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/vrx_gz

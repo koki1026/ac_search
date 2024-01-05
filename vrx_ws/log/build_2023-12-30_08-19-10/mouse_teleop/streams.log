@@ -1,0 +1,23 @@
+[1.549s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/mouse_teleop': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/mouse_teleop/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/mouse_teleop build --build-base /home/gaia-22/ac_search/vrx_ws/build/mouse_teleop/build install --record /home/gaia-22/ac_search/vrx_ws/build/mouse_teleop/install.log --single-version-externally-managed
+[1.742s] running egg_info
+[1.742s] writing ../../../build/mouse_teleop/mouse_teleop.egg-info/PKG-INFO
+[1.742s] writing dependency_links to ../../../build/mouse_teleop/mouse_teleop.egg-info/dependency_links.txt
+[1.742s] writing entry points to ../../../build/mouse_teleop/mouse_teleop.egg-info/entry_points.txt
+[1.742s] writing requirements to ../../../build/mouse_teleop/mouse_teleop.egg-info/requires.txt
+[1.742s] writing top-level names to ../../../build/mouse_teleop/mouse_teleop.egg-info/top_level.txt
+[1.770s] adding license file 'LICENSE'
+[1.771s] writing manifest file '../../../build/mouse_teleop/mouse_teleop.egg-info/SOURCES.txt'
+[1.771s] running build
+[1.771s] running build_py
+[1.771s] running install
+[1.771s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.771s]   warnings.warn(
+[1.771s] running install_lib
+[1.772s] running install_data
+[1.773s] running install_egg_info
+[1.773s] removing '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/mouse_teleop-1.5.0-py3.10.egg-info' (and everything under it)
+[1.773s] Copying ../../../build/mouse_teleop/mouse_teleop.egg-info to /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/mouse_teleop-1.5.0-py3.10.egg-info
+[1.774s] running install_scripts
+[1.786s] Installing mouse_teleop script to /home/gaia-22/ac_search/vrx_ws/install/lib/mouse_teleop
+[1.787s] writing list of installed files to '/home/gaia-22/ac_search/vrx_ws/build/mouse_teleop/install.log'
+[1.885s] Invoked command in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/mouse_teleop' returned '0': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/mouse_teleop/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/mouse_teleop build --build-base /home/gaia-22/ac_search/vrx_ws/build/mouse_teleop/build install --record /home/gaia-22/ac_search/vrx_ws/build/mouse_teleop/install.log --single-version-externally-managed

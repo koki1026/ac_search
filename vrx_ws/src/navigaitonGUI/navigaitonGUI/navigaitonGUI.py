@@ -63,7 +63,7 @@ def rviz_marker(self, position: np.ndarray, label: str, idx: int):
     
     if(idx == 100):
         marker_child.type = Marker.MESH_RESOURCE
-        marker_child.mesh_resource = "file:///home/koki-22/ac_search/vrx_ws/src/navigaitonGUI/mesh/WAM-V-Base.dae"
+        marker_child.mesh_resource = "file:///home/gaia-22/ac_search/vrx_ws/src/navigaitonGUI/mesh/WAM-V-Base.dae"
         marker_child.mesh_use_embedded_materials = True
 
     return marker_child
@@ -127,11 +127,11 @@ class NavigaitonGUI(Node):
             self.buoys[i][0] = msg.poses[i].position.x - self.myPos[0]
             self.buoys[i][1] = msg.poses[i].position.y - self.myPos[1]
             distance = np.linalg.norm(self.buoys)
-            radian = math.atan2(self.buoys[i][0], self.buoys[i][1])
+            radian = math.atan2(self.buoys[i][1], self.buoys[i][0])
             angle = radian - self.myAng
             rela_buoy = [0.8]*2
             rela_buoy[0] = np.cos(angle)*distance
-            rela_buoy[1] = -np.sin(angle)*distance
+            rela_buoy[1] = np.sin(angle)*distance
             markers.markers.append(rviz_marker(self, rela_buoy, "marker: "+str(i), i))
         
         self.marker_pub.publish(markers)

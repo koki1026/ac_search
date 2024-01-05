@@ -1,0 +1,1041 @@
+[0.892s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--merge-install']
+[0.892s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=True, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f78ec566fb0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f78ec80cc10>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f78ec80cc10>>, mixin_verb=('build',))
+[0.923s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.923s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.923s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.923s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.923s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.923s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.923s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/gaia-22/ac_search/vrx_ws'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.923s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.929s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collect) by extensions ['ignore', 'ignore_ament_install']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collect) by extension 'ignore'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collect) by extension 'ignore_ament_install'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collect) by extensions ['colcon_pkg']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collect) by extension 'colcon_pkg'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collect) by extensions ['colcon_meta']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collect) by extension 'colcon_meta'
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collect) by extensions ['ros']
+[0.930s] Level 1:colcon.colcon_core.package_identification:_identify(src/data_collect) by extension 'ros'
+[0.932s] DEBUG:colcon.colcon_core.package_identification:Package 'src/data_collect' with type 'ros.ament_python' and name 'data_collect'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigaitonGUI) by extensions ['ignore', 'ignore_ament_install']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigaitonGUI) by extension 'ignore'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigaitonGUI) by extension 'ignore_ament_install'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigaitonGUI) by extensions ['colcon_pkg']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigaitonGUI) by extension 'colcon_pkg'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigaitonGUI) by extensions ['colcon_meta']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigaitonGUI) by extension 'colcon_meta'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigaitonGUI) by extensions ['ros']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigaitonGUI) by extension 'ros'
+[0.932s] DEBUG:colcon.colcon_core.package_identification:Package 'src/navigaitonGUI' with type 'ros.ament_python' and name 'navigaitonGUI'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extensions ['ignore', 'ignore_ament_install']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extension 'ignore'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extension 'ignore_ament_install'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extensions ['colcon_pkg']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extension 'colcon_pkg'
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extensions ['colcon_meta']
+[0.932s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extension 'colcon_meta'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extensions ['ros']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit) by extension 'ros'
+[0.933s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pure_pursuit' with type 'ros.ament_python' and name 'pure_pursuit'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools) by extensions ['ignore', 'ignore_ament_install']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools) by extension 'ignore'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools) by extension 'ignore_ament_install'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools) by extensions ['colcon_pkg']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools) by extension 'colcon_pkg'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools) by extensions ['colcon_meta']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools) by extension 'colcon_meta'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools) by extensions ['ros']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools) by extension 'ros'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools) by extensions ['cmake', 'python']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools) by extension 'cmake'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools) by extension 'python'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools) by extensions ['python_setup_py']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools) by extension 'python_setup_py'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/joy_teleop) by extensions ['ignore', 'ignore_ament_install']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/joy_teleop) by extension 'ignore'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/joy_teleop) by extension 'ignore_ament_install'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/joy_teleop) by extensions ['colcon_pkg']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/joy_teleop) by extension 'colcon_pkg'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/joy_teleop) by extensions ['colcon_meta']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/joy_teleop) by extension 'colcon_meta'
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/joy_teleop) by extensions ['ros']
+[0.933s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/joy_teleop) by extension 'ros'
+[0.934s] DEBUG:colcon.colcon_core.package_identification:Package 'src/teleop_tools/joy_teleop' with type 'ros.ament_python' and name 'joy_teleop'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/key_teleop) by extensions ['ignore', 'ignore_ament_install']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/key_teleop) by extension 'ignore'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/key_teleop) by extension 'ignore_ament_install'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/key_teleop) by extensions ['colcon_pkg']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/key_teleop) by extension 'colcon_pkg'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/key_teleop) by extensions ['colcon_meta']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/key_teleop) by extension 'colcon_meta'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/key_teleop) by extensions ['ros']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/key_teleop) by extension 'ros'
+[0.934s] DEBUG:colcon.colcon_core.package_identification:Package 'src/teleop_tools/key_teleop' with type 'ros.ament_python' and name 'key_teleop'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/mouse_teleop) by extensions ['ignore', 'ignore_ament_install']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/mouse_teleop) by extension 'ignore'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/mouse_teleop) by extension 'ignore_ament_install'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/mouse_teleop) by extensions ['colcon_pkg']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/mouse_teleop) by extension 'colcon_pkg'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/mouse_teleop) by extensions ['colcon_meta']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/mouse_teleop) by extension 'colcon_meta'
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/mouse_teleop) by extensions ['ros']
+[0.934s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/mouse_teleop) by extension 'ros'
+[0.935s] DEBUG:colcon.colcon_core.package_identification:Package 'src/teleop_tools/mouse_teleop' with type 'ros.ament_python' and name 'mouse_teleop'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools) by extensions ['ignore', 'ignore_ament_install']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools) by extension 'ignore'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools) by extension 'ignore_ament_install'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools) by extensions ['colcon_pkg']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools) by extension 'colcon_pkg'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools) by extensions ['colcon_meta']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools) by extension 'colcon_meta'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools) by extensions ['ros']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools) by extension 'ros'
+[0.935s] DEBUG:colcon.colcon_core.package_identification:Package 'src/teleop_tools/teleop_tools' with type 'ros.ament_cmake' and name 'teleop_tools'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools_msgs) by extension 'ignore'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools_msgs) by extension 'ignore_ament_install'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools_msgs) by extensions ['colcon_pkg']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools_msgs) by extension 'colcon_pkg'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools_msgs) by extensions ['colcon_meta']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools_msgs) by extension 'colcon_meta'
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools_msgs) by extensions ['ros']
+[0.935s] Level 1:colcon.colcon_core.package_identification:_identify(src/teleop_tools/teleop_tools_msgs) by extension 'ros'
+[0.935s] DEBUG:colcon.colcon_core.package_identification:Package 'src/teleop_tools/teleop_tools_msgs' with type 'ros.ament_cmake' and name 'teleop_tools_msgs'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extensions ['ignore', 'ignore_ament_install']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extension 'ignore'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extension 'ignore_ament_install'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extensions ['colcon_pkg']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extension 'colcon_pkg'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extensions ['colcon_meta']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extension 'colcon_meta'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extensions ['ros']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extension 'ros'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extensions ['cmake', 'python']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extension 'cmake'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extension 'python'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extensions ['python_setup_py']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx) by extension 'python_setup_py'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extensions ['ignore', 'ignore_ament_install']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extension 'ignore'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extension 'ignore_ament_install'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extensions ['colcon_pkg']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extension 'colcon_pkg'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extensions ['colcon_meta']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extension 'colcon_meta'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extensions ['ros']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extension 'ros'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extensions ['cmake', 'python']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extension 'cmake'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extension 'python'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extensions ['python_setup_py']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/images) by extension 'python_setup_py'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extensions ['ignore', 'ignore_ament_install']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extension 'ignore'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extension 'ignore_ament_install'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extensions ['colcon_pkg']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extension 'colcon_pkg'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extensions ['colcon_meta']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extension 'colcon_meta'
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extensions ['ros']
+[0.936s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_gz) by extension 'ros'
+[0.937s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vrx/vrx_gz' with type 'ros.ament_cmake' and name 'vrx_gz'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extension 'ignore'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extension 'ignore_ament_install'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extensions ['colcon_pkg']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extension 'colcon_pkg'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extensions ['colcon_meta']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extension 'colcon_meta'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extensions ['ros']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_ros) by extension 'ros'
+[0.937s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vrx/vrx_ros' with type 'ros.ament_cmake' and name 'vrx_ros'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extensions ['ignore', 'ignore_ament_install']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extension 'ignore'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extension 'ignore_ament_install'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extensions ['colcon_pkg']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extension 'colcon_pkg'
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extensions ['colcon_meta']
+[0.937s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extension 'colcon_meta'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extensions ['ros']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extension 'ros'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extensions ['cmake', 'python']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extension 'cmake'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extension 'python'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extensions ['python_setup_py']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf) by extension 'python_setup_py'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extension 'ignore'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extension 'ignore_ament_install'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extensions ['colcon_pkg']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extension 'colcon_pkg'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extensions ['colcon_meta']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extension 'colcon_meta'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extensions ['ros']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/vrx_gazebo) by extension 'ros'
+[0.938s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vrx/vrx_urdf/vrx_gazebo' with type 'ros.ament_cmake' and name 'vrx_gazebo'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extensions ['ignore', 'ignore_ament_install']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extension 'ignore'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extension 'ignore_ament_install'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extensions ['colcon_pkg']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extension 'colcon_pkg'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extensions ['colcon_meta']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extension 'colcon_meta'
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extensions ['ros']
+[0.938s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_description) by extension 'ros'
+[0.939s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vrx/vrx_urdf/wamv_description' with type 'ros.ament_cmake' and name 'wamv_description'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extension 'ignore'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extension 'ignore_ament_install'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extensions ['colcon_pkg']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extension 'colcon_pkg'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extensions ['colcon_meta']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extension 'colcon_meta'
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extensions ['ros']
+[0.939s] Level 1:colcon.colcon_core.package_identification:_identify(src/vrx/vrx_urdf/wamv_gazebo) by extension 'ros'
+[0.939s] DEBUG:colcon.colcon_core.package_identification:Package 'src/vrx/vrx_urdf/wamv_gazebo' with type 'ros.ament_cmake' and name 'wamv_gazebo'
+[0.939s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.939s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.939s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.939s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.939s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.010s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.011s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.032s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 14 installed packages in /home/gaia-22/ac_search/vrx_ws/install
+[1.042s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 346 installed packages in /opt/ros/humble
+[1.043s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'data_collect' build argument 'cmake_args' from command line to 'None'
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'data_collect' build argument 'cmake_target' from command line to 'None'
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'data_collect' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'data_collect' build argument 'cmake_clean_cache' from command line to 'False'
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'data_collect' build argument 'cmake_clean_first' from command line to 'False'
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'data_collect' build argument 'cmake_force_configure' from command line to 'False'
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'data_collect' build argument 'ament_cmake_args' from command line to 'None'
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'data_collect' build argument 'catkin_cmake_args' from command line to 'None'
+[1.097s] Level 5:colcon.colcon_core.verb:set package 'data_collect' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.097s] DEBUG:colcon.colcon_core.verb:Building package 'data_collect' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gaia-22/ac_search/vrx_ws/build/data_collect', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gaia-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/gaia-22/ac_search/vrx_ws/src/data_collect', 'symlink_install': False, 'test_result_base': None}
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'key_teleop' build argument 'cmake_args' from command line to 'None'
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'key_teleop' build argument 'cmake_target' from command line to 'None'
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'key_teleop' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'key_teleop' build argument 'cmake_clean_cache' from command line to 'False'
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'key_teleop' build argument 'cmake_clean_first' from command line to 'False'
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'key_teleop' build argument 'cmake_force_configure' from command line to 'False'
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'key_teleop' build argument 'ament_cmake_args' from command line to 'None'
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'key_teleop' build argument 'catkin_cmake_args' from command line to 'None'
+[1.108s] Level 5:colcon.colcon_core.verb:set package 'key_teleop' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.108s] DEBUG:colcon.colcon_core.verb:Building package 'key_teleop' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gaia-22/ac_search/vrx_ws/build/key_teleop', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gaia-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/key_teleop', 'symlink_install': False, 'test_result_base': None}
+[1.118s] Level 5:colcon.colcon_core.verb:set package 'mouse_teleop' build argument 'cmake_args' from command line to 'None'
+[1.118s] Level 5:colcon.colcon_core.verb:set package 'mouse_teleop' build argument 'cmake_target' from command line to 'None'
+[1.118s] Level 5:colcon.colcon_core.verb:set package 'mouse_teleop' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.118s] Level 5:colcon.colcon_core.verb:set package 'mouse_teleop' build argument 'cmake_clean_cache' from command line to 'False'
+[1.118s] Level 5:colcon.colcon_core.verb:set package 'mouse_teleop' build argument 'cmake_clean_first' from command line to 'False'
+[1.118s] Level 5:colcon.colcon_core.verb:set package 'mouse_teleop' build argument 'cmake_force_configure' from command line to 'False'
+[1.118s] Level 5:colcon.colcon_core.verb:set package 'mouse_teleop' build argument 'ament_cmake_args' from command line to 'None'
+[1.118s] Level 5:colcon.colcon_core.verb:set package 'mouse_teleop' build argument 'catkin_cmake_args' from command line to 'None'
+[1.118s] Level 5:colcon.colcon_core.verb:set package 'mouse_teleop' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.118s] DEBUG:colcon.colcon_core.verb:Building package 'mouse_teleop' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gaia-22/ac_search/vrx_ws/build/mouse_teleop', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gaia-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/mouse_teleop', 'symlink_install': False, 'test_result_base': None}
+[1.128s] Level 5:colcon.colcon_core.verb:set package 'navigaitonGUI' build argument 'cmake_args' from command line to 'None'
+[1.129s] Level 5:colcon.colcon_core.verb:set package 'navigaitonGUI' build argument 'cmake_target' from command line to 'None'
+[1.129s] Level 5:colcon.colcon_core.verb:set package 'navigaitonGUI' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.129s] Level 5:colcon.colcon_core.verb:set package 'navigaitonGUI' build argument 'cmake_clean_cache' from command line to 'False'
+[1.129s] Level 5:colcon.colcon_core.verb:set package 'navigaitonGUI' build argument 'cmake_clean_first' from command line to 'False'
+[1.129s] Level 5:colcon.colcon_core.verb:set package 'navigaitonGUI' build argument 'cmake_force_configure' from command line to 'False'
+[1.129s] Level 5:colcon.colcon_core.verb:set package 'navigaitonGUI' build argument 'ament_cmake_args' from command line to 'None'
+[1.129s] Level 5:colcon.colcon_core.verb:set package 'navigaitonGUI' build argument 'catkin_cmake_args' from command line to 'None'
+[1.129s] Level 5:colcon.colcon_core.verb:set package 'navigaitonGUI' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.129s] DEBUG:colcon.colcon_core.verb:Building package 'navigaitonGUI' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gaia-22/ac_search/vrx_ws/build/navigaitonGUI', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gaia-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/gaia-22/ac_search/vrx_ws/src/navigaitonGUI', 'symlink_install': False, 'test_result_base': None}
+[1.139s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit' build argument 'cmake_args' from command line to 'None'
+[1.139s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit' build argument 'cmake_target' from command line to 'None'
+[1.139s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.139s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit' build argument 'cmake_clean_cache' from command line to 'False'
+[1.139s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit' build argument 'cmake_clean_first' from command line to 'False'
+[1.139s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit' build argument 'cmake_force_configure' from command line to 'False'
+[1.139s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit' build argument 'ament_cmake_args' from command line to 'None'
+[1.139s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit' build argument 'catkin_cmake_args' from command line to 'None'
+[1.139s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.139s] DEBUG:colcon.colcon_core.verb:Building package 'pure_pursuit' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gaia-22/ac_search/vrx_ws/build/pure_pursuit', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gaia-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/gaia-22/ac_search/vrx_ws/src/pure_pursuit', 'symlink_install': False, 'test_result_base': None}
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools_msgs' build argument 'cmake_args' from command line to 'None'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools_msgs' build argument 'cmake_target' from command line to 'None'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[1.149s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.149s] DEBUG:colcon.colcon_core.verb:Building package 'teleop_tools_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gaia-22/ac_search/vrx_ws/build/teleop_tools_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gaia-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/teleop_tools_msgs', 'symlink_install': False, 'test_result_base': None}
+[1.159s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'cmake_args' from command line to 'None'
+[1.159s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'cmake_target' from command line to 'None'
+[1.159s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.159s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[1.159s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[1.159s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[1.159s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[1.159s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[1.159s] Level 5:colcon.colcon_core.verb:set package 'vrx_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.159s] DEBUG:colcon.colcon_core.verb:Building package 'vrx_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gaia-22/ac_search/vrx_ws/build/vrx_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gaia-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_urdf/vrx_gazebo', 'symlink_install': False, 'test_result_base': None}
+[1.170s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'cmake_args' from command line to 'None'
+[1.170s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'cmake_target' from command line to 'None'
+[1.170s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.170s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[1.170s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'cmake_clean_first' from command line to 'False'
+[1.170s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'cmake_force_configure' from command line to 'False'
+[1.170s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'ament_cmake_args' from command line to 'None'
+[1.170s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[1.170s] Level 5:colcon.colcon_core.verb:set package 'vrx_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.170s] DEBUG:colcon.colcon_core.verb:Building package 'vrx_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gaia-22/ac_search/vrx_ws/build/vrx_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gaia-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_ros', 'symlink_install': False, 'test_result_base': None}
+[1.180s] Level 5:colcon.colcon_core.verb:set package 'joy_teleop' build argument 'cmake_args' from command line to 'None'
+[1.180s] Level 5:colcon.colcon_core.verb:set package 'joy_teleop' build argument 'cmake_target' from command line to 'None'
+[1.180s] Level 5:colcon.colcon_core.verb:set package 'joy_teleop' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.180s] Level 5:colcon.colcon_core.verb:set package 'joy_teleop' build argument 'cmake_clean_cache' from command line to 'False'
+[1.180s] Level 5:colcon.colcon_core.verb:set package 'joy_teleop' build argument 'cmake_clean_first' from command line to 'False'
+[1.180s] Level 5:colcon.colcon_core.verb:set package 'joy_teleop' build argument 'cmake_force_configure' from command line to 'False'
+[1.180s] Level 5:colcon.colcon_core.verb:set package 'joy_teleop' build argument 'ament_cmake_args' from command line to 'None'
+[1.180s] Level 5:colcon.colcon_core.verb:set package 'joy_teleop' build argument 'catkin_cmake_args' from command line to 'None'
+[1.180s] Level 5:colcon.colcon_core.verb:set package 'joy_teleop' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.180s] DEBUG:colcon.colcon_core.verb:Building package 'joy_teleop' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gaia-22/ac_search/vrx_ws/build/joy_teleop', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gaia-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/joy_teleop', 'symlink_install': False, 'test_result_base': None}
+[1.191s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'cmake_args' from command line to 'None'
+[1.191s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'cmake_target' from command line to 'None'
+[1.191s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.191s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'cmake_clean_cache' from command line to 'False'
+[1.191s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'cmake_clean_first' from command line to 'False'
+[1.191s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'cmake_force_configure' from command line to 'False'
+[1.191s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'ament_cmake_args' from command line to 'None'
+[1.191s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'catkin_cmake_args' from command line to 'None'
+[1.191s] Level 5:colcon.colcon_core.verb:set package 'vrx_gz' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.191s] DEBUG:colcon.colcon_core.verb:Building package 'vrx_gz' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gaia-22/ac_search/vrx_ws/build/vrx_gz', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gaia-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_gz', 'symlink_install': False, 'test_result_base': None}
+[1.201s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'cmake_args' from command line to 'None'
+[1.201s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'cmake_target' from command line to 'None'
+[1.201s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.201s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'cmake_clean_cache' from command line to 'False'
+[1.201s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'cmake_clean_first' from command line to 'False'
+[1.201s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'cmake_force_configure' from command line to 'False'
+[1.201s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'ament_cmake_args' from command line to 'None'
+[1.201s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'catkin_cmake_args' from command line to 'None'
+[1.201s] Level 5:colcon.colcon_core.verb:set package 'wamv_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.201s] DEBUG:colcon.colcon_core.verb:Building package 'wamv_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gaia-22/ac_search/vrx_ws/build/wamv_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gaia-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_urdf/wamv_description', 'symlink_install': False, 'test_result_base': None}
+[1.211s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools' build argument 'cmake_args' from command line to 'None'
+[1.211s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools' build argument 'cmake_target' from command line to 'None'
+[1.211s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.211s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools' build argument 'cmake_clean_cache' from command line to 'False'
+[1.211s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools' build argument 'cmake_clean_first' from command line to 'False'
+[1.211s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools' build argument 'cmake_force_configure' from command line to 'False'
+[1.211s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools' build argument 'ament_cmake_args' from command line to 'None'
+[1.211s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools' build argument 'catkin_cmake_args' from command line to 'None'
+[1.211s] Level 5:colcon.colcon_core.verb:set package 'teleop_tools' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.211s] DEBUG:colcon.colcon_core.verb:Building package 'teleop_tools' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gaia-22/ac_search/vrx_ws/build/teleop_tools', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gaia-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/teleop_tools', 'symlink_install': False, 'test_result_base': None}
+[1.222s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'cmake_args' from command line to 'None'
+[1.222s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'cmake_target' from command line to 'None'
+[1.222s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.222s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[1.222s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[1.222s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[1.222s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[1.222s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[1.222s] Level 5:colcon.colcon_core.verb:set package 'wamv_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.222s] DEBUG:colcon.colcon_core.verb:Building package 'wamv_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/gaia-22/ac_search/vrx_ws/install', 'merge_install': True, 'path': '/home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_urdf/wamv_gazebo', 'symlink_install': False, 'test_result_base': None}
+[1.232s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.243s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.243s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/teleop_tools_msgs' with build type 'ament_cmake'
+[1.243s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/teleop_tools_msgs'
+[1.255s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.255s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.255s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.287s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_urdf/vrx_gazebo' with build type 'ament_cmake'
+[1.288s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_urdf/vrx_gazebo'
+[1.298s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.298s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.331s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/key_teleop' with build type 'ament_python'
+[1.331s] Level 1:colcon.colcon_core.shell:create_environment_hook('key_teleop', 'ament_prefix_path')
+[1.342s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/key_teleop/hook/ament_prefix_path.ps1'
+[1.342s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/key_teleop/hook/ament_prefix_path.dsv'
+[1.342s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/key_teleop/hook/ament_prefix_path.sh'
+[1.360s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.360s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.393s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_ros' with build type 'ament_cmake'
+[1.393s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_ros'
+[1.404s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.404s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.436s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gaia-22/ac_search/vrx_ws/src/data_collect' with build type 'ament_python'
+[1.436s] Level 1:colcon.colcon_core.shell:create_environment_hook('data_collect', 'ament_prefix_path')
+[1.447s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/data_collect/hook/ament_prefix_path.ps1'
+[1.447s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/data_collect/hook/ament_prefix_path.dsv'
+[1.447s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/data_collect/hook/ament_prefix_path.sh'
+[1.458s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.458s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.494s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/mouse_teleop' with build type 'ament_python'
+[1.495s] Level 1:colcon.colcon_core.shell:create_environment_hook('mouse_teleop', 'ament_prefix_path')
+[1.506s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/mouse_teleop/hook/ament_prefix_path.ps1'
+[1.506s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/mouse_teleop/hook/ament_prefix_path.dsv'
+[1.506s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/mouse_teleop/hook/ament_prefix_path.sh'
+[1.517s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.517s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.550s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gaia-22/ac_search/vrx_ws/src/navigaitonGUI' with build type 'ament_python'
+[1.550s] Level 1:colcon.colcon_core.shell:create_environment_hook('navigaitonGUI', 'ament_prefix_path')
+[1.561s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/navigaitonGUI/hook/ament_prefix_path.ps1'
+[1.561s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/navigaitonGUI/hook/ament_prefix_path.dsv'
+[1.561s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/navigaitonGUI/hook/ament_prefix_path.sh'
+[1.573s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.573s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.606s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gaia-22/ac_search/vrx_ws/src/pure_pursuit' with build type 'ament_python'
+[1.606s] Level 1:colcon.colcon_core.shell:create_environment_hook('pure_pursuit', 'ament_prefix_path')
+[1.617s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit/hook/ament_prefix_path.ps1'
+[1.617s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit/hook/ament_prefix_path.dsv'
+[1.617s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit/hook/ament_prefix_path.sh'
+[1.628s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.628s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.664s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/teleop_tools_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/teleop_tools_msgs -- -j20 -l20
+[1.666s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/vrx_gazebo -- -j20 -l20
+[1.861s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/key_teleop'
+[1.872s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.872s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.910s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_ros': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/vrx_ros -- -j20 -l20
+[2.093s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gaia-22/ac_search/vrx_ws/src/data_collect'
+[2.103s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.104s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.309s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/mouse_teleop'
+[2.320s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.320s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.526s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gaia-22/ac_search/vrx_ws/src/navigaitonGUI'
+[2.537s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.537s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.754s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gaia-22/ac_search/vrx_ws/src/pure_pursuit'
+[2.765s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.765s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.798s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/vrx_ros -- -j20 -l20
+[2.818s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_ros': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/vrx_ros
+[2.824s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vrx_ros)
+[2.825s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_ros' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/vrx_ros
+[2.838s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[2.838s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[2.839s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_ros', 'cmake_prefix_path')
+[2.850s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/cmake_prefix_path.ps1'
+[2.850s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/cmake_prefix_path.dsv'
+[2.850s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/cmake_prefix_path.sh'
+[2.851s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[2.851s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_ros', 'ld_library_path_lib')
+[2.862s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/ld_library_path_lib.ps1'
+[2.863s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/ld_library_path_lib.dsv'
+[2.863s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/ld_library_path_lib.sh'
+[2.863s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[2.863s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/vrx_ros.pc'
+[2.863s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[2.863s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_ros', 'pythonpath')
+[2.874s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/pythonpath.ps1'
+[2.875s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/pythonpath.dsv'
+[2.875s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/pythonpath.sh'
+[2.875s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[2.886s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/package.ps1'
+[2.886s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/package.dsv'
+[2.887s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/package.sh'
+[2.887s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/package.bash'
+[2.887s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/package.zsh'
+[2.888s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/vrx_ros)
+[2.912s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vrx_ros)
+[2.923s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[2.924s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[2.924s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_ros', 'cmake_prefix_path')
+[2.935s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/cmake_prefix_path.ps1'
+[2.935s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/cmake_prefix_path.dsv'
+[2.935s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/cmake_prefix_path.sh'
+[2.935s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[2.936s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_ros', 'ld_library_path_lib')
+[2.946s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/ld_library_path_lib.ps1'
+[2.947s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/ld_library_path_lib.dsv'
+[2.947s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/ld_library_path_lib.sh'
+[2.947s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[2.947s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/vrx_ros.pc'
+[2.947s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[2.947s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_ros', 'pythonpath')
+[2.959s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/pythonpath.ps1'
+[2.959s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/pythonpath.dsv'
+[2.959s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/hook/pythonpath.sh'
+[2.959s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[2.971s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/package.ps1'
+[2.971s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/package.dsv'
+[2.971s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/package.sh'
+[2.972s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/package.bash'
+[2.972s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_ros/package.zsh'
+[2.972s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/vrx_ros)
+[2.972s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_gz' with build type 'ament_cmake'
+[2.972s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_gz'
+[2.984s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.984s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.025s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_gz': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/vrx_gz -- -j20 -l20
+[3.135s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/src/navigaitonGUI': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/navigaitonGUI/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/navigaitonGUI build --build-base /home/gaia-22/ac_search/vrx_ws/build/navigaitonGUI/build install --record /home/gaia-22/ac_search/vrx_ws/build/navigaitonGUI/install.log --single-version-externally-managed
+[3.138s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/key_teleop': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/key_teleop/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/key_teleop build --build-base /home/gaia-22/ac_search/vrx_ws/build/key_teleop/build install --record /home/gaia-22/ac_search/vrx_ws/build/key_teleop/install.log --single-version-externally-managed
+[3.139s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/mouse_teleop': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/mouse_teleop/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/mouse_teleop build --build-base /home/gaia-22/ac_search/vrx_ws/build/mouse_teleop/build install --record /home/gaia-22/ac_search/vrx_ws/build/mouse_teleop/install.log --single-version-externally-managed
+[3.141s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/src/data_collect': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/data_collect/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/data_collect build --build-base /home/gaia-22/ac_search/vrx_ws/build/data_collect/build install --record /home/gaia-22/ac_search/vrx_ws/build/data_collect/install.log --single-version-externally-managed
+[3.143s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/src/pure_pursuit': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/pure_pursuit build --build-base /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/build install --record /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/install.log --single-version-externally-managed
+[3.375s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/key_teleop' returned '0': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/key_teleop/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/key_teleop build --build-base /home/gaia-22/ac_search/vrx_ws/build/key_teleop/build install --record /home/gaia-22/ac_search/vrx_ws/build/key_teleop/install.log --single-version-externally-managed
+[3.386s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[3.387s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[3.387s] Level 1:colcon.colcon_core.shell:create_environment_hook('key_teleop', 'cmake_prefix_path')
+[3.398s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/key_teleop/hook/cmake_prefix_path.ps1'
+[3.399s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/key_teleop/hook/cmake_prefix_path.dsv'
+[3.399s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/key_teleop/hook/cmake_prefix_path.sh'
+[3.399s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[3.399s] Level 1:colcon.colcon_core.shell:create_environment_hook('key_teleop', 'ld_library_path_lib')
+[3.411s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/key_teleop/hook/ld_library_path_lib.ps1'
+[3.411s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/key_teleop/hook/ld_library_path_lib.dsv'
+[3.411s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/key_teleop/hook/ld_library_path_lib.sh'
+[3.411s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[3.411s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/key_teleop.pc'
+[3.411s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[3.411s] Level 1:colcon.colcon_core.shell:create_environment_hook('key_teleop', 'pythonpath')
+[3.423s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/key_teleop/hook/pythonpath.ps1'
+[3.423s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/key_teleop/hook/pythonpath.dsv'
+[3.423s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/key_teleop/hook/pythonpath.sh'
+[3.424s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[3.424s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(key_teleop)
+[3.435s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/key_teleop/package.ps1'
+[3.436s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/key_teleop/package.dsv'
+[3.436s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/key_teleop/package.sh'
+[3.436s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/key_teleop/package.bash'
+[3.436s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/key_teleop/package.zsh'
+[3.436s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/key_teleop)
+[3.438s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/mouse_teleop' returned '0': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/mouse_teleop/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/mouse_teleop build --build-base /home/gaia-22/ac_search/vrx_ws/build/mouse_teleop/build install --record /home/gaia-22/ac_search/vrx_ws/build/mouse_teleop/install.log --single-version-externally-managed
+[3.449s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[3.449s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[3.449s] Level 1:colcon.colcon_core.shell:create_environment_hook('mouse_teleop', 'cmake_prefix_path')
+[3.460s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/mouse_teleop/hook/cmake_prefix_path.ps1'
+[3.460s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/mouse_teleop/hook/cmake_prefix_path.dsv'
+[3.460s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/mouse_teleop/hook/cmake_prefix_path.sh'
+[3.461s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[3.461s] Level 1:colcon.colcon_core.shell:create_environment_hook('mouse_teleop', 'ld_library_path_lib')
+[3.471s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/mouse_teleop/hook/ld_library_path_lib.ps1'
+[3.472s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/mouse_teleop/hook/ld_library_path_lib.dsv'
+[3.472s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/mouse_teleop/hook/ld_library_path_lib.sh'
+[3.472s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[3.472s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/mouse_teleop.pc'
+[3.472s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[3.472s] Level 1:colcon.colcon_core.shell:create_environment_hook('mouse_teleop', 'pythonpath')
+[3.483s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/mouse_teleop/hook/pythonpath.ps1'
+[3.483s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/mouse_teleop/hook/pythonpath.dsv'
+[3.483s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/mouse_teleop/hook/pythonpath.sh'
+[3.483s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[3.483s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mouse_teleop)
+[3.494s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/mouse_teleop/package.ps1'
+[3.494s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/mouse_teleop/package.dsv'
+[3.494s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/mouse_teleop/package.sh'
+[3.495s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/mouse_teleop/package.bash'
+[3.495s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/mouse_teleop/package.zsh'
+[3.495s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/mouse_teleop)
+[4.067s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/vrx_gazebo -- -j20 -l20
+[4.079s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/vrx_gazebo
+[4.106s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vrx_gazebo)
+[4.107s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/vrx_gazebo
+[4.119s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[4.120s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[4.120s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gazebo', 'cmake_prefix_path')
+[4.131s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/cmake_prefix_path.ps1'
+[4.131s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/cmake_prefix_path.dsv'
+[4.131s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/cmake_prefix_path.sh'
+[4.131s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[4.131s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gazebo', 'ld_library_path_lib')
+[4.143s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/ld_library_path_lib.ps1'
+[4.143s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/ld_library_path_lib.dsv'
+[4.143s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/ld_library_path_lib.sh'
+[4.143s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[4.143s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/vrx_gazebo.pc'
+[4.144s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[4.144s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gazebo', 'pythonpath')
+[4.155s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/pythonpath.ps1'
+[4.155s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/pythonpath.dsv'
+[4.155s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/pythonpath.sh'
+[4.156s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[4.167s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.ps1'
+[4.167s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.dsv'
+[4.168s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.sh'
+[4.168s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.bash'
+[4.168s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.zsh'
+[4.168s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/vrx_gazebo)
+[4.169s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/teleop_tools_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/teleop_tools_msgs -- -j20 -l20
+[4.194s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vrx_gazebo)
+[4.206s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[4.206s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[4.206s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gazebo', 'cmake_prefix_path')
+[4.217s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/cmake_prefix_path.ps1'
+[4.217s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/cmake_prefix_path.dsv'
+[4.217s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/cmake_prefix_path.sh'
+[4.217s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[4.217s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gazebo', 'ld_library_path_lib')
+[4.228s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/ld_library_path_lib.ps1'
+[4.228s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/ld_library_path_lib.dsv'
+[4.228s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/ld_library_path_lib.sh'
+[4.228s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[4.228s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/vrx_gazebo.pc'
+[4.228s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[4.229s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gazebo', 'pythonpath')
+[4.239s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/pythonpath.ps1'
+[4.239s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/pythonpath.dsv'
+[4.239s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/hook/pythonpath.sh'
+[4.239s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[4.249s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.ps1'
+[4.250s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.dsv'
+[4.250s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.sh'
+[4.250s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.bash'
+[4.250s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gazebo/package.zsh'
+[4.250s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/vrx_gazebo)
+[4.251s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_urdf/wamv_description' with build type 'ament_cmake'
+[4.251s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_urdf/wamv_description'
+[4.262s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.262s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.303s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/teleop_tools_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/teleop_tools_msgs
+[4.305s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/wamv_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} GZ_SIM_RESOURCE_PATH=/home/gaia-22/ac_search/vrx_ws/install/share:${GZ_SIM_RESOURCE_PATH} PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/wamv_description -- -j20 -l20
+[4.332s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(teleop_tools_msgs)
+[4.332s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/teleop_tools_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/teleop_tools_msgs
+[4.343s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[4.344s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[4.344s] Level 1:colcon.colcon_core.shell:create_environment_hook('teleop_tools_msgs', 'cmake_prefix_path')
+[4.355s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/cmake_prefix_path.ps1'
+[4.355s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/cmake_prefix_path.dsv'
+[4.355s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/cmake_prefix_path.sh'
+[4.355s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[4.355s] Level 1:colcon.colcon_core.shell:create_environment_hook('teleop_tools_msgs', 'ld_library_path_lib')
+[4.366s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/ld_library_path_lib.ps1'
+[4.366s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/ld_library_path_lib.dsv'
+[4.366s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/ld_library_path_lib.sh'
+[4.366s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[4.366s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/teleop_tools_msgs.pc'
+[4.366s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[4.366s] Level 1:colcon.colcon_core.shell:create_environment_hook('teleop_tools_msgs', 'pythonpath')
+[4.377s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/pythonpath.ps1'
+[4.377s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/pythonpath.dsv'
+[4.377s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/pythonpath.sh'
+[4.377s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[4.388s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/package.ps1'
+[4.388s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/package.dsv'
+[4.388s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/package.sh'
+[4.388s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/package.bash'
+[4.388s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/package.zsh'
+[4.389s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/teleop_tools_msgs)
+[4.390s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/wamv_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} GZ_SIM_RESOURCE_PATH=/home/gaia-22/ac_search/vrx_ws/install/share:${GZ_SIM_RESOURCE_PATH} PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/wamv_description -- -j20 -l20
+[4.401s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/wamv_description': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} GZ_SIM_RESOURCE_PATH=/home/gaia-22/ac_search/vrx_ws/install/share:${GZ_SIM_RESOURCE_PATH} PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/wamv_description
+[4.407s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wamv_description)
+[4.407s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/wamv_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} GZ_SIM_RESOURCE_PATH=/home/gaia-22/ac_search/vrx_ws/install/share:${GZ_SIM_RESOURCE_PATH} PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/wamv_description
+[4.419s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[4.419s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[4.419s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_description', 'cmake_prefix_path')
+[4.430s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/cmake_prefix_path.ps1'
+[4.430s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/cmake_prefix_path.dsv'
+[4.430s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/cmake_prefix_path.sh'
+[4.431s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[4.431s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_description', 'ld_library_path_lib')
+[4.441s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/ld_library_path_lib.ps1'
+[4.442s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/ld_library_path_lib.dsv'
+[4.442s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/ld_library_path_lib.sh'
+[4.442s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[4.442s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/wamv_description.pc'
+[4.442s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[4.442s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_description', 'pythonpath')
+[4.453s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/pythonpath.ps1'
+[4.453s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/pythonpath.dsv'
+[4.453s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/pythonpath.sh'
+[4.453s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[4.464s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/package.ps1'
+[4.464s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/package.dsv'
+[4.464s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/package.sh'
+[4.465s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/package.bash'
+[4.465s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/package.zsh'
+[4.465s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/wamv_description)
+[4.476s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(teleop_tools_msgs)
+[4.487s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[4.487s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[4.487s] Level 1:colcon.colcon_core.shell:create_environment_hook('teleop_tools_msgs', 'cmake_prefix_path')
+[4.498s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/cmake_prefix_path.ps1'
+[4.498s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/cmake_prefix_path.dsv'
+[4.498s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/cmake_prefix_path.sh'
+[4.499s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[4.499s] Level 1:colcon.colcon_core.shell:create_environment_hook('teleop_tools_msgs', 'ld_library_path_lib')
+[4.509s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/ld_library_path_lib.ps1'
+[4.509s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/ld_library_path_lib.dsv'
+[4.509s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/ld_library_path_lib.sh'
+[4.509s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[4.509s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/teleop_tools_msgs.pc'
+[4.510s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[4.510s] Level 1:colcon.colcon_core.shell:create_environment_hook('teleop_tools_msgs', 'pythonpath')
+[4.520s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/pythonpath.ps1'
+[4.520s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/pythonpath.dsv'
+[4.520s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/hook/pythonpath.sh'
+[4.520s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[4.531s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/package.ps1'
+[4.531s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/package.dsv'
+[4.531s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/package.sh'
+[4.531s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/package.bash'
+[4.531s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools_msgs/package.zsh'
+[4.532s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/teleop_tools_msgs)
+[4.532s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/joy_teleop' with build type 'ament_python'
+[4.532s] Level 1:colcon.colcon_core.shell:create_environment_hook('joy_teleop', 'ament_prefix_path')
+[4.545s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/joy_teleop/hook/ament_prefix_path.ps1'
+[4.545s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/joy_teleop/hook/ament_prefix_path.dsv'
+[4.545s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/joy_teleop/hook/ament_prefix_path.sh'
+[4.556s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.556s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.600s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wamv_description)
+[4.610s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[4.610s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[4.611s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_description', 'cmake_prefix_path')
+[4.621s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/cmake_prefix_path.ps1'
+[4.621s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/cmake_prefix_path.dsv'
+[4.621s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/cmake_prefix_path.sh'
+[4.621s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[4.622s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_description', 'ld_library_path_lib')
+[4.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/ld_library_path_lib.ps1'
+[4.632s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/ld_library_path_lib.dsv'
+[4.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/ld_library_path_lib.sh'
+[4.632s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[4.632s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/wamv_description.pc'
+[4.633s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[4.633s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_description', 'pythonpath')
+[4.645s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/pythonpath.ps1'
+[4.645s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/pythonpath.dsv'
+[4.646s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/hook/pythonpath.sh'
+[4.646s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[4.656s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/package.ps1'
+[4.656s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/package.dsv'
+[4.657s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/package.sh'
+[4.657s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/package.bash'
+[4.657s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_description/package.zsh'
+[4.657s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/wamv_description)
+[4.658s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_urdf/wamv_gazebo' with build type 'ament_cmake'
+[4.658s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_urdf/wamv_gazebo'
+[4.668s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.668s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.876s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/joy_teleop'
+[4.887s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.887s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.921s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} GZ_SIM_RESOURCE_PATH=/home/gaia-22/ac_search/vrx_ws/install/share:${GZ_SIM_RESOURCE_PATH} PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo -- -j20 -l20
+[4.942s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} GZ_SIM_RESOURCE_PATH=/home/gaia-22/ac_search/vrx_ws/install/share:${GZ_SIM_RESOURCE_PATH} PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo -- -j20 -l20
+[4.953s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} GZ_SIM_RESOURCE_PATH=/home/gaia-22/ac_search/vrx_ws/install/share:${GZ_SIM_RESOURCE_PATH} PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo
+[4.959s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wamv_gazebo)
+[4.960s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} GZ_SIM_RESOURCE_PATH=/home/gaia-22/ac_search/vrx_ws/install/share:${GZ_SIM_RESOURCE_PATH} PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/wamv_gazebo
+[4.972s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[4.972s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[4.973s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_gazebo', 'cmake_prefix_path')
+[4.984s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/cmake_prefix_path.ps1'
+[4.984s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/cmake_prefix_path.dsv'
+[4.985s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/cmake_prefix_path.sh'
+[4.985s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[4.985s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_gazebo', 'ld_library_path_lib')
+[4.996s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/ld_library_path_lib.ps1'
+[4.996s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/ld_library_path_lib.dsv'
+[4.997s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/ld_library_path_lib.sh'
+[4.997s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[4.997s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/wamv_gazebo.pc'
+[4.997s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[4.997s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_gazebo', 'pythonpath')
+[5.008s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/pythonpath.ps1'
+[5.008s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/pythonpath.dsv'
+[5.009s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/pythonpath.sh'
+[5.009s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[5.020s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.ps1'
+[5.021s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.dsv'
+[5.021s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.sh'
+[5.021s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.bash'
+[5.021s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.zsh'
+[5.021s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/wamv_gazebo)
+[5.044s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wamv_gazebo)
+[5.056s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[5.056s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[5.056s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_gazebo', 'cmake_prefix_path')
+[5.068s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/cmake_prefix_path.ps1'
+[5.069s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/cmake_prefix_path.dsv'
+[5.069s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/cmake_prefix_path.sh'
+[5.069s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[5.069s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_gazebo', 'ld_library_path_lib')
+[5.081s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/ld_library_path_lib.ps1'
+[5.082s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/ld_library_path_lib.dsv'
+[5.082s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/ld_library_path_lib.sh'
+[5.082s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[5.082s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/wamv_gazebo.pc'
+[5.083s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[5.083s] Level 1:colcon.colcon_core.shell:create_environment_hook('wamv_gazebo', 'pythonpath')
+[5.094s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/pythonpath.ps1'
+[5.095s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/pythonpath.dsv'
+[5.095s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/hook/pythonpath.sh'
+[5.095s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[5.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.ps1'
+[5.107s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.dsv'
+[5.108s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.sh'
+[5.108s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.bash'
+[5.108s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/wamv_gazebo/package.zsh'
+[5.108s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/wamv_gazebo)
+[5.203s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/joy_teleop': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/joy_teleop/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 setup.py egg_info --egg-base ../../../build/joy_teleop build --build-base /home/gaia-22/ac_search/vrx_ws/build/joy_teleop/build install --record /home/gaia-22/ac_search/vrx_ws/build/joy_teleop/install.log --single-version-externally-managed
+[5.439s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/src/pure_pursuit' returned '0': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/pure_pursuit build --build-base /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/build install --record /home/gaia-22/ac_search/vrx_ws/build/pure_pursuit/install.log --single-version-externally-managed
+[5.451s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[5.451s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[5.451s] Level 1:colcon.colcon_core.shell:create_environment_hook('pure_pursuit', 'cmake_prefix_path')
+[5.462s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit/hook/cmake_prefix_path.ps1'
+[5.463s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit/hook/cmake_prefix_path.dsv'
+[5.463s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit/hook/cmake_prefix_path.sh'
+[5.463s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[5.463s] Level 1:colcon.colcon_core.shell:create_environment_hook('pure_pursuit', 'ld_library_path_lib')
+[5.474s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit/hook/ld_library_path_lib.ps1'
+[5.474s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit/hook/ld_library_path_lib.dsv'
+[5.474s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit/hook/ld_library_path_lib.sh'
+[5.475s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[5.475s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/pure_pursuit.pc'
+[5.475s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[5.475s] Level 1:colcon.colcon_core.shell:create_environment_hook('pure_pursuit', 'pythonpath')
+[5.487s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit/hook/pythonpath.ps1'
+[5.487s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit/hook/pythonpath.dsv'
+[5.487s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit/hook/pythonpath.sh'
+[5.487s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[5.487s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pure_pursuit)
+[5.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit/package.ps1'
+[5.499s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit/package.dsv'
+[5.500s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit/package.sh'
+[5.500s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit/package.bash'
+[5.500s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/pure_pursuit/package.zsh'
+[5.500s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/pure_pursuit)
+[5.501s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/src/navigaitonGUI' returned '0': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/navigaitonGUI/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/navigaitonGUI build --build-base /home/gaia-22/ac_search/vrx_ws/build/navigaitonGUI/build install --record /home/gaia-22/ac_search/vrx_ws/build/navigaitonGUI/install.log --single-version-externally-managed
+[5.515s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[5.515s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[5.515s] Level 1:colcon.colcon_core.shell:create_environment_hook('navigaitonGUI', 'cmake_prefix_path')
+[5.527s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/navigaitonGUI/hook/cmake_prefix_path.ps1'
+[5.527s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/navigaitonGUI/hook/cmake_prefix_path.dsv'
+[5.528s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/navigaitonGUI/hook/cmake_prefix_path.sh'
+[5.528s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[5.528s] Level 1:colcon.colcon_core.shell:create_environment_hook('navigaitonGUI', 'ld_library_path_lib')
+[5.547s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/navigaitonGUI/hook/ld_library_path_lib.ps1'
+[5.547s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/navigaitonGUI/hook/ld_library_path_lib.dsv'
+[5.547s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/navigaitonGUI/hook/ld_library_path_lib.sh'
+[5.547s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[5.547s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/navigaitonGUI.pc'
+[5.548s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[5.548s] Level 1:colcon.colcon_core.shell:create_environment_hook('navigaitonGUI', 'pythonpath')
+[5.558s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/navigaitonGUI/hook/pythonpath.ps1'
+[5.559s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/navigaitonGUI/hook/pythonpath.dsv'
+[5.559s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/navigaitonGUI/hook/pythonpath.sh'
+[5.559s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[5.559s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(navigaitonGUI)
+[5.570s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/navigaitonGUI/package.ps1'
+[5.570s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/navigaitonGUI/package.dsv'
+[5.570s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/navigaitonGUI/package.sh'
+[5.570s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/navigaitonGUI/package.bash'
+[5.571s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/navigaitonGUI/package.zsh'
+[5.571s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/navigaitonGUI)
+[5.571s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/joy_teleop' returned '0': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/joy_teleop/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/python3 setup.py egg_info --egg-base ../../../build/joy_teleop build --build-base /home/gaia-22/ac_search/vrx_ws/build/joy_teleop/build install --record /home/gaia-22/ac_search/vrx_ws/build/joy_teleop/install.log --single-version-externally-managed
+[5.582s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[5.582s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[5.583s] Level 1:colcon.colcon_core.shell:create_environment_hook('joy_teleop', 'cmake_prefix_path')
+[5.593s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/joy_teleop/hook/cmake_prefix_path.ps1'
+[5.593s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/joy_teleop/hook/cmake_prefix_path.dsv'
+[5.593s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/joy_teleop/hook/cmake_prefix_path.sh'
+[5.593s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[5.593s] Level 1:colcon.colcon_core.shell:create_environment_hook('joy_teleop', 'ld_library_path_lib')
+[5.604s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/joy_teleop/hook/ld_library_path_lib.ps1'
+[5.604s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/joy_teleop/hook/ld_library_path_lib.dsv'
+[5.604s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/joy_teleop/hook/ld_library_path_lib.sh'
+[5.604s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[5.604s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/joy_teleop.pc'
+[5.604s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[5.605s] Level 1:colcon.colcon_core.shell:create_environment_hook('joy_teleop', 'pythonpath')
+[5.615s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/joy_teleop/hook/pythonpath.ps1'
+[5.615s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/joy_teleop/hook/pythonpath.dsv'
+[5.615s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/joy_teleop/hook/pythonpath.sh'
+[5.615s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[5.616s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(joy_teleop)
+[5.626s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/joy_teleop/package.ps1'
+[5.626s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/joy_teleop/package.dsv'
+[5.626s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/joy_teleop/package.sh'
+[5.627s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/joy_teleop/package.bash'
+[5.627s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/joy_teleop/package.zsh'
+[5.627s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/joy_teleop)
+[5.627s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/teleop_tools' with build type 'ament_cmake'
+[5.627s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/teleop_tools'
+[5.638s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.638s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.671s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/src/data_collect' returned '0': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/data_collect/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/data_collect build --build-base /home/gaia-22/ac_search/vrx_ws/build/data_collect/build install --record /home/gaia-22/ac_search/vrx_ws/build/data_collect/install.log --single-version-externally-managed
+[5.682s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[5.682s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[5.683s] Level 1:colcon.colcon_core.shell:create_environment_hook('data_collect', 'cmake_prefix_path')
+[5.693s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/data_collect/hook/cmake_prefix_path.ps1'
+[5.693s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/data_collect/hook/cmake_prefix_path.dsv'
+[5.693s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/data_collect/hook/cmake_prefix_path.sh'
+[5.694s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[5.694s] Level 1:colcon.colcon_core.shell:create_environment_hook('data_collect', 'ld_library_path_lib')
+[5.705s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/data_collect/hook/ld_library_path_lib.ps1'
+[5.705s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/data_collect/hook/ld_library_path_lib.dsv'
+[5.705s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/data_collect/hook/ld_library_path_lib.sh'
+[5.705s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[5.705s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/data_collect.pc'
+[5.705s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[5.705s] Level 1:colcon.colcon_core.shell:create_environment_hook('data_collect', 'pythonpath')
+[5.716s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/data_collect/hook/pythonpath.ps1'
+[5.716s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/data_collect/hook/pythonpath.dsv'
+[5.716s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/data_collect/hook/pythonpath.sh'
+[5.716s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[5.716s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(data_collect)
+[5.726s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/data_collect/package.ps1'
+[5.727s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/data_collect/package.dsv'
+[5.727s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/data_collect/package.sh'
+[5.727s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/data_collect/package.bash'
+[5.727s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/data_collect/package.zsh'
+[5.727s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/data_collect)
+[5.729s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_gz' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/vrx_gz -- -j20 -l20
+[5.730s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/teleop_tools': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/teleop_tools -- -j20 -l20
+[5.750s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/teleop_tools' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/teleop_tools -- -j20 -l20
+[5.762s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/teleop_tools': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/teleop_tools
+[5.767s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(teleop_tools)
+[5.768s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/teleop_tools' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/teleop_tools
+[5.779s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[5.779s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[5.780s] Level 1:colcon.colcon_core.shell:create_environment_hook('teleop_tools', 'cmake_prefix_path')
+[5.790s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/cmake_prefix_path.ps1'
+[5.791s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/cmake_prefix_path.dsv'
+[5.791s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/cmake_prefix_path.sh'
+[5.791s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[5.791s] Level 1:colcon.colcon_core.shell:create_environment_hook('teleop_tools', 'ld_library_path_lib')
+[5.802s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/ld_library_path_lib.ps1'
+[5.802s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/ld_library_path_lib.dsv'
+[5.803s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/ld_library_path_lib.sh'
+[5.803s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[5.803s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/teleop_tools.pc'
+[5.803s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[5.803s] Level 1:colcon.colcon_core.shell:create_environment_hook('teleop_tools', 'pythonpath')
+[5.813s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/pythonpath.ps1'
+[5.814s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/pythonpath.dsv'
+[5.814s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/pythonpath.sh'
+[5.814s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[5.825s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/package.ps1'
+[5.825s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/package.dsv'
+[5.825s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/package.sh'
+[5.825s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/package.bash'
+[5.825s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/package.zsh'
+[5.826s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/teleop_tools)
+[5.827s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_gz': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/vrx_gz
+[5.847s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(teleop_tools)
+[5.865s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[5.865s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[5.865s] Level 1:colcon.colcon_core.shell:create_environment_hook('teleop_tools', 'cmake_prefix_path')
+[5.876s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/cmake_prefix_path.ps1'
+[5.876s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/cmake_prefix_path.dsv'
+[5.876s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/cmake_prefix_path.sh'
+[5.876s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[5.876s] Level 1:colcon.colcon_core.shell:create_environment_hook('teleop_tools', 'ld_library_path_lib')
+[5.887s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/ld_library_path_lib.ps1'
+[5.887s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/ld_library_path_lib.dsv'
+[5.887s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/ld_library_path_lib.sh'
+[5.887s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[5.887s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/teleop_tools.pc'
+[5.887s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[5.887s] Level 1:colcon.colcon_core.shell:create_environment_hook('teleop_tools', 'pythonpath')
+[5.898s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/pythonpath.ps1'
+[5.898s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/pythonpath.dsv'
+[5.898s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/hook/pythonpath.sh'
+[5.899s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[5.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/package.ps1'
+[5.909s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/package.dsv'
+[5.910s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/package.sh'
+[5.910s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/package.bash'
+[5.910s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/teleop_tools/package.zsh'
+[5.910s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/teleop_tools)
+[5.911s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vrx_gz)
+[5.911s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_gz' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble:${CMAKE_PREFIX_PATH} PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:/home/gaia-22/ac_search/vrx_ws/install/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages /usr/bin/cmake --install /home/gaia-22/ac_search/vrx_ws/build/vrx_gz
+[5.922s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[5.922s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[5.922s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gz', 'cmake_prefix_path')
+[5.933s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/cmake_prefix_path.ps1'
+[5.933s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/cmake_prefix_path.dsv'
+[5.933s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/cmake_prefix_path.sh'
+[5.933s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[5.933s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gz', 'ld_library_path_lib')
+[5.944s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/ld_library_path_lib.ps1'
+[5.944s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/ld_library_path_lib.dsv'
+[5.944s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/ld_library_path_lib.sh'
+[5.944s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[5.944s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/vrx_gz.pc'
+[5.945s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[5.945s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gz', 'pythonpath')
+[5.955s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/pythonpath.ps1'
+[5.955s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/pythonpath.dsv'
+[5.955s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/pythonpath.sh'
+[5.955s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[5.966s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/package.ps1'
+[5.966s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/package.dsv'
+[5.966s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/package.sh'
+[5.966s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/package.bash'
+[5.967s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/package.zsh'
+[5.967s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/vrx_gz)
+[6.109s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vrx_gz)
+[6.119s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake module files
+[6.119s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install' for CMake config files
+[6.120s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gz', 'cmake_prefix_path')
+[6.130s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/cmake_prefix_path.ps1'
+[6.130s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/cmake_prefix_path.dsv'
+[6.130s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/cmake_prefix_path.sh'
+[6.130s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib'
+[6.131s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gz', 'ld_library_path_lib')
+[6.141s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/ld_library_path_lib.ps1'
+[6.141s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/ld_library_path_lib.dsv'
+[6.141s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/ld_library_path_lib.sh'
+[6.141s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[6.141s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/pkgconfig/vrx_gz.pc'
+[6.141s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages'
+[6.141s] Level 1:colcon.colcon_core.shell:create_environment_hook('vrx_gz', 'pythonpath')
+[6.151s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/pythonpath.ps1'
+[6.152s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/pythonpath.dsv'
+[6.152s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/hook/pythonpath.sh'
+[6.152s] Level 1:colcon.colcon_core.environment:checking '/home/gaia-22/ac_search/vrx_ws/install/bin'
+[6.162s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/package.ps1'
+[6.163s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/package.dsv'
+[6.163s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/package.sh'
+[6.163s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/package.bash'
+[6.163s] INFO:colcon.colcon_core.shell:Creating package script '/home/gaia-22/ac_search/vrx_ws/install/share/vrx_gz/package.zsh'
+[6.164s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/gaia-22/ac_search/vrx_ws/install/share/colcon-core/packages/vrx_gz)
+[6.164s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[6.164s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[6.164s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[6.164s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[6.177s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[6.178s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[6.178s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[6.185s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[6.197s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gaia-22/ac_search/vrx_ws/install/local_setup.ps1'
+[6.197s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/gaia-22/ac_search/vrx_ws/install/_local_setup_util_ps1.py'
+[6.198s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gaia-22/ac_search/vrx_ws/install/setup.ps1'
+[6.209s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gaia-22/ac_search/vrx_ws/install/local_setup.sh'
+[6.209s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/gaia-22/ac_search/vrx_ws/install/_local_setup_util_sh.py'
+[6.209s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gaia-22/ac_search/vrx_ws/install/setup.sh'
+[6.220s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gaia-22/ac_search/vrx_ws/install/local_setup.bash'
+[6.220s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gaia-22/ac_search/vrx_ws/install/setup.bash'
+[6.238s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/gaia-22/ac_search/vrx_ws/install/local_setup.zsh'
+[6.238s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/gaia-22/ac_search/vrx_ws/install/setup.zsh'

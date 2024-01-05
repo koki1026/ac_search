@@ -1,0 +1,23 @@
+[1.954s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/src/navigaitonGUI': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/navigaitonGUI/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/navigaitonGUI build --build-base /home/gaia-22/ac_search/vrx_ws/build/navigaitonGUI/build install --record /home/gaia-22/ac_search/vrx_ws/build/navigaitonGUI/install.log --single-version-externally-managed
+[2.181s] running egg_info
+[2.182s] writing ../../build/navigaitonGUI/navigaitonGUI.egg-info/PKG-INFO
+[2.182s] writing dependency_links to ../../build/navigaitonGUI/navigaitonGUI.egg-info/dependency_links.txt
+[2.182s] writing entry points to ../../build/navigaitonGUI/navigaitonGUI.egg-info/entry_points.txt
+[2.182s] writing requirements to ../../build/navigaitonGUI/navigaitonGUI.egg-info/requires.txt
+[2.182s] writing top-level names to ../../build/navigaitonGUI/navigaitonGUI.egg-info/top_level.txt
+[4.386s] writing manifest file '../../build/navigaitonGUI/navigaitonGUI.egg-info/SOURCES.txt'
+[4.386s] running build
+[4.386s] running build_py
+[4.386s] copying navigaitonGUI/navigaitonGUI.py -> /home/gaia-22/ac_search/vrx_ws/build/navigaitonGUI/build/lib/navigaitonGUI
+[4.387s] running install
+[4.387s] running install_lib
+[4.387s] copying /home/gaia-22/ac_search/vrx_ws/build/navigaitonGUI/build/lib/navigaitonGUI/navigaitonGUI.py -> /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/navigaitonGUI
+[4.387s] byte-compiling /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/navigaitonGUI/navigaitonGUI.py to navigaitonGUI.cpython-310.pyc
+[4.388s] running install_data
+[4.415s] running install_egg_info
+[4.416s] removing '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/navigaitonGUI-0.0.0-py3.10.egg-info' (and everything under it)
+[4.416s] Copying ../../build/navigaitonGUI/navigaitonGUI.egg-info to /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/navigaitonGUI-0.0.0-py3.10.egg-info
+[4.417s] running install_scripts
+[4.417s] Installing navigation_GUI_node script to /home/gaia-22/ac_search/vrx_ws/install/lib/navigaitonGUI
+[4.417s] writing list of installed files to '/home/gaia-22/ac_search/vrx_ws/build/navigaitonGUI/install.log'
+[4.498s] Invoked command in '/home/gaia-22/ac_search/vrx_ws/src/navigaitonGUI' returned '0': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/navigaitonGUI/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/navigaitonGUI build --build-base /home/gaia-22/ac_search/vrx_ws/build/navigaitonGUI/build install --record /home/gaia-22/ac_search/vrx_ws/build/navigaitonGUI/install.log --single-version-externally-managed

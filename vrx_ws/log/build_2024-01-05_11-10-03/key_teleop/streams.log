@@ -1,0 +1,21 @@
+[2.212s] Invoking command in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/key_teleop': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/key_teleop/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/key_teleop build --build-base /home/gaia-22/ac_search/vrx_ws/build/key_teleop/build install --record /home/gaia-22/ac_search/vrx_ws/build/key_teleop/install.log --single-version-externally-managed
+[2.436s] running egg_info
+[2.436s] writing ../../../build/key_teleop/key_teleop.egg-info/PKG-INFO
+[2.437s] writing dependency_links to ../../../build/key_teleop/key_teleop.egg-info/dependency_links.txt
+[2.437s] writing entry points to ../../../build/key_teleop/key_teleop.egg-info/entry_points.txt
+[2.437s] writing requirements to ../../../build/key_teleop/key_teleop.egg-info/requires.txt
+[2.437s] writing top-level names to ../../../build/key_teleop/key_teleop.egg-info/top_level.txt
+[2.465s] adding license file 'LICENSE'
+[2.465s] writing manifest file '../../../build/key_teleop/key_teleop.egg-info/SOURCES.txt'
+[2.465s] running build
+[2.465s] running build_py
+[2.465s] running install
+[2.466s] running install_lib
+[2.467s] running install_data
+[2.467s] running install_egg_info
+[2.468s] removing '/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/key_teleop-1.5.0-py3.10.egg-info' (and everything under it)
+[2.468s] Copying ../../../build/key_teleop/key_teleop.egg-info to /home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages/key_teleop-1.5.0-py3.10.egg-info
+[2.469s] running install_scripts
+[2.486s] Installing key_teleop script to /home/gaia-22/ac_search/vrx_ws/install/lib/key_teleop
+[2.486s] writing list of installed files to '/home/gaia-22/ac_search/vrx_ws/build/key_teleop/install.log'
+[2.600s] Invoked command in '/home/gaia-22/ac_search/vrx_ws/src/teleop_tools/key_teleop' returned '0': PYTHONPATH=/home/gaia-22/ac_search/vrx_ws/build/key_teleop/prefix_override:/home/gaia-22/ac_search/vrx_ws/install/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/key_teleop build --build-base /home/gaia-22/ac_search/vrx_ws/build/key_teleop/build install --record /home/gaia-22/ac_search/vrx_ws/build/key_teleop/install.log --single-version-externally-managed
