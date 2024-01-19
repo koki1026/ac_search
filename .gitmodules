@@ -4,3 +4,6 @@
 [submodule "vrx/src/teleop_tools"]
 	path = vrx/src/teleop_tools
 	url = https://github.com/ros-teleop/teleop_tools
+[submodule "Imitation/imitation"]
+	path = Imitation/imitation
+	url = https://github.com/HumanCompatibleAI/imitation
