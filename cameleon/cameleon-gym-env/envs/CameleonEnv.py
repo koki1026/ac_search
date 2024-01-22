@@ -2,7 +2,7 @@ import gym
 import numpy as np
 import matplotlib.pyplot as plt
 
-class Cameleon(gym.Env):
+class CameleonEnv(gym.Env):
 
     def __init__(self, render_mode='human'):
         self.window_size = 200.0
