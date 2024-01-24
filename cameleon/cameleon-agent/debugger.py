@@ -15,4 +15,4 @@ for _ in range(200):
         print("Episode finished after {} timesteps".format(_+1))
         env.reset() #環境を初期化
     #1秒待機
-    time.sleep(0.1)
+    time.sleep(3)

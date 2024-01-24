@@ -7,7 +7,7 @@ import cv2
 
 class CameleonEnv(gym.Env):
 
-    def __init__(self, render_mode='hum'):
+    def __init__(self, render_mode='human'):
         self.window_size = 800 #人間に見せる画像のサイズ
         self.render_size = 800 #環境の画像のサイズ
         self.myPos = [0.0]*2 #自分の位置
