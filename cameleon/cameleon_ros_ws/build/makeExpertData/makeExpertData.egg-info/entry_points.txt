@@ -1,0 +1,3 @@
+[console_scripts]
+makeExpertData = makeExpertData.makeExpertData:main
+
