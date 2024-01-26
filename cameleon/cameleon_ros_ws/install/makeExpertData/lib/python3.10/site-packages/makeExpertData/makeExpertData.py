@@ -6,8 +6,6 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from geometry_msgs.msg import PoseArray
 from std_msgs.msg import Bool
-from imitation.data.types import MaybeWrapDict
-from imitation.data.types import TransitionsMinimal
 
 
 
@@ -109,11 +107,9 @@ class makeExpertData(Node):
             return 3
 
     def save_data(self):
-        observation = MaybeWrapDict(self.observation_data)
-        data = TransitionsMinimal(observation, self.action_data, self.info_data)
         path = 'rollout.pkl'
         with open(path, mode='wb') as f:
-            pickle.dump(data, f)
+            pickle.dump([self.action_data, self.observation_data, self.info_data], f)
 
 def main(args=None):
     rclpy.init(args=args)
