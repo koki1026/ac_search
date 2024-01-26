@@ -2,13 +2,14 @@ import pickle
 import cv2
 import numpy as np
 import rclpy
+from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from geometry_msgs.msg import PoseArray
 from std_msgs.msg import Bool
 
 
 
-class makeExpertData(gym.Env):
+class makeExpertData(Node):
     def __init__(self, render_mode='human'):
         super().__init__('makeExpertData')
 
