@@ -10,7 +10,7 @@ from std_msgs.msg import Bool
 
 
 class makeExpertData(Node):
-    def __init__(self, render_mode='human'):
+    def __init__(self):
         super().__init__('makeExpertData')
 
         # サブスクリプションの宣言
@@ -110,3 +110,13 @@ class makeExpertData(Node):
         path = 'data/rollout.pkl'
         with open(path, mode='wb') as f:
             pickle.dump([self.action_data, self.observation_data, self.info_data], f)
+
+def main(args=None):
+    rclpy.init(args=args)
+    makeExpertData_node = makeExpertData()
+    rclpy.spin(makeExpertData_node)
+    makeExpertData_node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
