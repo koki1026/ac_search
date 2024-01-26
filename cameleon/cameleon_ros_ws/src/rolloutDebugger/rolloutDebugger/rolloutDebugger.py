@@ -8,8 +8,9 @@ from geometry_msgs.msg import PoseArray
 from std_msgs.msg import Bool
 from geometry_msgs.msg import Pose
 
-class makeExpertData(Node):
+class rolloutDebugger(Node):
     def __init__(self):
+        super().__init__('rolloutDebugger')
         self.myVel = 0.0
         self.myAngle = 0.0
         self.myAngleVel = 0.0
@@ -69,3 +70,13 @@ class makeExpertData(Node):
         self.done_pub.publish(self.done)
         self.pose_pub.publish(poses)
         self.twist_pub.publish(TwistMsg)
+
+def main(args=None):
+    rclpy.init(args=args)
+    rolloutDebugger_node = rolloutDebugger()
+    rclpy.spin(rolloutDebugger_node)
+    rolloutDebugger_node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
