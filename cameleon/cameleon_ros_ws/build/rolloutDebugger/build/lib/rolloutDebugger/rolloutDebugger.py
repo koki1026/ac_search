@@ -11,12 +11,12 @@ from geometry_msgs.msg import Pose
 class rolloutDebugger(Node):
     def __init__(self):
         super().__init__('rolloutDebugger')
-        self.myVel = 0.0
-        self.myAngle = 0.0
-        self.myAngleVel = 0.0
-        self.myPose = [0.0] * 2
-        self.targetPose = [0.0] * 2
-        self.nextTargetPose = [0.0] * 2
+        self.myVel = 1.0
+        self.myAngle = 2.0
+        self.myAngleVel = 3.0
+        self.myPose = [1.0] * 2
+        self.targetPose = [2.0] * 2
+        self.nextTargetPose = [3.0] * 2
         self.PoseMember = [self.myPose, self.targetPose, self.nextTargetPose]
         self.windSpeed = 0.0
         self.windDirection = 0.0
@@ -49,6 +49,11 @@ class rolloutDebugger(Node):
             "/asv/done",
             10
         )
+        self.environment_pub = self.create_publisher(
+            Pose,
+            "/asv/environment",
+            10
+        )
 
     def onTick(self):
         poses = PoseArray()
@@ -62,16 +67,26 @@ class rolloutDebugger(Node):
             pose.orientation.z = 0.0
             pose.orientation.w = 0.0
             poses.poses.append(pose)
+
         TwistMsg = Twist()
         TwistMsg.linear.x = self.myVel
         TwistMsg.angular.z = self.myAngle
         TwistMsg.angular.x = self.myAngleVel
         self.done = self.get_parameter('done').get_parameter_value().bool_value
+
         doneMsg = Bool()
         doneMsg.data = self.done
+
+        pose = Pose()
+        pose.position.x = self.windSpeed
+        pose.position.y = self.windDirection
+        pose.position.z = self.waveLevel
+        pose.orientation.x = self.waveDirection
+        
         self.done_pub.publish(doneMsg)
         self.pose_pub.publish(poses)
         self.twist_pub.publish(TwistMsg)
+        self.environment_pub.publish(pose)
 
 def main(args=None):
     rclpy.init(args=args)

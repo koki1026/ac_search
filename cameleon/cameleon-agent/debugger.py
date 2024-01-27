@@ -11,6 +11,7 @@ env.reset()
 for _ in range(200):
     action = env.action_space.sample() #ランダムなアクションを取得
     observation, reward, done, info = env.step(action) #アクションを実行
+    print("observation:", observation)
     if done:
         print("Episode finished after {} timesteps".format(_+1))
         env.reset() #環境を初期化
