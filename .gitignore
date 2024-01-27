@@ -1,8 +1,8 @@
-*/devel/
-*/log/
-*/build/
-*/install/
-*/vrx/
+vrx_ws/devel/
+vrx_ws/log/
+vrx_ws/build/
+vrx_ws/install/
+vrx_ws/vrx/
 bin/
 lib/
 msg_gen/
