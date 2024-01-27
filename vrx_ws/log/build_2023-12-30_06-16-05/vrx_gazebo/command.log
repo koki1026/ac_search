@@ -1,3 +1,0 @@
-Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_urdf/vrx_gazebo -DCMAKE_INSTALL_PREFIX=/home/gaia-22/ac_search/vrx_ws/install
-Invoked command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/gaia-22/ac_search/vrx_ws/src/vrx/vrx_urdf/vrx_gazebo -DCMAKE_INSTALL_PREFIX=/home/gaia-22/ac_search/vrx_ws/install
-Invoking command in '/home/gaia-22/ac_search/vrx_ws/build/vrx_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/gaia-22/ac_search/vrx_ws/build/vrx_gazebo -- -j20 -l20
