@@ -1,6 +1,8 @@
-devel/
-log/
-build/
+*/devel/
+*/log/
+*/build/
+*/install/
+*/vrx/
 bin/
 lib/
 msg_gen/
