@@ -1,9 +1,0 @@
-source;share/rviz_collada_marker/hook/cmake_prefix_path.ps1
-source;share/rviz_collada_marker/hook/cmake_prefix_path.dsv
-source;share/rviz_collada_marker/hook/cmake_prefix_path.sh
-source;share/rviz_collada_marker/hook/ld_library_path_lib.ps1
-source;share/rviz_collada_marker/hook/ld_library_path_lib.dsv
-source;share/rviz_collada_marker/hook/ld_library_path_lib.sh
-source;share/rviz_collada_marker/hook/pythonpath.ps1
-source;share/rviz_collada_marker/hook/pythonpath.dsv
-source;share/rviz_collada_marker/hook/pythonpath.sh

@@ -63,7 +63,7 @@ def rviz_marker(self, position: np.ndarray, label: str, idx: int):
     
     if(idx == 100):
         marker_child.type = Marker.MESH_RESOURCE
-        marker_child.mesh_resource = "file:///home/koki-22/ac_search/vrx_ws/src/navigaitonGUI/mesh/WAM-V-Base.dae"
+        marker_child.mesh_resource = "file:///home/gaia-22/ac_search/vrx_ws/src/navigaitonGUI/mesh/WAM-V-Base.dae"
         marker_child.mesh_use_embedded_materials = True
 
     return marker_child
