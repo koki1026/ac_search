@@ -6,6 +6,7 @@ from sensor_msgs.msg import Imu
 from geometry_msgs.msg import PoseArray
 from std_msgs.msg import Float64
 from std_msgs.msg import Float32
+from std_msgs.msg import Bool
 import numpy as np
 
 #すべてのトピックをサブスクライブしてひとつにまとめる
@@ -50,7 +51,15 @@ class DatacollectNode(Node):
         self.waveParameterPeriod = self.get_parameter("wave_period").value #波の周期（*2s）
         self.waveParameterStepness = self.get_parameter("wave_stepness").value #波のピークの尖り具合
 
+        self.done = True
 
+        # エピソードの開始を受け取るコールバック関数
+        self.done_sub = self.create_subscription(
+            Bool,
+            '/wamv/done',
+            self.done_callback,
+            10
+        )
         self.collect_imu_sub = self.create_subscription(
             Imu,
             '/world/sydney_regatta/model/wamv/link/wamv/imu_wamv_link/sensor/imu_wamv_sensor/imu',
@@ -126,6 +135,9 @@ class DatacollectNode(Node):
 
         self.PoseHeaderStamp = 0.0
         self.ImuHeaderStamp = 0.0
+
+    def done_callback(self,msg):
+        self.done = msg.data
         
 
     def imu_data_callback(self,msg):
