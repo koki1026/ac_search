@@ -8,6 +8,7 @@ from std_msgs.msg import Int32MultiArray
 import numpy as np
 import matplotlib.pyplot as plt
 from visualization_msgs.msg import MarkerArray, Marker
+from std_msgs.msg import Bool
 # wave, goal , my, thruster l,r,lv,rv
 def euler_from_quaternion(quaternion):                                                                   
         """クオータニオンからオイラー角を計算する関数                                                        
@@ -96,6 +97,12 @@ class NavigaitonGUI(Node):
              self.pose_data_callback,
              10
         )
+        self.done = False
+        self.done_pub = self.create_publisher(
+            Bool,
+            "/wamv/done",
+            10
+        )
 
         self.goalPosX = 0.0 #ゴールのx位置を保存
         self.goalPosY = 0.0 #ゴールのy位置を保存
@@ -139,7 +146,13 @@ class NavigaitonGUI(Node):
         goal_dis = [0.0]*2
         goal_dis[0] = np.abs(self.myPos[0]-self.goalPosX)
         goal_dis[1] = np.abs(self.myPos[1]-self.goalPosY)
-        if(np.linalg.norm(goal_dis) < 0.1):
+        if(np.linalg.norm(goal_dis) < 3.0):
+            if(self.goal_index == self.buoys_size-30):
+                self.done = True
+                self.goal_index -= 1
+                done = Bool()
+                done.data = self.done
+                self.done_pub.publish(done)
             self.goal_index+=1
         index_array = Int32MultiArray()
         data_array = []
