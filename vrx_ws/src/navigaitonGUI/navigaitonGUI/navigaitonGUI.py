@@ -51,6 +51,11 @@ def rviz_marker(self, position: np.ndarray, label: str, idx: int):
         marker_child.color.g = 0.0
         marker_child.color.b = 0.0
         marker_child.color.a = 1.0
+    elif(idx == self.goal_index+1): #ゴールの色は赤色
+        marker_child.color.r = 1.0
+        marker_child.color.g = 1.0
+        marker_child.color.b = 0.0
+        marker_child.color.a = 1.0
     elif(idx == self.goal_index-1): #スタートの色は青色
         marker_child.color.r = 0.0
         marker_child.color.g = 0.0
