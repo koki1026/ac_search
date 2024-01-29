@@ -97,12 +97,16 @@ class CameleonEnv(gym.Env):
         self.action_space = gym.spaces.Box(low, high, dtype=np.float32)
 
         high = np.array([
+            self.max_vel, #速度
+            self.max_Angvel, #角速度
             1.0, #風向
             np.finfo(np.float32).max, #風速
             1.0, #波向
             np.finfo(np.float32).max, #波高
         ])
         low = np.array([
+            0.0, #速度
+            -self.max_Angvel, #角速度
             -1.0, #風向
             0.0, #風速
             -1.0, #波向
