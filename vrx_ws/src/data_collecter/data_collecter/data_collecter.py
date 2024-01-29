@@ -7,6 +7,7 @@ from geometry_msgs.msg import Twist
 from geometry_msgs.msg import PoseArray
 from geometry_msgs.msg import Pose
 from std_msgs.msg import Bool
+from std_msgs.msg import Int32
 from std_msgs.msg import Float32
 from sensor_msgs.msg import Imu
 
@@ -34,11 +35,7 @@ def euler_from_quaternion(quaternion):
                                          
         return roll, pitch, yaw
 
-def calc_vel(nowPose, prePose, nowTime, preTime):
-    vel = math.sqrt((nowPose[0]-prePose[0])**2 + (nowPose[1]-prePose[1])**2) / (nowTime-preTime)
-    return vel
-
-class makeExpertData(Node):
+class dataCollecter(Node):
     def __init__(self):
         super().__init__('data_collect_node')
 
@@ -56,9 +53,13 @@ class makeExpertData(Node):
         self.myAngle = 0.0
         self.myAngleVel = 0.0
 
+
         #decleare parameter for culcrate
         self.myAccel = 0.0
         self.next_index = 0
+        self.NowTime = 0.0
+        self.PreTime = 0.0
+        self.prePose = [0.0] * 2
 
         #make publisher
         self.twist_pub = self.create_publisher(
@@ -91,7 +92,7 @@ class makeExpertData(Node):
         )
         self.collect_Pose_sub = self.create_subscription(
             PoseArray,
-            'asv/waypoints',
+            'vrx/pose',
             self.waypoints_callback,
             10
         )
@@ -113,10 +114,26 @@ class makeExpertData(Node):
             self.wind_speed_callback,
             10
         )
+        self.collect_index_sub = self.create_subscription(
+            Int32,
+            '/vrx/index',
+            self.index_callback,
+            10
+        )
+
+        # 速度を計算するためのタイマー
+        self.writeTimer = self.create_timer(
+            0.1,
+            self.onTick
+        )
+
+    def onTick(self):
+        self.myVel = math.sqrt((self.myPose[0]-self.prePose[0])**2 + (self.myPose[1]-self.prePose[1])**2) / 0.1
+        self.prePose = self.myPose.copy()
 
     def imu_callback(self, msg):
         self.myAngleVel = msg.angular_velocity.z
-        self.myAngle = euler_from_quaternion(msg.orientatioon)[2]
+        self.myAngle = euler_from_quaternion(msg.orientation)[2]
         TwistMsg = Twist()
         TwistMsg.linear.x = self.myVel
         TwistMsg.angular.z = self.myAngle
@@ -126,9 +143,6 @@ class makeExpertData(Node):
     def waypoints_callback(self, msg):
         self.myPose[0] = msg.poses[0].position.x
         self.myPose[1] = msg.poses[0].position.y
-        self.NowTime = msg.header.stamp.sec + ((msg.header.stamp.nanosec/1000000)*0.001)
-        self.myVel = calc_vel(self.myPose, self.prePose, self.NowTime, self.PreTime)
-        self.PreTime = self.NowTime
 
         self.targetPose[0] = msg.poses[1+self.next_index].position.x
         self.targetPose[1] = msg.poses[1+self.next_index].position.y
@@ -154,9 +168,21 @@ class makeExpertData(Node):
         self.windSpeed = msg.data
         EnvironmentMsg = Pose()
         EnvironmentMsg.orientation.x = self.windSpeed
-        EnvironmentMsg.orientation.y = self.windDirection -self.myAngle
+        EnvironmentMsg.orientation.y = np.radians(self.windDirection) -self.myAngle
         EnvironmentMsg.orientation.z = self.waveLevel
-        EnvironmentMsg.orientation.w = self.waveDirection - self.myAngle
+        EnvironmentMsg.orientation.w = np.radians(self.waveDirection) - self.myAngle
         self.environment_pub.publish(EnvironmentMsg)
+        
+    def index_callback(self, msg):
+        self.next_index = msg.data
 
 
+def main(args=None):
+    rclpy.init(args=args)
+    data_collect_node = dataCollecter()
+    rclpy.spin(data_collect_node)
+    data_collect_node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()

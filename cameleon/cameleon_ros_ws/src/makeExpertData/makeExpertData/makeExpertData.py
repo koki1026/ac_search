@@ -23,15 +23,15 @@ class makeExpertData(Node):
         # msg.angular.z = 現在角度
         # msg.angulear.x = 現在角速度
         '''
-        self.create_subscription(Twist, '/asv/cmd_vel', self.cmd_vel_callback, 10)
+        self.create_subscription(Twist, 'expert/asv/cmd_vel', self.cmd_vel_callback, 10)
         '''
         # msg.poses = [現在位置, 目標地点, 次の目標地点]
         '''
-        self.create_subscription(PoseArray, '/asv/waypoints', self.waypoints_callback, 10)
+        self.create_subscription(PoseArray, 'expert/asv/waypoints', self.waypoints_callback, 10)
         '''
         # エピソードの開始と終了を判定するコールバック
         '''
-        self.create_subscription(Bool, '/asv/done', self.done_callback, 10)
+        self.create_subscription(Bool, 'expert/asv/done', self.done_callback, 10)
         '''
         # 書き込み全体の終了を判定するコールバック
         '''
@@ -42,7 +42,7 @@ class makeExpertData(Node):
         # orientation.z = waveLevel
         # orientation.w = waveDirection
         '''
-        self.create_subscription(Pose, '/asv/environment', self.environment_callback, 10)
+        self.create_subscription(Pose, 'expert/asv/environment', self.environment_callback, 10)
 
         # 変数の宣言
         self.myVel = 0.0

@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'data_collect_node = data_collect.data_collect:main',
+            'data_collect_node = data_collecter.data_collecter:main',
         ],
     },
 )

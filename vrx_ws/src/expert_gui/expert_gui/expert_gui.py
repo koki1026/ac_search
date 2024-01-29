@@ -216,12 +216,16 @@ class expertGUI(Node):
         # index番号をパブリッシュ
         self.index_pub.publish(index)
         #すべてのポイントと船体位置をパブリッシュ
+        poses.header.stamp = self.get_clock().now().to_msg()
         self.pose_pub.publish(poses)
         #すべてのマーカーをパブリッシュ
         self.marker_pub.publish(markers)
 
     #エピソードの開始を受け取ったときに呼び出される関数
     def reset_callback(self, msg):
+        done = Bool()
+        done.data = True
+        self.done_pub.publish(done)
         self.nextPointIndex = 0
         preAng = np.degrees(self.myAng)
         #通過地点の生成
