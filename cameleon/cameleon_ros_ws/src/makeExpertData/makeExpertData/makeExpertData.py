@@ -23,26 +23,26 @@ class makeExpertData(Node):
         # msg.angular.z = 現在角度
         # msg.angulear.x = 現在角速度
         '''
-        self.create_subscription(Twist, '/asv/cmd_vel', self.cmd_vel_callback, 10)
+        self.create_subscription(Twist, 'expert/asv/cmd_vel', self.cmd_vel_callback, 10)
         '''
         # msg.poses = [現在位置, 目標地点, 次の目標地点]
         '''
-        self.create_subscription(PoseArray, '/asv/waypoints', self.waypoints_callback, 10)
+        self.create_subscription(PoseArray, 'expert/asv/waypoints', self.waypoints_callback, 10)
         '''
         # エピソードの開始と終了を判定するコールバック
         '''
-        self.create_subscription(Bool, '/asv/done', self.done_callback, 10)
+        self.create_subscription(Bool, 'expert/asv/done', self.done_callback, 10)
         '''
         # 書き込み全体の終了を判定するコールバック
         '''
         self.create_subscription(Bool, '/asv/final', self.final_callback, 10)
         '''
-        # pose.x = windSpeed
-        # pose.y = windDirection
-        # pose.z = waveLevel
-        # pose.w = waveDirection
+        # orientation.x = windSpeed
+        # orientation.y = windDirection
+        # orientation.z = waveLevel
+        # orientation.w = waveDirection
         '''
-        self.create_subscription(Pose, '/asv/environment', self.environment_callback, 10)
+        self.create_subscription(Pose, 'expert/asv/environment', self.environment_callback, 10)
 
         # 変数の宣言
         self.myVel = 0.0
@@ -88,10 +88,10 @@ class makeExpertData(Node):
         self.nextTargetPose[1] = msg.poses[2].position.y
 
     def environment_callback(self, msg):
-        self.windSpeed = msg.position.x
-        self.windDirection = msg.position.y
-        self.waveLevel = msg.position.z
-        self.waveDirection = msg.orientation.x
+        self.windSpeed = msg.orientation.x
+        self.windDirection = msg.orientation.y
+        self.waveLevel = msg.orientation.z
+        self.waveDirection = msg.orientation.w
 
     def done_callback(self, msg):
         self.dane = msg.data
