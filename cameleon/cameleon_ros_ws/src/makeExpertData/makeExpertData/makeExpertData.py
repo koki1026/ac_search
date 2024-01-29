@@ -110,7 +110,7 @@ class makeExpertData(Node):
             print("episode status" , episode_status)
         elif episode_status == 2:
             action, action_checker = self.makeActionData(self.action_index,self.myVel,self.myAngle,self.myAngleVel,self.myPose,self.prePose)
-            observation = self.makeObservationData(self.myPose,self.myAngle,self.targetPose,self.nextTargetPose,self.windSpeed,self.windDirection,self.waveLevel,self.waveDirection)
+            observation = self.makeObservationData(self.myVel, self.myAngleVel, self.myPose,self.myAngle,self.targetPose,self.nextTargetPose,self.windSpeed,self.windDirection,self.waveLevel,self.waveDirection)
 
             # 種々のデータを更新
             self.prePose = self.myPose
@@ -144,12 +144,12 @@ class makeExpertData(Node):
         action_bool = self.action_start
         return action,action_bool
     
-    def makeObservationData(self,myPose,myAngle,targetPose,nextTargetPose,windSpeed,windDirection,waveLevel,waveDirection):
+    def makeObservationData(self, myVel, myAngleVel, myPose,myAngle,targetPose,nextTargetPose,windSpeed,windDirection,waveLevel,waveDirection):
         img = np.zeros((self.render_size,self.render_size,3), np.uint8)
         img = cv2.circle(img, (int(self.render_size/2),int(self.render_size/2)), 5, (255,255,255), -1)
         img = self._point_render(myPose, myAngle, targetPose, img, 1, 0, 0, 5)
         img = self._point_render(myPose, myAngle, nextTargetPose, img, 0, 1, 0, 5)
-        environment = np.array([windSpeed, windDirection, waveLevel, waveDirection], dtype=np.float32)
+        environment = np.array([myVel, myAngleVel, windSpeed, windDirection, waveLevel, waveDirection], dtype=np.float32)
         observation = [environment, img]
         return observation
     
