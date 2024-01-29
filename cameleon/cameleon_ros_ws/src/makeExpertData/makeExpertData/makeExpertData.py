@@ -37,10 +37,10 @@ class makeExpertData(Node):
         '''
         self.create_subscription(Bool, '/asv/final', self.final_callback, 10)
         '''
-        # pose.x = windSpeed
-        # pose.y = windDirection
-        # pose.z = waveLevel
-        # pose.w = waveDirection
+        # orientation.x = windSpeed
+        # orientation.y = windDirection
+        # orientation.z = waveLevel
+        # orientation.w = waveDirection
         '''
         self.create_subscription(Pose, '/asv/environment', self.environment_callback, 10)
 
@@ -88,10 +88,10 @@ class makeExpertData(Node):
         self.nextTargetPose[1] = msg.poses[2].position.y
 
     def environment_callback(self, msg):
-        self.windSpeed = msg.position.x
-        self.windDirection = msg.position.y
-        self.waveLevel = msg.position.z
-        self.waveDirection = msg.orientation.x
+        self.windSpeed = msg.orientation.x
+        self.windDirection = msg.orientation.y
+        self.waveLevel = msg.orientation.z
+        self.waveDirection = msg.orientation.w
 
     def done_callback(self, msg):
         self.dane = msg.data
