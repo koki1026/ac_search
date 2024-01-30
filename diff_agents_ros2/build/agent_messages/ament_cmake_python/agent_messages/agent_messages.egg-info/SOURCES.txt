@@ -1,8 +1,0 @@
-setup.py
-agent_messages/__init__.py
-agent_messages.egg-info/PKG-INFO
-agent_messages.egg-info/SOURCES.txt
-agent_messages.egg-info/dependency_links.txt
-agent_messages.egg-info/top_level.txt
-agent_messages/msg/__init__.py
-agent_messages/msg/_agent_tf.py

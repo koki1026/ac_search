@@ -159,7 +159,9 @@ class dataCollecter(Node):
 
     def done_callback(self, msg):
         self.done = msg.data
-        self.done_pub.publish(self.done)
+        done = Bool()
+        done.data = self.done
+        self.done_pub.publish(done)
 
     def wind_direction_callback(self, msg):
         self.windDirection = msg.data
@@ -172,7 +174,7 @@ class dataCollecter(Node):
         EnvironmentMsg.orientation.z = self.waveLevel
         EnvironmentMsg.orientation.w = np.radians(self.waveDirection) - self.myAngle
         self.environment_pub.publish(EnvironmentMsg)
-        
+
     def index_callback(self, msg):
         self.next_index = msg.data
 

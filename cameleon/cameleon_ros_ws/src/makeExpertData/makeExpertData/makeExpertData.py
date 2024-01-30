@@ -2,6 +2,7 @@ import math
 import pickle
 import cv2
 import numpy as np
+import pygame
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
@@ -31,7 +32,7 @@ class makeExpertData(Node):
         '''
         # エピソードの開始と終了を判定するコールバック
         '''
-        self.create_subscription(Bool, 'expert/asv/done', self.done_callback, 10)
+        self.create_subscription(Bool, 'vrx/done', self.done_callback, 10)
         '''
         # 書き込み全体の終了を判定するコールバック
         '''
@@ -67,6 +68,10 @@ class makeExpertData(Node):
         self.action_data = []
         self.observation_data = []
         self.info_data = []
+
+        #pygameの初期化
+        pygame.init()
+        self.screen = pygame.display.set_mode((self.render_size,self.render_size))
         
         # タイマーコールバック関数を宣言
         '''
@@ -111,6 +116,13 @@ class makeExpertData(Node):
         elif episode_status == 2:
             action, action_checker = self.makeActionData(self.action_index,self.myVel,self.myAngle,self.myAngleVel,self.myPose,self.prePose)
             observation = self.makeObservationData(self.myVel, self.myAngleVel, self.myPose,self.myAngle,self.targetPose,self.nextTargetPose,self.windSpeed,self.windDirection,self.waveLevel,self.waveDirection)
+
+            #ovservationを描画
+            img = observation[1]
+            pygame.display.set_caption("Cameleon")
+            image_surface = pygame.surfarray.make_surface(img)
+            self.screen.blit(image_surface, (0,0))
+            pygame.display.flip()
 
             # 種々のデータを更新
             self.prePose = self.myPose
@@ -184,7 +196,7 @@ class makeExpertData(Node):
             self.makeActionData(((action_index+i)%4),myVel,myAngle,myAngleVel,myPose,prePose)
             self.action_data.append(self.action[(action_index+i+3)%4])
             print ("action: ", self.action_data)
-        observation = self.makeObservationData(self.myPose,self.myAngle,self.targetPose,self.nextTargetPose,self.windSpeed,self.windDirection,self.waveLevel,self.waveDirection)
+        observation = self.makeObservationData(self.myVel, self.myAngleVel, self.myPose,self.myAngle,self.targetPose,self.nextTargetPose,self.windSpeed,self.windDirection,self.waveLevel,self.waveDirection)
         self.observation_data.append(observation)
         print ("observation: ")
         self.info_data.append([1])

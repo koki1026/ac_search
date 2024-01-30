@@ -1,9 +1,6 @@
 [submodule "vrx_ws/vrx_ws/src/vrx"]
 	path = vrx_ws/vrx_ws/src/vrx
 	url = https://github.com/osrf/vrx
-[submodule "vrx/src/teleop_tools"]
-	path = vrx/src/teleop_tools
-	url = https://github.com/ros-teleop/teleop_tools
 [submodule "Imitation/imitation"]
 	path = Imitation/imitation
 	url = https://github.com/HumanCompatibleAI/imitation

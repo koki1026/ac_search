@@ -36,22 +36,22 @@ class rolloutDebugger(Node):
         #make publisher
         self.twist_pub = self.create_publisher(
             Twist,
-            "/asv/cmd_vel",
+            "expert/asv/cmd_vel",
             10
         )
         self.pose_pub = self.create_publisher(
             PoseArray,
-            "/asv/waypoints",
+            "expert/asv/waypoints",
             10
         )
         self.done_pub = self.create_publisher(
             Bool,
-            "/asv/done",
+            "/vrx/done",
             10
         )
         self.environment_pub = self.create_publisher(
             Pose,
-            "/asv/environment",
+            "expert/asv/environment",
             10
         )
 
