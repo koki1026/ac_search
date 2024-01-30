@@ -15,6 +15,8 @@ class CameleonEnv(gym.Env):
         self.max_vel = 10.0 #asvの最大速度
         self.max_Angvel = np.pi/4.0 #asvの最大角速度
         self.render_mode = render_mode #人間に見せる画像のモード
+        self.myVel = 0.0 #asvの速度
+        self.myAngVel = 0.0 #asvの角速度
         if(self.render_mode=='human'):
             pygame.init() #pygameの初期化
             self.screen = pygame.display.set_mode((self.window_size,self.window_size)) #pygameの画面を設定
@@ -28,6 +30,7 @@ class CameleonEnv(gym.Env):
         #通過地点の数
         self.passing_point_num = 50 #用意する通過地点の数
         self.episode_point_num = self.passing_point_num-10 #エピソードの通過地点の数
+        
         #通過地点の座標
         self.passing_point = np.zeros((self.passing_point_num, 2))
         #目指す通過地点のインデックス
@@ -40,8 +43,8 @@ class CameleonEnv(gym.Env):
             angle = np.random.rand()*180.0-90.0
             #ポイントの中身を更新(i=0の時は原点からの距離を代入)
             if(i==0):
-                self.passing_point[i][0] = abs(distance*np.cos(angle))
-                self.passing_point[i][1] = abs(distance*np.sin(angle))
+                self.passing_point[i][0] = abs(self.myPos[0] + distance*np.cos(angle))
+                self.passing_point[i][1] = abs(self.myPos[1] + distance*np.sin(angle))
                 #通過地点をデバッグ
                 print("passing_point: "+str(self.passing_point[i][0])+","+str(self.passing_point[i][1]))
             else:
@@ -54,9 +57,6 @@ class CameleonEnv(gym.Env):
             [
                 self.max_vel, #asvの次の瞬間の最大速度
                 self.max_Angvel, #asvの次の瞬間の最大角速度
-                self.max_vel, #asvの最大速度
-                np.pi, #方向
-                np.pi,  #角度
                 self.max_vel, #asvの最大速度
                 np.pi, #方向
                 np.pi,  #角度
@@ -88,9 +88,6 @@ class CameleonEnv(gym.Env):
                 0.0, #asvの最大速度
                 -np.pi, #方向
                 -np.pi,  #角度
-                0.0, #asvの最大速度
-                -np.pi, #方向
-                -np.pi,  #角度
             ],
             dtype=np.float32,
         )
@@ -99,17 +96,17 @@ class CameleonEnv(gym.Env):
         high = np.array([
             self.max_vel, #速度
             self.max_Angvel, #角速度
-            1.0, #風向
+            np.pi, #風向
             np.finfo(np.float32).max, #風速
-            1.0, #波向
+            np.pi, #波向
             np.finfo(np.float32).max, #波高
         ])
         low = np.array([
             0.0, #速度
             -self.max_Angvel, #角速度
-            -1.0, #風向
+            -np.pi, #風向
             0.0, #風速
-            -1.0, #波向
+            -np.pi, #波向
             0.0, #波高
         ])
 
@@ -128,23 +125,24 @@ class CameleonEnv(gym.Env):
         #actionを実行をもとに現在の速度を更新
         self.myVel = action[0]
         #actionを実行をもとに現在の角速度を更新
-        self.myAng = action[1]
+        self.myAngVel = action[1]
         #actionを実行をもとに現在地を更新
         self.myPos[0] += action[2]*np.cos(action[3])
         self.myPos[1] += action[2]*np.sin(action[3])
         #actionを実行をもとに現在の角度を更新
-        self.myAngle += action[4]
-
-
-        #状態を更新
-        nextnextPointIndex = self.nextPointIndex+1
-        self.state = self._next_state(self.myPos, self.myAngle, self.passing_point[self.nextPointIndex], self.passing_point[nextnextPointIndex])
+        self.myAngle = action[4]
 
         #報酬を計算
         reward = self._get_reward()
 
         #episodeの終了判定
         done = self._is_done()
+
+        #状態を更新
+        nextnextPointIndex = self.nextPointIndex+1
+        self.state = self._next_state(self.myPos, self.myAngle, self.passing_point[self.nextPointIndex], self.passing_point[nextnextPointIndex])
+
+
 
         #episodeの情報
         info = {}
@@ -200,8 +198,8 @@ class CameleonEnv(gym.Env):
             angle = np.random.rand()*180.0-90.0
             #ポイントの中身を更新(i=0の時は原点からの距離を代入)
             if(i==0):
-                self.passing_point[i][0] = abs(distance*np.cos(angle))
-                self.passing_point[i][1] = abs(distance*np.sin(angle))
+                self.passing_point[i][0] = self.myPos[0] + distance*np.sin(np.radians(angle))
+                self.passing_point[i][1] = self.myPos[1] + distance*np.cos(np.radians(angle))
 
             else:
                 self.passing_point[i][0] = abs(self.passing_point[i-1][0] + distance*np.cos(angle))
@@ -209,6 +207,7 @@ class CameleonEnv(gym.Env):
 
         self.state = self._next_state(self.myPos, self.myAngle, self.passing_point[self.nextPointIndex], self.passing_point[self.nextPointIndex+1])
 
+        return self.state
     
     def _next_state(self, myPos, myAng, nextPoint_, nextnextPoint_):
         #画像を生成
@@ -224,7 +223,7 @@ class CameleonEnv(gym.Env):
         img = np.zeros((self.render_size,self.render_size,3),dtype=np.uint8)
         #自分の位置を表す円を中心に描画
         cv2.circle(img, (int(self.render_size/2),int(self.render_size/2)), 5, (255,255,255), -1)
-        img = self._point_render(myPos, myAng, nextPoint_, img, 0,1,0, 5)
+        img = self._point_render(myPos, myAng, nextPoint_, img, 1,0,0, 5)
         img = self._point_render(myPos, myAng, nextnextPoint_, img, 0,1,0, 5)
         #画像を返す
         return img
@@ -253,7 +252,7 @@ class CameleonEnv(gym.Env):
         distance = [0.0]*2
         distance[0] = self.myPos[0]-self.passing_point[self.nextPointIndex][0]
         distance[1] = self.myPos[1]-self.passing_point[self.nextPointIndex][1]
-        if(np.linalg.norm(distance)<1.0):
+        if(np.linalg.norm(distance)<3.0):
             #次の通過点のインデックスを更新
             self.nextPointIndex += 1
             reward = 1.0
@@ -263,7 +262,7 @@ class CameleonEnv(gym.Env):
     
     def _is_done(self):
         #次の通過点のインデックスが通過点の数-3を超えたら終了
-        if(self.nextPointIndex>self.passing_point_num-3):
+        if(self.nextPointIndex>self.episode_point_num):
             done = True
         else:
             done = False
