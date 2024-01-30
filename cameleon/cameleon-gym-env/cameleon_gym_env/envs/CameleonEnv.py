@@ -9,8 +9,8 @@ from typing import Optional, Tuple, Union
 class CameleonEnv(gym.Env):
 
     def __init__(self, render_mode='hum'):
-        self.window_size = 800 #人間に見せる画像のサイズ
-        self.render_size = 800 #環境の画像のサイズ
+        self.window_size = 600 #人間に見せる画像のサイズ
+        self.render_size = 600 #環境の画像のサイズ
         self.myPos = [0.0]*2 #自分の位置
         self.myAngle = 0.0 #自分の角度
         self.max_vel = 10.0 #asvの最大速度
@@ -92,6 +92,49 @@ class CameleonEnv(gym.Env):
         )
         self.action_space = gym.spaces.Box(low= lower, high = higher, dtype=np.float32)
 
+        higher_list = []
+        for i in range(40):
+            higher_list.append(self.max_vel)
+        for i in range(40):
+            higher_list.append(self.max_Angvel)
+        for i in range(40):
+            higher_list.append(np.pi)
+        for i in range(40):
+            higher_list.append(np.finfo(np.float32).max)
+        for i in range(40):
+            higher_list.append(np.pi)
+        for i in range(40):
+            higher_list.append(np.finfo(np.float32).max)
+        higher_list_np = np.array(higher_list, np.float32)
+
+        low_list = []
+        for i in range(40):
+            low_list.append(0.0)
+        for i in range(40):
+            low_list.append(-self.max_Angvel)
+        for i in range(40):
+            low_list.append(-np.pi)
+        for i in range(40):
+            low_list.append(0.0)
+        for i in range(40):
+            low_list.append(-np.pi)
+        for i in range(40):
+            low_list.append(0.0)
+        low_list_np = np.array(low_list, np.float32)
+
+        zero_image = np.zeros((self.render_size, self.render_size), np.float32)
+        zero_image240 = cv2.resize(zero_image, (240, 240))
+        high_image = np.full((self.render_size, self.render_size), 255.0, np.float32)
+        high_image240 = cv2.resize(high_image, (240, 240))
+
+        observation_high_list_np = np.vstack([high_image240, higher_list_np])
+        observation_low_list_np = np.vstack([zero_image240, low_list_np])
+
+        
+
+        self.observation_space = gym.spaces.Box(low=observation_low_list_np, high=observation_high_list_np, dtype=np.float32)
+
+        '''
         higher = np.array([
             self.max_vel, #速度
             self.max_Angvel, #角速度
@@ -112,18 +155,6 @@ class CameleonEnv(gym.Env):
             ]
             ,np.float32
         )
-
-        zero_image = np.zeros((self.render_size, self.render_size, 3), np.uint8)
-        high_image = np.full((self.render_size, self.render_size, 3), 255, np.uint8)
-
-        low_list = [lower, zero_image]
-        low_list_np = np.array(low_list, dtype=object)
-        high_list = [higher, high_image]
-        high_list_np = np.array(high_list, dtype=object)
-
-        self.observation_space = gym.spaces.Box(low=low_list_np, high=high_list_np, dtype=object)
-
-        '''
         box_space1 = gym.spaces.Box(low = lower, high=higher, dtype=np.float32)
         box_space2 = gym.spaces.Box(low=0, high=255, shape=(self.render_size, self.render_size, 3), dtype=np.uint8)
         spase = ()

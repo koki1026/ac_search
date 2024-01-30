@@ -9,6 +9,7 @@ from geometry_msgs.msg import Twist
 from geometry_msgs.msg import PoseArray
 from geometry_msgs.msg import Pose
 from std_msgs.msg import Bool
+from rosgraph_msgs.msg import Clock
 import imitation.data.types as types
 from imitation.data.types import TransitionsMinimal
 
@@ -45,6 +46,8 @@ class makeExpertData(Node):
         '''
         self.create_subscription(Pose, 'expert/asv/environment', self.environment_callback, 10)
 
+        self.create_subscription(Clock, '/clock', self.clock_callback, 10)
+
         # 変数の宣言
         self.myVel = 0.0
         self.myAngle = 0.0
@@ -62,7 +65,12 @@ class makeExpertData(Node):
         self.action = [[0.0]*14]*4
         self.action_index = 0
         self.action_start = False
-        self.render_size = 800
+        self.render_size = 600
+
+        #時間の設定
+        self.clock = 0.0
+        self.nanoclock = 0.0
+        self.timeTick = 0.5
 
         #データの保存先
         self.action_data = []
@@ -77,7 +85,7 @@ class makeExpertData(Node):
         '''
         # 一秒ごとにaction, observation, next_observation, reward, done, infoを保存
         '''
-        self.create_timer(1.0, self.timer_callback)
+        #self.create_timer(1.0, self.timer_callback)
 
     def cmd_vel_callback(self, msg):
         self.myVel = msg.linear.x
@@ -104,6 +112,14 @@ class makeExpertData(Node):
     def final_callback(self, msg):
         if msg.data == True:
             self.save_data()
+
+    def clock_callback(self, msg):
+        self.clock = msg.clock.set_sec
+        self.nanoclock = msg.clock.set_nanosec
+        self.clock = self.clock + self.nanoclock/1000000000
+        if self.clock > self.preclock + self.timeTick:
+            self.preclock = self.clock
+            self.timer_callback()
 
     def timer_callback(self):
         episode_status = self.episode_check()
@@ -157,13 +173,52 @@ class makeExpertData(Node):
         return action,action_bool
     
     def makeObservationData(self, myVel, myAngleVel, myPose,myAngle,targetPose,nextTargetPose,windSpeed,windDirection,waveLevel,waveDirection):
+        img = np.zeros((self.render_size,self.render_size), np.float32)
+        img = cv2.circle(img, (int(self.render_size/2),int(self.render_size/2)), 5, 255, -1)
+        img = self._point_render_mono(myPose, myAngle, targetPose, img, 155, 5)
+        img = self._point_render_mono(myPose, myAngle, nextTargetPose, img, 55, 5)
+        img240 = cv2.resize(img, (240,240))
+        environment = []
+        for i in range(40):
+            environment.append(myVel)
+        for i in range(40):
+            environment.append(myAngleVel)
+        for i in range(40):
+            environment.append(windSpeed)
+        for i in range(40):
+            environment.append(windDirection)
+        for i in range(40):
+            environment.append(waveLevel)
+        for i in range(40):
+            environment.append(waveDirection)
+        environment = np.array(environment, dtype=np.float32)
+
+        #img240とenvironmentを結合する
+        observation = np.vstack([img240, environment])
+
+        '''
         img = np.zeros((self.render_size,self.render_size,3), np.uint8)
         img = cv2.circle(img, (int(self.render_size/2),int(self.render_size/2)), 5, (255,255,255), -1)
         img = self._point_render(myPose, myAngle, targetPose, img, 1, 0, 0, 5)
         img = self._point_render(myPose, myAngle, nextTargetPose, img, 0, 1, 0, 5)
         environment = np.array([myVel, myAngleVel, windSpeed, windDirection, waveLevel, waveDirection], dtype=np.float32)
         observation = [environment, img]
+        '''
         return observation
+    
+    def _point_render_mono(self, myPos, myAng, target_point, img, gray, radius=1):
+        #target_pointのmyPosからの相対位置を計算
+        Point = [0.0]*2
+        Point[0] = target_point[0]-myPos[0]
+        Point[1] = target_point[1]-myPos[1]
+        #target_pointのmyPosからの相対距離を計算
+        PointDistance = np.linalg.norm(Point)*10
+        #myAngからの相対角度を計算
+        PointAngle = np.arctan2(Point[1],Point[0])-myAng
+        #target_pointを表す円を描画
+        cv2.circle(img, (int(self.render_size/2+PointDistance*np.cos(PointAngle)),int(self.render_size/2+PointDistance*np.sin(PointAngle))), radius, gray, -1)
+        #画像を返す
+        return img
     
     def _point_render(self, myPos, myAng, target_point, img, r,g,b,radius=1):
         #target_pointのmyPosからの相対位置を計算
@@ -215,7 +270,7 @@ class makeExpertData(Node):
 
     def save_data(self):
         act = np.array(self.action_data)
-        obs = np.array(self.observation_data, dtype=object)
+        obs = np.array(self.observation_data, dtype=np.float32)
         info = np.array(self.info_data)
         observation = types.maybe_wrap_in_dictobs(obs)
         data = TransitionsMinimal(observation, act, info)
