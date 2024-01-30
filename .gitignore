@@ -26,6 +26,10 @@ devel_isolated/
 *.dox
 *.wikidoc
 
+# Ignore asset file
+*.asset
+*.asset.meta
+
 # eclipse stuff
 .project
 .cproject
