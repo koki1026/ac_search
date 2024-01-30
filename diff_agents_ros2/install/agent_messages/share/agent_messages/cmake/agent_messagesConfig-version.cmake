@@ -1,1 +1,0 @@
-/home/koki-22/ac_search/diff_agents_ros2/build/agent_messages/ament_cmake_core/agent_messagesConfig-version.cmake

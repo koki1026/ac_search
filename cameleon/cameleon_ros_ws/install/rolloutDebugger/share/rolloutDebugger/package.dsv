@@ -1,6 +1,0 @@
-source;share/rolloutDebugger/hook/pythonpath.ps1
-source;share/rolloutDebugger/hook/pythonpath.dsv
-source;share/rolloutDebugger/hook/pythonpath.sh
-source;share/rolloutDebugger/hook/ament_prefix_path.ps1
-source;share/rolloutDebugger/hook/ament_prefix_path.dsv
-source;share/rolloutDebugger/hook/ament_prefix_path.sh

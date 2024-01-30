@@ -1,4 +1,0 @@
-[console_scripts]
-Angulear = head_quarter:main
-head_quarter = head_quarter.head_quarter:main
-

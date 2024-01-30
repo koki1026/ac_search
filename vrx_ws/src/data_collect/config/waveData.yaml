@@ -1,6 +1,0 @@
-data_collect_node:
-  ros__parameters:
-    wave_direction: 1.0
-    wave_gain: 3.0
-    wave_period: 5
-    wave_stepness: 0
