@@ -9,6 +9,7 @@ from geometry_msgs.msg import Twist
 from geometry_msgs.msg import PoseArray
 from geometry_msgs.msg import Pose
 from std_msgs.msg import Bool
+from rosgraph_msgs.msg import Clock
 import imitation.data.types as types
 from imitation.data.types import TransitionsMinimal
 
@@ -45,6 +46,8 @@ class makeExpertData(Node):
         '''
         self.create_subscription(Pose, 'expert/asv/environment', self.environment_callback, 10)
 
+        self.create_subscription(Clock, '/clock', self.clock_callback, 10)
+
         # 変数の宣言
         self.myVel = 0.0
         self.myAngle = 0.0
@@ -64,6 +67,11 @@ class makeExpertData(Node):
         self.action_start = False
         self.render_size = 600
 
+        #時間の設定
+        self.clock = 0.0
+        self.nanoclock = 0.0
+        self.timeTick = 0.5
+
         #データの保存先
         self.action_data = []
         self.observation_data = []
@@ -77,7 +85,7 @@ class makeExpertData(Node):
         '''
         # 一秒ごとにaction, observation, next_observation, reward, done, infoを保存
         '''
-        self.create_timer(1.0, self.timer_callback)
+        #self.create_timer(1.0, self.timer_callback)
 
     def cmd_vel_callback(self, msg):
         self.myVel = msg.linear.x
@@ -104,6 +112,14 @@ class makeExpertData(Node):
     def final_callback(self, msg):
         if msg.data == True:
             self.save_data()
+
+    def clock_callback(self, msg):
+        self.clock = msg.clock.set_sec
+        self.nanoclock = msg.clock.set_nanosec
+        self.clock = self.clock + self.nanoclock/1000000000
+        if self.clock > self.preclock + self.timeTick:
+            self.preclock = self.clock
+            self.timer_callback()
 
     def timer_callback(self):
         episode_status = self.episode_check()
@@ -178,7 +194,7 @@ class makeExpertData(Node):
         environment = np.array(environment, dtype=np.float32)
 
         #img240とenvironmentを結合する
-        observation = np.concatenate([img240, environment], axis=0)
+        observation = np.vstack([img240, environment])
 
         '''
         img = np.zeros((self.render_size,self.render_size,3), np.uint8)
