@@ -4,10 +4,11 @@ import matplotlib.pyplot as plt
 import time
 import pygame
 import cv2
+from typing import Optional, Tuple, Union
 
 class CameleonEnv(gym.Env):
 
-    def __init__(self, render_mode='human'):
+    def __init__(self, render_mode='hum'):
         self.window_size = 800 #人間に見せる画像のサイズ
         self.render_size = 800 #環境の画像のサイズ
         self.myPos = [0.0]*2 #自分の位置
@@ -53,7 +54,7 @@ class CameleonEnv(gym.Env):
                 #通過地点をデバッグ
                 print("passing_point: "+str(self.passing_point[i][0])+","+str(self.passing_point[i][1]))
                                                                                         
-        high = np.array(
+        higher = np.array(
             [
                 self.max_vel, #asvの次の瞬間の最大速度
                 self.max_Angvel, #asvの次の瞬間の最大角速度
@@ -69,10 +70,9 @@ class CameleonEnv(gym.Env):
                 self.max_vel, #asvの最大速度
                 np.pi, #方向
                 np.pi,  #角度
-            ],
-            dtype=np.float32,
+            ]
         )
-        low = np.array(
+        lower = np.array(
             [
                 0.0, #asvの次の瞬間の最低速度
                 -self.max_Angvel, #asvの次の瞬間の最低角速度
@@ -88,34 +88,51 @@ class CameleonEnv(gym.Env):
                 0.0, #asvの最大速度
                 -np.pi, #方向
                 -np.pi,  #角度
-            ],
-            dtype=np.float32,
+            ]
         )
-        self.action_space = gym.spaces.Box(low, high, dtype=np.float32)
+        self.action_space = gym.spaces.Box(low= lower, high = higher, dtype=np.float32)
 
-        high = np.array([
+        higher = np.array([
             self.max_vel, #速度
             self.max_Angvel, #角速度
             np.pi, #風向
             np.finfo(np.float32).max, #風速
             np.pi, #波向
             np.finfo(np.float32).max, #波高
-        ])
-        low = np.array([
+            ]
+            ,np.float32
+        )
+        lower = np.array([
             0.0, #速度
             -self.max_Angvel, #角速度
             -np.pi, #風向
             0.0, #風速
             -np.pi, #波向
             0.0, #波高
-        ])
+            ]
+            ,np.float32
+        )
 
-        box_space1 = gym.spaces.Box(low, high, dtype=np.float32)
+        zero_image = np.zeros((self.render_size, self.render_size, 3), np.uint8)
+        high_image = np.full((self.render_size, self.render_size, 3), 255, np.uint8)
+
+        low_list = [lower, zero_image]
+        low_list_np = np.array(low_list, dtype=object)
+        high_list = [higher, high_image]
+        high_list_np = np.array(high_list, dtype=object)
+
+        self.observation_space = gym.spaces.Box(low=low_list_np, high=high_list_np, dtype=object)
+
+        '''
+        box_space1 = gym.spaces.Box(low = lower, high=higher, dtype=np.float32)
         box_space2 = gym.spaces.Box(low=0, high=255, shape=(self.render_size, self.render_size, 3), dtype=np.uint8)
+        spase = ()
 
         self.observation_space = gym.spaces.Tuple(
             (box_space1, box_space2)
         )
+        '''
+        
 
     def step(self, action):
         #エラー処理
@@ -178,7 +195,12 @@ class CameleonEnv(gym.Env):
         self.screen.blit(image_surface, (0,0))
         pygame.display.flip()
 
-    def reset(self):
+    def reset(
+            self,
+        *,
+        seed: Optional[int] = None,
+        options: Optional[dict] = None,
+    ):
         self.myPos = [0.0]*2
         self.myVel = 0.0
         self.myAngle = 0.0
@@ -207,14 +229,18 @@ class CameleonEnv(gym.Env):
 
         self.state = self._next_state(self.myPos, self.myAngle, self.passing_point[self.nextPointIndex], self.passing_point[self.nextPointIndex+1])
 
-        return self.state
+        return self.state, {}
     
     def _next_state(self, myPos, myAng, nextPoint_, nextnextPoint_):
         #画像を生成
         img = self._render(myPos, myAng, nextPoint_, nextnextPoint_,)
 
+        state1 = np.array([self.myVel, self.myAngVel, self.wind_direction, self.wind_speed, self.wave_direction, self.wave_level], dtype=np.float32)
+        state2 = np.array(img, dtype=np.uint8)
+        states = [state1, state2]
+
         #状態を生成
-        state = (self.myVel, self.myAngle, self.wind_direction, self.wind_speed, self.wave_direction, self.wave_level), img
+        state = np.array(states, dtype=object)
 
         return state
     
