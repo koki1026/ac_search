@@ -31,8 +31,10 @@ env = make_vec_env(
 env_file_path = env.__module__
 print(env_file_path)
 
-path_file = "/media/gaia-22/ESD-ISO/auto_cosmos/cameleon/data/pkl/rollout01.pkl"
+path_file = "/media/gaia-22/ESD-ISO/auto_cosmos/cameleon/data/pkl/rollout02.pkl"
 rollouts = pickle.load(open(path_file, 'rb'))
+
+print("type: "+ str(type(rollouts)))
  
 learner = PPO(
     env=env,

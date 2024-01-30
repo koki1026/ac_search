@@ -12,6 +12,7 @@ from std_msgs.msg import Bool
 from rosgraph_msgs.msg import Clock
 import imitation.data.types as types
 from imitation.data.types import TransitionsMinimal
+from imitation.data.types import TrajectoryWithRew
 
 
 
@@ -70,12 +71,14 @@ class makeExpertData(Node):
         #時間の設定
         self.clock = 0.0
         self.nanoclock = 0.0
+        self.preclock = 0.0
         self.timeTick = 0.5
 
         #データの保存先
         self.action_data = []
         self.observation_data = []
         self.info_data = []
+        self.trajectories = []
 
         #pygameの初期化
         pygame.init()
@@ -114,8 +117,8 @@ class makeExpertData(Node):
             self.save_data()
 
     def clock_callback(self, msg):
-        self.clock = msg.clock.set_sec
-        self.nanoclock = msg.clock.set_nanosec
+        self.clock = msg.clock.sec
+        self.nanoclock = msg.clock.nanosec
         self.clock = self.clock + self.nanoclock/1000000000
         if self.clock > self.preclock + self.timeTick:
             self.preclock = self.clock
@@ -128,13 +131,14 @@ class makeExpertData(Node):
             print("episode status" , episode_status)
         elif episode_status == 1:
             self.final_append(self.action_index,self.myVel,self.myAngle,self.myAngleVel,self.myPose,self.prePose)
+            self.trajectoryWithRew_Input(self.action_data,self.observation_data,self.info_data)
             print("episode status" , episode_status)
         elif episode_status == 2:
             action, action_checker = self.makeActionData(self.action_index,self.myVel,self.myAngle,self.myAngleVel,self.myPose,self.prePose)
             observation = self.makeObservationData(self.myVel, self.myAngleVel, self.myPose,self.myAngle,self.targetPose,self.nextTargetPose,self.windSpeed,self.windDirection,self.waveLevel,self.waveDirection)
 
             #ovservationを描画
-            img = observation[1]
+            img = observation
             pygame.display.set_caption("Cameleon")
             image_surface = pygame.surfarray.make_surface(img)
             self.screen.blit(image_surface, (0,0))
@@ -238,11 +242,23 @@ class makeExpertData(Node):
             cv2.circle(img, (int(self.render_size/2+PointDistance*np.cos(PointAngle)),int(self.render_size/2+PointDistance*np.sin(PointAngle))), radius, (255,0,0), -1)
         #画像を返す
         return img
+    
+    def trajectoryWithRew_Input(self, action_data, observation_data, info_data):
+        tWR = TrajectoryWithRew()
+        tWR.acts = np.array(action_data, dtype=np.float32)
+        tWR.obs = np.array(observation_data, dtype=np.float32)
+        tWR.infos = np.array(info_data)
+        tWR.rews = np.array([0.0]*len(action_data))
+        tWR.terminal = True
+        self.trajectories.append(tWR)
 
     def reset(self):
         self.action_index = 0
         self.prePose = [0.0] * 2
         self.action = [[0.0]*14]*4
+        self.action_data = []
+        self.observation_data = []
+        self.info_data = []
         self.action_start = False
 
     #action を最後に４回アペンドする
@@ -269,11 +285,7 @@ class makeExpertData(Node):
             return 3
 
     def save_data(self):
-        act = np.array(self.action_data)
-        obs = np.array(self.observation_data, dtype=np.float32)
-        info = np.array(self.info_data)
-        observation = types.maybe_wrap_in_dictobs(obs)
-        data = TransitionsMinimal(observation, act, info)
+        data = self.trajectories
         path = 'rollout.pkl'
         with open(path, mode='wb') as f:
             pickle.dump(data, f)
