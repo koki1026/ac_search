@@ -244,12 +244,13 @@ class makeExpertData(Node):
         return img
     
     def trajectoryWithRew_Input(self, action_data, observation_data, info_data):
-        tWR = TrajectoryWithRew()
-        tWR.acts = np.array(action_data, dtype=np.float32)
-        tWR.obs = np.array(observation_data, dtype=np.float32)
-        tWR.infos = np.array(info_data)
-        tWR.rews = np.array([0.0]*len(action_data))
-        tWR.terminal = True
+        tWR = TrajectoryWithRew(
+            acts=np.array(action_data, dtype=np.float32),
+            infos=np.array(info_data),
+            obs=np.array(observation_data, dtype=np.float32),
+            rews=np.array([0.0]*len(action_data)),
+            terminal=True,
+        )
         self.trajectories.append(tWR)
 
     def reset(self):
@@ -263,14 +264,14 @@ class makeExpertData(Node):
 
     #action を最後に４回アペンドする
     def final_append(self, action_index,myVel,myAngle,myAngleVel,myPose,prePose):
-        for i in range(4):
+        for i in range(3):
             self.makeActionData(((action_index+i)%4),myVel,myAngle,myAngleVel,myPose,prePose)
             self.action_data.append(self.action[(action_index+i+3)%4])
             print ("action: ", self.action_data)
         observation = self.makeObservationData(self.myVel, self.myAngleVel, self.myPose,self.myAngle,self.targetPose,self.nextTargetPose,self.windSpeed,self.windDirection,self.waveLevel,self.waveDirection)
         self.observation_data.append(observation)
         print ("observation: ")
-        self.info_data.append([1])
+        #self.info_data.append([1])
 
     def episode_check(self):
         if self.preDane == False and self.dane == True:
@@ -286,9 +287,10 @@ class makeExpertData(Node):
 
     def save_data(self):
         data = self.trajectories
+        data_np = np.array(data)
         path = 'rollout.pkl'
         with open(path, mode='wb') as f:
-            pickle.dump(data, f)
+            pickle.dump(data_np, f)
 
 def main(args=None):
     rclpy.init(args=args)
