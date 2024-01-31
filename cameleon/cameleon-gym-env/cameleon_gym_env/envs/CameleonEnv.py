@@ -46,13 +46,9 @@ class CameleonEnv(gym.Env):
             if(i==0):
                 self.passing_point[i][0] = abs(self.myPos[0] + distance*np.cos(angle))
                 self.passing_point[i][1] = abs(self.myPos[1] + distance*np.sin(angle))
-                #通過地点をデバッグ
-                print("passing_point: "+str(self.passing_point[i][0])+","+str(self.passing_point[i][1]))
             else:
                 self.passing_point[i][0] = abs(self.passing_point[i-1][0] + distance*np.cos(angle))
                 self.passing_point[i][1] = abs(self.passing_point[i-1][1] + distance*np.sin(angle))
-                #通過地点をデバッグ
-                print("passing_point: "+str(self.passing_point[i][0])+","+str(self.passing_point[i][1]))
                                                                                         
         higher = np.array(
             [
@@ -199,7 +195,7 @@ class CameleonEnv(gym.Env):
         if(self.render_mode=='human'):
             self.render(self.state[1],action)
 
-        return self.state, reward, done, info
+        return self.state, reward, done, False, info
     
     def render(self, img, action):
         #imgにactionの5~16を描画(白)
@@ -264,16 +260,47 @@ class CameleonEnv(gym.Env):
     
     def _next_state(self, myPos, myAng, nextPoint_, nextnextPoint_):
         #画像を生成
-        img = self._render(myPos, myAng, nextPoint_, nextnextPoint_,)
+        img = self._render_mono(myPos, myAng, nextPoint_, nextnextPoint_)
+        #img = self._render(myPos, myAng, nextPoint_, nextnextPoint_,)
+        img240 = cv2.resize(img, (240,240))
 
-        state1 = np.array([self.myVel, self.myAngVel, self.wind_direction, self.wind_speed, self.wave_direction, self.wave_level], dtype=np.float32)
-        state2 = np.array(img, dtype=np.uint8)
-        states = [state1, state2]
+        #state1 = np.array([self.myVel, self.myAngVel, self.wind_direction, self.wind_speed, self.wave_direction, self.wave_level], dtype=np.float32)
+        state1 = self._state1_mono(self.myVel, self.myAngVel, self.wind_direction, self.wind_speed, self.wave_direction, self.wave_level)
+        state2 = img240
+        states = np.vstack([state2, state1])
 
         #状態を生成
-        state = np.array(states, dtype=object)
+        state = states
 
         return state
+    
+    def _state1_mono(self, myVel, myAngVel, wind_direction, wind_speed, wave_direction, wave_level):
+        #状態を生成
+        state = []
+        for i in range(40):
+            state.append(myVel)
+        for i in range(40):   
+            state.append(myAngVel) 
+        for i in range(40):
+            state.append(wind_direction)
+        for i in range(40):
+            state.append(wind_speed)
+        for i in range(40):
+            state.append(wave_direction)
+        for i in range(40):
+            state.append(wave_level)
+        state = np.array(state, dtype=np.float32)
+        return state
+    
+    def _render_mono(self, myPos, myAng, nextPoint_, nextnextPoint_):
+        #画像を生成
+        img = np.zeros((self.render_size,self.render_size),dtype=np.float32)
+        #自分の位置を表す円を中心に描画
+        cv2.circle(img, (int(self.render_size/2),int(self.render_size/2)), 5, 255, -1)
+        img = self._point_render_mono(myPos, myAng, nextPoint_, img, 155, 5)
+        img = self._point_render_mono(myPos, myAng, nextnextPoint_, img, 55, 5)
+        #画像を返す
+        return img
     
     def _render(self, myPos, myAng, nextPoint_, nextnextPoint_):
         #画像を生成
@@ -282,6 +309,20 @@ class CameleonEnv(gym.Env):
         cv2.circle(img, (int(self.render_size/2),int(self.render_size/2)), 5, (255,255,255), -1)
         img = self._point_render(myPos, myAng, nextPoint_, img, 1,0,0, 5)
         img = self._point_render(myPos, myAng, nextnextPoint_, img, 0,1,0, 5)
+        #画像を返す
+        return img
+    
+    def _point_render_mono(self, myPos, myAng, target_point, img, gray, radius=1):
+        #target_pointのmyPosからの相対位置を計算
+        Point = [0.0]*2
+        Point[0] = target_point[0]-myPos[0]
+        Point[1] = target_point[1]-myPos[1]
+        #target_pointのmyPosからの相対距離を計算
+        PointDistance = np.linalg.norm(Point)*10
+        #myAngからの相対角度を計算
+        PointAngle = np.arctan2(Point[1],Point[0])-myAng
+        #target_pointを表す円を描画
+        cv2.circle(img, (int(self.render_size/2+PointDistance*np.cos(PointAngle)),int(self.render_size/2+PointDistance*np.sin(PointAngle))), radius, gray, -1)
         #画像を返す
         return img
     
@@ -328,7 +369,7 @@ class CameleonEnv(gym.Env):
         distance = [0.0]*2
         distance[0] = self.myPos[0]-self.passing_point[self.nextPointIndex][0]
         distance[1] = self.myPos[1]-self.passing_point[self.nextPointIndex][1]
-        if(np.linalg.norm(distance)>20.0):
+        if(np.linalg.norm(distance)>5.0):
             done = True
 
         return done
