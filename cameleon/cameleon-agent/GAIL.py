@@ -75,7 +75,7 @@ gail_trainer = GAIL(
 )
 
 
-gail_trainer.train(2_000_000, allow_variable_horizon=True)
+gail_trainer.train(2_000_000)
 
 learner_rewards_after_training, _ = evaluate_policy(
     learner, env, 100, return_episode_rewards=True

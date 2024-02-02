@@ -31,6 +31,10 @@ class CameleonEnv(gym.Env):
         #通過地点の数
         self.passing_point_num = 50 #用意する通過地点の数
         self.episode_point_num = self.passing_point_num-10 #エピソードの通過地点の数
+
+        # エピソードの長さを60で切る
+        self.max_episode_steps = 60
+        self.episode_step = 0
         
         #通過地点の座標
         self.passing_point = np.zeros((self.passing_point_num, 2))
@@ -162,6 +166,7 @@ class CameleonEnv(gym.Env):
         
 
     def step(self, action):
+        self.episode_step += 1
         #エラー処理
         err_msg = f"{action!r} ({type(action)}) invalid"
         assert self.action_space.contains(action), err_msg
@@ -370,6 +375,10 @@ class CameleonEnv(gym.Env):
         distance[0] = self.myPos[0]-self.passing_point[self.nextPointIndex][0]
         distance[1] = self.myPos[1]-self.passing_point[self.nextPointIndex][1]
         if(np.linalg.norm(distance)>5.0):
+            done = True
+        
+        #エピソードの長さが60を超えたら終了
+        if(self.episode_step>=self.max_episode_steps):
             done = True
 
         return done
