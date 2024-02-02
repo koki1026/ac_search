@@ -21,7 +21,7 @@ import cv2
 SEED = 42
 
 env = make_vec_env(
-    "seals:seals/CartPole-v0",
+    "Cameleon-v0",
     rng=np.random.default_rng(SEED),
     n_envs=8,
     post_wrappers=[
@@ -36,15 +36,8 @@ rollouts = pickle.load(open(path_file, 'rb'))
 
 rng = np.random.default_rng()
 
-expert = load_policy(
-    "ppo-huggingface",
-    organization="HumanCompatibleAI",
-    env_name="seals-CartPole-v0",
-    venv=env,
-)
-
 rolloutee = rollout.rollout(
-    expert,
+    None,
     env,
     rollout.make_sample_until(min_timesteps=None, min_episodes=50),
     rng=rng,
@@ -73,7 +66,7 @@ reward_net = BasicRewardNet(
 )
 gail_trainer = GAIL(
     demonstrations=rolloutee,
-    demo_batch_size=32,
+    demo_batch_size=4,
     gen_replay_buffer_capacity=512,
     n_disc_updates_per_round=8,
     venv=env,
