@@ -16,9 +16,9 @@ from imitation.data.types import TrajectoryWithRew
 
 
 
-class makeExpertData(Node):
+class makeExpertData_1(Node):
     def __init__(self):
-        super().__init__('makeExpertData')
+        super().__init__('makeExpertData_1')
 
         # サブスクリプションの宣言
         '''
@@ -158,17 +158,13 @@ class makeExpertData(Node):
 
     def makeActionData(self,action_index,myVel,myAngle,myAngleVel,myPose,prePose):
         #速度と角速度について挿入
-        print("action_index",action_index)
-        self.action[action_index][0] = myVel
-        self.action[action_index][1] = myAngleVel
         #距離と方向、そして向きについて挿入
         distance = np.linalg.norm(np.array(myPose) - np.array(prePose))
         radian = math.atan2(myPose[0]-prePose[0], myPose[1]-prePose[1])
-        for i in range(4):
-            self.action[(action_index+i)%4][2+i*3] = distance
-            self.action[(action_index+i)%4][3+i*3] = radian
-            self.action[(action_index+i)%4][4+i*3] = myAngle
-        action = self.action[(action_index+3)%4]
+        self.action[0] = distance
+        self.action[1] = radian
+        self.action[2] = myAngle
+        action = self.action
 
         if action_index == 1:
             self.action_start = True
@@ -263,10 +259,8 @@ class makeExpertData(Node):
 
     #action を最後に４回アペンドする
     def final_append(self, action_index,myVel,myAngle,myAngleVel,myPose,prePose):
-        for i in range(3):
-            self.makeActionData(((action_index+i)%4),myVel,myAngle,myAngleVel,myPose,prePose)
-            self.action_data.append(self.action[(action_index+i+3)%4])
-            print ("action: ", self.action_data)
+        action = self.makeActionData(action_index,myVel,myAngle,myAngleVel,myPose,prePose)
+        self.action_data.append(action)
         observation = self.makeObservationData(self.myVel, self.myAngleVel, self.myPose,self.myAngle,self.targetPose,self.nextTargetPose,self.windSpeed,self.windDirection,self.waveLevel,self.waveDirection)
         self.observation_data.append(observation)
         print ("observation: ")
@@ -293,7 +287,7 @@ class makeExpertData(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    makeExpertData_node = makeExpertData()
+    makeExpertData_node = makeExpertData_1()
     rclpy.spin(makeExpertData_node)
     makeExpertData_node.destroy_node()
     rclpy.shutdown()

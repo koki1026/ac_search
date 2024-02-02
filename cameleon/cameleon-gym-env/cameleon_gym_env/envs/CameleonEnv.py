@@ -233,6 +233,7 @@ class CameleonEnv(gym.Env):
         seed: Optional[int] = None,
         options: Optional[dict] = None,
     ):
+        self.episode_step = 0
         self.myPos = [0.0]*2
         self.myVel = 0.0
         self.myAngle = 0.0
@@ -364,18 +365,22 @@ class CameleonEnv(gym.Env):
         return reward
     
     def _is_done(self):
+        '''
         #次の通過点のインデックスが通過点の数-3を超えたら終了
         if(self.nextPointIndex>self.episode_point_num):
             done = True
         else:
             done = False
-
+        '''
+        done = False
         #現在地が次の通過点の半径20.0以上なら終了
         distance = [0.0]*2
         distance[0] = self.myPos[0]-self.passing_point[self.nextPointIndex][0]
         distance[1] = self.myPos[1]-self.passing_point[self.nextPointIndex][1]
-        if(np.linalg.norm(distance)>5.0):
+        '''
+        if(np.linalg.norm(distance)>20.0):
             done = True
+        '''
         
         #エピソードの長さが60を超えたら終了
         if(self.episode_step>=self.max_episode_steps):
