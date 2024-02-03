@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 from visualization_msgs.msg import MarkerArray, Marker
 from std_msgs.msg import Bool
 from geometry_msgs.msg import Pose
+from rosgraph_msgs.msg import Clock
 # wave, goal , my, thruster l,r,lv,rv
 def euler_from_quaternion(quaternion):                                                                   
         """クオータニオンからオイラー角を計算する関数                                                        
@@ -85,13 +86,16 @@ class expertGUI(Node):
         self.myAng = 0.0 #自分の角度を保存
         self.myAngOri = [0.0]*4 #自分の四元角度を保存
 
-        self.passing_point_num = 50 #用意する通過地点の数
+        self.passing_point_num = 20 #用意する通過地点の数
         self.episode_point_num = self.passing_point_num-10 #エピソードの通過地点の数
         #通過地点の座標
         self.passing_point = np.zeros((self.passing_point_num, 2))
         #目指す通過地点のインデックス
         self.nextPointIndex = 0
         preAng = 0.0
+
+        self.now_time = 0.0
+        self.start_time = 0.0
         #通過地点の生成
         for i in range(self.passing_point_num):
             #一つ前の通過地点からの距離を8~10の範囲でランダムに決定
@@ -157,6 +161,22 @@ class expertGUI(Node):
              self.pose_data_callback,
              10
         )
+        self.time_sub = self.create_subscription(
+            Clock,
+            '/clock',
+            self.time_callback,
+            10
+        )
+
+    def time_callback(self, msg):
+        self.now_time = msg.clock.sec
+        if(self.now_time >= self.start_time+35):
+            self.start_time = self.now_time
+            self.nextPointIndex = 0
+            done = Bool()
+            done.data = True
+            self.done_pub.publish(done)
+            
         
     def imu_data_callback(self,msg):
         self.myAngOri[0] = msg.orientation.x
@@ -202,14 +222,8 @@ class expertGUI(Node):
         goal_dis = [0.0]*2
         goal_dis[0] = np.abs(self.myPos[0]-self.passing_point[self.nextPointIndex][0])
         goal_dis[1] = np.abs(self.myPos[1]-self.passing_point[self.nextPointIndex][1])
-        if(np.linalg.norm(goal_dis) < 3.0):
-            if(self.nextPointIndex == self.episode_point_num):
-                self.nextPointIndex = 0
-                done = Bool()
-                done.data = True
-                self.done_pub.publish(done)
-            else:
-                self.nextPointIndex += 1
+        if(np.linalg.norm(goal_dis) < 2.0):
+            self.nextPointIndex += 1
         index = Int32()
         index.data = self.nextPointIndex
 
@@ -225,6 +239,7 @@ class expertGUI(Node):
     def reset_callback(self, msg):
         done = Bool()
         done.data = True
+        self.start_time = self.now_time
         self.done_pub.publish(done)
         self.nextPointIndex = 0
         preAng = np.degrees(self.myAng)
@@ -237,8 +252,11 @@ class expertGUI(Node):
             preAng = angle
             #ポイントの中身を更新(i=0の時は船の現在地からの距離を代入)
             if(i==0):
-                self.passing_point[i][0] = self.myPos[0] + distance*np.sin(np.radians(angle))
-                self.passing_point[i][1] = self.myPos[1] + distance*np.cos(np.radians(angle))
+                self.passing_point[i][0] = self.myPos[0] + distance*np.cos(self.myAng)
+                self.passing_point[i][1] = self.myPos[1] + distance*np.sin(self.myAng)
+                preAng = np.degrees(self.myAng)
+                #y方向角度からx方向角度に変更
+                preAng = 90.0 - preAng
                 #通過地点をデバッグ
                 print("passing_point: "+str(self.passing_point[i][0])+","+str(self.passing_point[i][1]))
             else:

@@ -1,0 +1,128 @@
+rosbag05 のデータを用いたロールアウトから学習
+env2を使用
+
+
+SEED = 42
+
+env = make_vec_env(
+    "Cameleon2-v0",
+    rng=np.random.default_rng(SEED),
+    n_envs=8,
+    post_wrappers=[
+        lambda env, _: RolloutInfoWrapper(env)
+    ],  # needed for computing rollouts later
+)
+env_file_path = env.__module__
+print(env_file_path)
+
+path_file = "/media/gaia-22/ESD-ISO/auto_cosmos/cameleon/data/pkl/rollout06.pkl"
+rollouts = pickle.load(open(path_file, 'rb'))
+
+rng = np.random.default_rng()
+
+rolloutee = rollout.rollout(
+    None,
+    env,
+    rollout.make_sample_until(min_timesteps=None, min_episodes=50),
+    rng=rng,
+)
+
+print("type: "+ str(type(rollouts)))
+ 
+learner = PPO(
+    env=env,
+    policy=MlpPolicy,
+    batch_size=64,
+    ent_coef=0.0,
+    learning_rate=0.0004,
+    gamma=0.95,
+    n_epochs=5,
+    seed=SEED,
+)
+
+learner_rewards_before_training, _ = evaluate_policy(
+    learner, env, 100, return_episode_rewards=True
+)
+reward_net = BasicRewardNet(
+    observation_space=env.observation_space,
+    action_space=env.action_space,
+    normalize_input_layer=RunningNorm,
+)
+gail_trainer = GAIL(
+    demonstrations=rolloutee,
+    demo_batch_size=32,
+    gen_replay_buffer_capacity=512,
+    n_disc_updates_per_round=8,
+    venv=env,
+    gen_algo=learner,
+    reward_net=reward_net,
+)
+
+
+gail_trainer.train(2_000_000)
+
+learner_rewards_after_training, _ = evaluate_policy(
+    learner, env, 100, return_episode_rewards=True
+)
+
+print(
+    "Rewards before training:",
+    np.mean(learner_rewards_before_training),
+    "+/-",
+    np.std(learner_rewards_before_training),
+)
+print(
+    "Rewards after training:",
+    np.mean(learner_rewards_after_training),
+    "+/-",
+    np.std(learner_rewards_after_training),
+)
+
+
+--------------------------------------------------                              
+| raw/                                |          |
+|    disc/disc_acc                    | 0.75     |
+|    disc/disc_acc_expert             | 0.812    |
+|    disc/disc_acc_gen                | 0.688    |
+|    disc/disc_entropy                | 0.571    |
+|    disc/disc_loss                   | 0.497    |
+|    disc/disc_proportion_expert_pred | 0.562    |
+|    disc/disc_proportion_expert_true | 0.5      |
+|    disc/global_step                 | 122      |
+|    disc/n_expert                    | 32       |
+|    disc/n_generated                 | 32       |
+--------------------------------------------------
+--------------------------------------------------                              
+| mean/                               |          |
+|    disc/disc_acc                    | 0.645    |
+|    disc/disc_acc_expert             | 0.715    |
+|    disc/disc_acc_gen                | 0.574    |
+|    disc/disc_entropy                | 0.547    |
+|    disc/disc_loss                   | 0.588    |
+|    disc/disc_proportion_expert_pred | 0.57     |
+|    disc/disc_proportion_expert_true | 0.5      |
+|    disc/global_step                 | 122      |
+|    disc/n_expert                    | 32       |
+|    disc/n_generated                 | 32       |
+|    gen/rollout/ep_len_mean          | 60       |
+|    gen/rollout/ep_rew_mean          | 0.42     |
+|    gen/rollout/ep_rew_wrapped_mean  | 30.8     |
+|    gen/time/fps                     | 4.96e+03 |
+|    gen/time/iterations              | 1        |
+|    gen/time/time_elapsed            | 3        |
+|    gen/time/total_timesteps         | 2e+06    |
+|    gen/train/approx_kl              | 0.147    |
+|    gen/train/clip_fraction          | 0.284    |
+|    gen/train/clip_range             | 0.2      |
+|    gen/train/entropy_loss           | -7.64    |
+|    gen/train/explained_variance     | 0.505    |
+|    gen/train/learning_rate          | 0.0004   |
+|    gen/train/loss                   | 2.16     |
+|    gen/train/n_updates              | 610      |
+|    gen/train/policy_gradient_loss   | 0.00747  |
+|    gen/train/std                    | 1.37     |
+|    gen/train/value_loss             | 5.78     |
+--------------------------------------------------
+round: 100%|██████████████████████████████████| 122/122 [11:49<00:00,  5.81s/it]
+Rewards before training: 0.0 +/- 0.0
+Rewards after training: 0.48 +/- 0.7413501197140256
