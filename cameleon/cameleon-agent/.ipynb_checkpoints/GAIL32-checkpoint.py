@@ -33,7 +33,6 @@ print(env_file_path)
 
 path_file = "/media/gaia-22/ESD-ISO/auto_cosmos/cameleon/data/pkl/rollout06.pkl"
 rollouts = pickle.load(open(path_file, 'rb'))
-rollouts = rollouts.tolist()
 
 rng = np.random.default_rng()
 
@@ -66,7 +65,7 @@ reward_net = BasicRewardNet(
     normalize_input_layer=RunningNorm,
 )
 gail_trainer = GAIL(
-    demonstrations=rollouts,
+    demonstrations=rolloutee,
     demo_batch_size=32,
     gen_replay_buffer_capacity=512,
     n_disc_updates_per_round=8,

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>makeExpertData</name>
+  <name>makeExpertData_1</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="amakou2626@gmail.com">koki-22</maintainer>
+  <maintainer email="abc@example.com">gaia-22</maintainer>
   <license>TODO: License declaration</license>
 
   <test_depend>ament_copyright</test_depend>

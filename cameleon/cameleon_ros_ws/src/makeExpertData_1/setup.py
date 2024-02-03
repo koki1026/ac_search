@@ -1,11 +1,11 @@
-from setuptools import setup
+from setuptools import find_packages, setup
 
-package_name = 'makeExpertData'
+package_name = 'makeExpertData_1'
 
 setup(
     name=package_name,
     version='0.0.0',
-    packages=[package_name],
+    packages=find_packages(exclude=['test']),
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
@@ -13,14 +13,14 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='koki-22',
-    maintainer_email='amakou2626@gmail.com',
+    maintainer='gaia-22',
+    maintainer_email='abc@example.com',
     description='TODO: Package description',
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'makeExpertData_1 = makeExpertData_1.makeExpertData_1:main',
+            'makeExpertData_1 = makeExpertData_1.makeExpertData_1:main'
         ],
     },
 )

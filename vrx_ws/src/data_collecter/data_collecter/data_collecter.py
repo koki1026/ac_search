@@ -9,6 +9,7 @@ from geometry_msgs.msg import Pose
 from std_msgs.msg import Bool
 from std_msgs.msg import Int32
 from std_msgs.msg import Float32
+from std_msgs.msg import Float64
 from sensor_msgs.msg import Imu
 
 def euler_from_quaternion(quaternion):                                                                   
@@ -46,12 +47,14 @@ class dataCollecter(Node):
         self.PoseMember = [self.myPose, self.targetPose, self.nextTargetPose]
         self.windSpeed = 0.0
         self.windDirection = 0.0
-        self.waveLevel = 0.0
+        self.waveLevel = 1.0
         self.waveDirection = 0.0
         self.done = True
         self.myVel = 0.0
         self.myAngle = 0.0
         self.myAngleVel = 0.0
+        self.left_thrust = 0.0
+        self.right_thrust = 0.0
 
 
         #decleare parameter for culcrate
@@ -82,6 +85,11 @@ class dataCollecter(Node):
             "expert/asv/environment",
             10
         )
+        self.thrust_pub = self.create_publisher(
+            Pose,
+            "expert/asv/thrust",
+            10
+        )
 
         #make subscriber
         self.collect_imu_sub = self.create_subscription(
@@ -98,7 +106,7 @@ class dataCollecter(Node):
         )
         self.collect_Pose_sub = self.create_subscription(
             Bool,
-            'asv/done',
+            'vrx/done',
             self.done_callback,
             10
         )
@@ -118,6 +126,18 @@ class dataCollecter(Node):
             Int32,
             '/vrx/index',
             self.index_callback,
+            10
+        )
+        self.collect_thrust_sub = self.create_subscription(
+            Float64,
+            '/wamv/thrusters/left/thrust',
+            self.left_thrust_callback,
+            10
+        )
+        self.collect_thrust_sub = self.create_subscription(
+            Float64,
+            '/wamv/thrusters/right/thrust',
+            self.right_thrust_callback,
             10
         )
 
@@ -177,6 +197,16 @@ class dataCollecter(Node):
 
     def index_callback(self, msg):
         self.next_index = msg.data
+
+    def left_thrust_callback(self, msg):
+        self.left_thrust = msg.data
+        ThrustMsg = Pose()
+        ThrustMsg.position.x = self.left_thrust
+        ThrustMsg.position.y = self.right_thrust
+        self.thrust_pub.publish(ThrustMsg)
+
+    def right_thrust_callback(self, msg):
+        self.right_thrust = msg.data
 
 
 def main(args=None):
