@@ -72,8 +72,9 @@ class makeExpertData_1(Node):
         self.clock = 0.0
         self.nanoclock = 0.0
         self.preclock = 0.0
-        self.timeTick = 0.5
-        self.data_length = 60
+        self.timeTick = 1.0
+        self.data_length = 30
+        self.start_clock = 0.0
 
         #データの保存先
         self.action_data = []
@@ -138,24 +139,14 @@ class makeExpertData_1(Node):
             action, action_checker = self.makeActionData(self.action_index,self.myVel,self.myAngle,self.myAngleVel,self.myPose,self.prePose)
             observation = self.makeObservationData(self.myVel, self.myAngleVel, self.myPose,self.myAngle,self.targetPose,self.nextTargetPose,self.windSpeed,self.windDirection,self.waveLevel,self.waveDirection)
 
-            #ovservationを描画
-            img = observation
-            pygame.display.set_caption("Cameleon")
-            image_surface = pygame.surfarray.make_surface(img)
-            self.screen.blit(image_surface, (0,0))
-            pygame.display.flip()
-
             # 種々のデータを更新
             self.prePose = self.myPose.copy()
             self.action_index += 1
             # データをアペンド
             if(action_checker):
                 self.action_data.append(action)
-                print ("action: ", self.action_data)
 
             self.observation_data.append(observation)
-            print ("observation: ")
-            print("episode status:", episode_status)
 
     def makeActionData(self,action_index,myVel,myAngle,myAngleVel,myPose,prePose):
         #速度と角速度について挿入
@@ -163,12 +154,7 @@ class makeExpertData_1(Node):
         #距離と方向、そして向きについて挿入
         distance = np.linalg.norm(np.array(myPose) - np.array(prePose))
         radian = math.atan2(myPose[0]-prePose[0], myPose[1]-prePose[1])
-        print("myPose",myPose)
-        print("prePose",prePose)
-        print("distance",distance)
-        print("radian",radian)
         action = np.array([distance, radian, myAngle], dtype=np.float32)
-        print("action",action)
 
         if action_index >= 1:
             self.action_start = True
@@ -176,23 +162,28 @@ class makeExpertData_1(Node):
         return action,action_bool
     
     def makeObservationData(self, myVel, myAngleVel, myPose,myAngle,targetPose,nextTargetPose,windSpeed,windDirection,waveLevel,waveDirection):
-        img = np.zeros((self.render_size,self.render_size), np.float32)
-        img = cv2.circle(img, (int(self.render_size/2),int(self.render_size/2)), 1, 255, -1)
-        img = self._point_render_mono(myPose, myAngle, targetPose, img, 155, 1)
-        img = self._point_render_mono(myPose, myAngle, nextTargetPose, img, 55, 1)
-        environment = []
-        for i in range(12):
-            environment.append(windSpeed)
-        for i in range(12):
-            environment.append(windDirection)
-        for i in range(12):
-            environment.append(waveLevel)
-        for i in range(12):
-            environment.append(waveDirection)
-        environment = np.array(environment, dtype=np.float32)
-
-        #img240とenvironmentを結合する
-        observation = np.vstack([img, environment])
+        observation = []
+        #culculation of the relative position and distance
+        relativePosition = [0.0]*2
+        relativePosition[0] = targetPose[0]-myPose[0]
+        relativePosition[1] = targetPose[1]-myPose[1]
+        relativeDistance = np.linalg.norm(relativePosition)
+        relativeAngle = np.arctan2(relativePosition[1],relativePosition[0])-myAngle
+        observation.append(relativeDistance)
+        observation.append(relativeAngle)
+        #culculation of the relative position and distance
+        relativePosition = [0.0]*2
+        relativePosition[0] = nextTargetPose[0]-myPose[0]
+        relativePosition[1] = nextTargetPose[1]-myPose[1]
+        relativeDistance = np.linalg.norm(relativePosition)
+        relativeAngle = np.arctan2(relativePosition[1],relativePosition[0])-myAngle
+        observation.append(relativeDistance)
+        observation.append(relativeAngle)
+        observation.append(windSpeed)
+        observation.append(windDirection)
+        observation.append(waveLevel)
+        observation.append(waveDirection)
+        observation = np.array(observation, dtype=np.float32)
 
         '''
         img = np.zeros((self.render_size,self.render_size,3), np.uint8)
@@ -245,6 +236,7 @@ class makeExpertData_1(Node):
             rews=np.array([0.0]*len(action_data)),
             terminal=True,
         )
+        print(len(action_data))
         self.trajectories.append(tWR)
 
     def reset(self):
@@ -255,15 +247,17 @@ class makeExpertData_1(Node):
         self.observation_data = []
         self.info_data = None
         self.action_start = False
+        self.start_clock = self.clock
+
+    def close(self):
+        pygame.quit()
 
     #action を最後に４回アペンドする
     def final_append(self, action_index,myVel,myAngle,myAngleVel,myPose,prePose):
         action, _ = self.makeActionData(((action_index)%4),myVel,myAngle,myAngleVel,myPose,prePose)
         self.action_data.append(action)
-        print ("action: ", action)
         observation = self.makeObservationData(self.myVel, self.myAngleVel, self.myPose,self.myAngle,self.targetPose,self.nextTargetPose,self.windSpeed,self.windDirection,self.waveLevel,self.waveDirection)
         self.observation_data.append(observation)
-        print ("observation: ")
         #self.info_data.append([1])
 
     def episode_check(self):
@@ -276,7 +270,7 @@ class makeExpertData_1(Node):
         elif self.preDane == True and self.dane == False:
             self.preDane = self.dane
             return 2
-        elif self.preDane == False and self.dane == False:
+        elif self.preDane == False and self.dane == False and self.start_clock+2.5 < self.clock:
             return 3
 
     def save_data(self):
