@@ -30,9 +30,9 @@ class CameleonEnvFinal(gym.Env):
         # Define the goal
         self.waypoint_num = 30
         self.waypoints = np.zeros((self.waypoint_num, 2), dtype=np.float32)
-        for i in range(self.waypoint_num):
-            self.waypoints[i][0] = 0
-            self.waypoints[i][1] = i
+        #reset the goal
+        waypoints = np.zeros((self.waypoint_num, 2), dtype=np.float32)
+        self.waypoints = self.makeWayPoints(self.waypoint_num, self.myPos, self.myAngle, waypoints)
 
         # Define the state
         self.myPos = [0.0, 0.0]
@@ -153,11 +153,34 @@ class CameleonEnvFinal(gym.Env):
         self.episode_length = 0
 
         #reset the goal
-        for i in range(self.waypoint_num):
-            self.waypoints[i][0] = 0
-            self.waypoints[i][1] = i
+        waypoints = np.zeros((self.waypoint_num, 2), dtype=np.float32)
+        self.waypoints = self.makeWayPoints(self.waypoint_num, self.myPos, self.myAngle, waypoints)
+        
         goal_state = self.goalState()
         return self.makeObservation(goal_state), {}
+    
+    def makeWayPoints(self, num, myPos, myAngle, waypoints):
+        # make the waypoints
+        PosTmp = myPos
+        AngTmp = myAngle
+        for i in range(num):
+            #distance 10~8
+            distance = np.random.rand()*10.0 + 8.0
+            #angle -pi/2~pi/2
+            angle = (np.random.rand()-0.5)*np.pi
+            # if i=0, angle is 0
+            if i == 0:
+                angle = 0
+            # waypoint position(Angle is yaw)
+            waypoints[i][0] = PosTmp[0] + distance*np.sin(AngTmp)
+            waypoints[i][1] = PosTmp[1] + distance*np.cos(AngTmp)
+            # update the position and angle
+            PosTmp = waypoints[i]
+            AngTmp += angle
+
+        return waypoints
+            
+
     
     # Define render function
     def render(self, mode):
