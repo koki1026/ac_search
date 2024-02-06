@@ -157,7 +157,7 @@ class CameleonEnvFinal(gym.Env):
             self.waypoints[i][0] = 0
             self.waypoints[i][1] = i
         goal_state = self.goalState()
-        return self.makeObservation(goal_state)
+        return self.makeObservation(goal_state), {}
     
     # Define render function
     def render(self, mode):
@@ -169,16 +169,16 @@ class CameleonEnvFinal(gym.Env):
         for i in range(self.waypoint_num):
             x = int(self.waypoints[i][0]*self.render_scale + center[0])
             y = int(self.waypoints[i][1]*self.render_scale + center[1])
-            cv2.circle(img, (x, y), self.render_scale/2, (0, 0, 255), -1)
+            cv2.circle(img, (x, y), int(self.render_scale/2), (0, 0, 255), -1)
         #draw the goal
         goalPos = self.waypoints[self.target_index]
         x = int(goalPos[0]*self.render_scale + center[0])
         y = int(goalPos[1]*self.render_scale + center[1])
-        cv2.circle(img, (x, y), self.render_scale/2, (0, 255, 0), -1)
+        cv2.circle(img, (x, y), int(self.render_scale/2), (0, 255, 0), -1)
         #draw the agent
         x = int(self.myPos[0]*self.render_scale + center[0])
         y = int(self.myPos[1]*self.render_scale + center[1])
-        cv2.circle(img, (x, y), self.render_scale/2, (255, 0, 0), -1)
+        cv2.circle(img, (x, y), int(self.render_scale/2), (255, 0, 0), -1)
 
         #show the image by pygame
         if mode == 'human':
