@@ -16,9 +16,9 @@ from imitation.data.types import TrajectoryWithRew
 
 
 
-class makeExpertData_1(Node):
+class makeExpertDataPath(Node):
     def __init__(self):
-        super().__init__('makeExpertData_1')
+        super().__init__('makeExpertDataPath')
 
         # サブスクリプションの宣言
         '''
@@ -49,18 +49,6 @@ class makeExpertData_1(Node):
 
         self.create_subscription(Clock, '/clock', self.clock_callback, 10)
 
-        self.create_subscription(
-            PoseArray,
-            "/vrx/pose",
-            self.pose_callback,
-            10,
-        )
-
-        #pygameの初期化
-        self.window_size = 1000
-        pygame.init() #pygameの初期化
-        self.screen = pygame.display.set_mode((self.window_size,self.window_size)) #pygameの画面を設定
-
         # 変数の宣言
         self.myVel = 0.0
         self.myAngle = 0.0
@@ -69,6 +57,7 @@ class makeExpertData_1(Node):
         self.prePose = [0.0] * 2
         self.targetPose = [0.0] * 2
         self.nextTargetPose = [0.0] * 2
+        self.nextnextTargetPose = [0.0] * 2
         self.windSpeed = 0.0
         self.windDirection = 0.0
         self.waveLevel = 0.0
@@ -79,11 +68,8 @@ class makeExpertData_1(Node):
         self.action_index = 0
         self.action_start = False
         self.render_size = 48
-        self.passing_point_num = 50
-        self.pose_array = self.passing_point = np.zeros((self.passing_point_num, 2))
-        self.target_point_array = np.zeros((self.passing_point_num, 2))
-        self.startPose = [0.0] * 2
-        self.pastPose = [0.0] * 2
+        self.action_array = np.zeros((10,2), dtype=np.float32)
+        self.action_array_index = 0
 
         #時間の設定
         self.clock = 0.0
@@ -99,17 +85,15 @@ class makeExpertData_1(Node):
         self.info_data = None
         self.trajectories = []
 
+        #pygameの初期化
+        pygame.init()
+        self.screen = pygame.display.set_mode((self.render_size,self.render_size))
         
         # タイマーコールバック関数を宣言
         '''
         # 一秒ごとにaction, observation, next_observation, reward, done, infoを保存
         '''
         #self.create_timer(1.0, self.timer_callback)
-
-    def pose_callback(self, msg):
-        for i in range(len(msg.poses)):
-            self.pose_array[i][0] = msg.poses[i].position.x
-            self.pose_array[i][1] = msg.poses[i].position.y
 
     def cmd_vel_callback(self, msg):
         self.myVel = msg.linear.x
@@ -143,7 +127,17 @@ class makeExpertData_1(Node):
         self.clock = self.clock + self.nanoclock/1000000000
         if self.clock > self.preclock + self.timeTick:
             self.preclock = self.clock
+            self.timer_action_callback()
+
+    def timer_action_callback(self):
+        distance = np.linalg.norm(np.array(self.myPose) - np.array(self.prePose))
+        radian = math.atan2(self.myPose[1]-self.prePose[1], self.myPose[0]-self.prePose[0])
+        self.action_array[self.action_array_index] = [distance, radian]
+        if self.action_array_index >= 9:
             self.timer_callback()
+            self.action_array_index = 0
+        else:
+            self.action_array_index += 1
 
     def timer_callback(self):
         episode_status = self.episode_check()
@@ -155,7 +149,7 @@ class makeExpertData_1(Node):
             print("episode status" , episode_status)
             self.reset() # エピソードの開始
         elif episode_status == 3:
-            action, action_checker = self.makeActionData(self.action_index,self.myVel,self.myAngle,self.myAngleVel,self.myPose,self.prePose)
+            action, action_checker = self.makeActionData()
             observation = self.makeObservationData(self.myVel, self.myAngleVel, self.myPose,self.myAngle,self.targetPose,self.nextTargetPose,self.windSpeed,self.windDirection,self.waveLevel,self.waveDirection)
 
             # 種々のデータを更新
@@ -167,24 +161,12 @@ class makeExpertData_1(Node):
 
             self.observation_data.append(observation)
 
-            img = np.zeros((self.render_size,self.render_size,3), np.uint8)
-            img_pose = [0.0]*2
-            img_pose[0] = self.myPose[0] - self.startPose[0]
-            img_pose[1] = self.myPose[1] - self.startPose[1]
-            img = self.render(img, img_pose, self.pastPose, self.target_point_array)
-            self.pastPose = img_pose.copy()
-            pygame.display.set_caption("Cameleon")
-            image_surface = pygame.surfarray.make_surface(img)
-            self.screen.blit(image_surface, (0,0))
-            pygame.display.flip()
+    def makeActionData(self,action_index):
+        action = np.zeros((10,2), dtype=np.float32)
+        for i in range(10):
+            action[i] = self.action_array[i].copy()
 
-    def makeActionData(self,action_index,myVel,myAngle,myAngleVel,myPose,prePose):
-        #速度と角速度について挿入
-        print("action_index",action_index)
-        #距離と方向、そして向きについて挿入
-        distance = np.linalg.norm(np.array(myPose) - np.array(prePose))
-        radian = math.atan2(myPose[0]-prePose[0], myPose[1]-prePose[1])
-        action = np.array([distance, radian, myAngle], dtype=np.float32)
+        self.action = np.zeros((10,2), dtype=np.float32)
 
         if action_index >= 1:
             self.action_start = True
@@ -192,66 +174,13 @@ class makeExpertData_1(Node):
         return action,action_bool
     
     def makeObservationData(self, myVel, myAngleVel, myPose,myAngle,targetPose,nextTargetPose,windSpeed,windDirection,waveLevel,waveDirection):
-        observation = []
-        #culculation of the relative position and distance
-        relativePosition = [0.0]*2
-        relativePosition[0] = targetPose[0]-myPose[0]
-        relativePosition[1] = targetPose[1]-myPose[1]
-        relativeDistance = np.linalg.norm(relativePosition)
-        relativeAngle = np.arctan2(relativePosition[1],relativePosition[0])-myAngle
-        observation.append(relativeDistance)
-        observation.append(relativeAngle)
-        #culculation of the relative position and distance
-        relativePosition = [0.0]*2
-        relativePosition[0] = nextTargetPose[0]-myPose[0]
-        relativePosition[1] = nextTargetPose[1]-myPose[1]
-        relativeDistance = np.linalg.norm(relativePosition)
-        relativeAngle = np.arctan2(relativePosition[1],relativePosition[0])-myAngle
-        observation.append(relativeDistance)
-        observation.append(relativeAngle)
-        observation.append(windSpeed)
-        observation.append(windDirection)
-        observation.append(waveLevel)
-        observation.append(waveDirection)
-        observation = np.array(observation, dtype=np.float32)
-
-        '''
-        img = np.zeros((self.render_size,self.render_size,3), np.uint8)
+        img = np.zeros((self.render_size,self.render_size,3), np.float32)
         img = cv2.circle(img, (int(self.render_size/2),int(self.render_size/2)), 5, (255,255,255), -1)
         img = self._point_render(myPose, myAngle, targetPose, img, 1, 0, 0, 5)
         img = self._point_render(myPose, myAngle, nextTargetPose, img, 0, 1, 0, 5)
-        environment = np.array([myVel, myAngleVel, windSpeed, windDirection, waveLevel, waveDirection], dtype=np.float32)
-        observation = [environment, img]
-        '''
+        
+        observation = img
         return observation
-    
-    def render(self, img, myPos, prePose, wayPoints):
-        img = np.zeros((self.window_size,self.window_size,3),dtype=np.uint8)
-        #add way point
-        for i in range(self.passing_point_num):
-            point = np.copy(wayPoints[i])
-            point = [int(point[0]*10+500), int(point[1]*10+500)]
-            cv2.circle(img, (point[0], point[1]), 5, (0,0,255), -1)
-        #add my position
-        cv2.circle(img, (int(myPos[0]*10+500), int(myPos[1]*10+500)), 5, (255,255,255), -1)
-        #add my pre position
-        cv2.circle(img, (int(prePose[0]*10+500), int(prePose[1]*10+500)), 5, (255,0,0), -1)
-
-        return img
-    
-    def _point_render_mono(self, myPos, myAng, target_point, img, gray, radius=1):
-        #target_pointのmyPosからの相対位置を計算
-        Point = [0.0]*2
-        Point[0] = target_point[0]-myPos[0]
-        Point[1] = target_point[1]-myPos[1]
-        #target_pointのmyPosからの相対距離を計算
-        PointDistance = np.linalg.norm(Point)
-        #myAngからの相対角度を計算
-        PointAngle = np.arctan2(Point[1],Point[0])-myAng
-        #target_pointを表す円を描画
-        cv2.circle(img, (int(self.render_size/2+PointDistance*np.cos(PointAngle)),int(self.render_size/2+PointDistance*np.sin(PointAngle))), radius, gray, -1)
-        #画像を返す
-        return img
     
     def _point_render(self, myPos, myAng, target_point, img, r,g,b,radius=1):
         #target_pointのmyPosからの相対位置を計算
@@ -271,6 +200,21 @@ class makeExpertData_1(Node):
             cv2.circle(img, (int(self.render_size/2+PointDistance*np.cos(PointAngle)),int(self.render_size/2+PointDistance*np.sin(PointAngle))), radius, (255,0,0), -1)
         #画像を返す
         return img
+    
+    def _point_render_mono(self, myPos, myAng, target_point, img, gray, radius=1):
+        #target_pointのmyPosからの相対位置を計算
+        Point = [0.0]*2
+        Point[0] = target_point[0]-myPos[0]
+        Point[1] = target_point[1]-myPos[1]
+        #target_pointのmyPosからの相対距離を計算
+        PointDistance = np.linalg.norm(Point)
+        #myAngからの相対角度を計算
+        PointAngle = np.arctan2(Point[1],Point[0])-myAng
+        #target_pointを表す円を描画
+        cv2.circle(img, (int(self.render_size/2+PointDistance*np.cos(PointAngle)),int(self.render_size/2+PointDistance*np.sin(PointAngle))), radius, gray, -1)
+        #画像を返す
+        return img
+    
     
     def trajectoryWithRew_Input(self, action_data, observation_data, info_data):
         tWR = TrajectoryWithRew(
@@ -292,16 +236,7 @@ class makeExpertData_1(Node):
         self.info_data = None
         self.action_start = False
         self.start_clock = self.clock
-        self.pastPose = [0.0]*2
-        self.pose_decide(self.pose_array, self.myPose)
 
-    def pose_decide(self, pose_array, myPose):
-        for i in range(self.passing_point_num):
-            pose = np.empty(2, dtype=np.float32)
-            pose[0] = pose_array[i][0] - myPose[0]
-            pose[1] = pose_array[i][1] - myPose[1]
-            self.target_point_array[i] = np.copy(pose)
-        self.startPose = myPose.copy()
     def close(self):
         pygame.quit()
 
@@ -335,7 +270,7 @@ class makeExpertData_1(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    makeExpertData_node = makeExpertData_1()
+    makeExpertData_node = makeExpertDataPath()
     rclpy.spin(makeExpertData_node)
     makeExpertData_node.destroy_node()
     rclpy.shutdown()
