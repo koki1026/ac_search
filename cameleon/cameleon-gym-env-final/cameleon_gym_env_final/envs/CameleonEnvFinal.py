@@ -27,6 +27,12 @@ class CameleonEnvFinal(gym.Env):
         high[1] = np.pi
         self.observation_space = gym.spaces.Box(low, high, dtype=np.float32)
 
+        # Define the state
+        self.myPos = [0.0, 0.0]
+        self.myVel = 0.0
+        self.myAngVel = 0.0
+        self.myAngle = 0.0
+
         # Define the goal
         self.waypoint_num = 30
         self.waypoints = np.zeros((self.waypoint_num, 2), dtype=np.float32)
@@ -34,11 +40,6 @@ class CameleonEnvFinal(gym.Env):
         waypoints = np.zeros((self.waypoint_num, 2), dtype=np.float32)
         self.waypoints = self.makeWayPoints(self.waypoint_num, self.myPos, self.myAngle, waypoints)
 
-        # Define the state
-        self.myPos = [0.0, 0.0]
-        self.myVel = 0.0
-        self.myAngVel = 0.0
-        self.myAngle = 0.0
 
         # make tools for updating the environment
         self.target_index = 0
@@ -46,7 +47,7 @@ class CameleonEnvFinal(gym.Env):
         self.episode_length = 0
 
         # Define the rendering parameters
-        self.render_size = 1000
+        self.render_size = 1200
         self.render_scale = 10
         self.render_mode = render_mode
         if(self.render_mode=='human'):
@@ -168,9 +169,6 @@ class CameleonEnvFinal(gym.Env):
             distance = np.random.rand()*10.0 + 8.0
             #angle -pi/2~pi/2
             angle = (np.random.rand()-0.5)*np.pi
-            # if i=0, angle is 0
-            if i == 0:
-                angle = 0
             # waypoint position(Angle is yaw)
             waypoints[i][0] = PosTmp[0] + distance*np.sin(AngTmp)
             waypoints[i][1] = PosTmp[1] + distance*np.cos(AngTmp)
@@ -209,3 +207,9 @@ class CameleonEnvFinal(gym.Env):
             image_surface = pygame.surfarray.make_surface(img)
             self.screen.blit(image_surface, (0,0))
             pygame.display.flip()
+
+    # Define close function
+    def close(self):
+        # close the environment
+        pygame.quit()
+        return
